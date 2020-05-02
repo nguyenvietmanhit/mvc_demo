@@ -8,9 +8,6 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $arr_params = [];
-
-
         $product_model = new Product();
 
         //lấy tổng số bản ghi đang có trong bảng products
