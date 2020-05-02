@@ -22,7 +22,6 @@ class CategoryController extends Controller
     //nếu có truyền tham số page lên trình duyêt - tương đương đang ở tại trang nào, thì gán giá trị đó cho biến $page
     if (isset($_GET['page'])) {
       $page = $_GET['page'];
-
     }
     //xử lý form tìm kiếm
     if (isset($_GET['name'])) {

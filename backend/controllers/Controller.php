@@ -19,6 +19,7 @@ class Controller
      * @return false|string
      */
     public function render($file, $variables = []) {
+
         //Nhập các giá trị của mảng vào các biến có tên tương ứng chính là key của phần tử đó.
         //khi muốn sử dụng biến từ bên ngoài vào trong hàm
         extract($variables);
