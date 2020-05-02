@@ -232,10 +232,10 @@ class CategoryController extends Controller
     }
     $id = $_GET['id'];
     $category_model = new Category();
-    $caetgory = $category_model->getCategoryById($id);
+    $category = $category_model->getCategoryById($id);
     //lấy nội dung view create.php
     $this->content = $this->render('views/categories/detail.php', [
-      'category' => $caetgory
+      'category' => $category
     ]);
     //gọi layout để nhúng nội dung view detail vừa lấy đc
     require_once 'views/layouts/main.php';
