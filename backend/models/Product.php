@@ -107,4 +107,46 @@ class Product extends Model
         ];
         return $obj_insert->execute($arr_insert);
     }
+
+    /**
+     * Lấy thông tin sản phẩm theo id
+     * @param $id
+     * @return mixed
+     */
+    public function getById($id)
+    {
+        $obj_select = $this->connection
+            ->prepare("SELECT products.*, categories.name AS category_name FROM products 
+          INNER JOIN categories ON products.category_id = categories.id WHERE products.id = $id");
+
+        $obj_select->execute();
+        return $obj_select->fetch(PDO::FETCH_ASSOC);
+    }
+
+
+    public function update($id)
+    {
+        $obj_update = $this->connection
+            ->prepare("UPDATE products SET category_id=:category_id, title=:title, avatar=:avatar, price=:price, 
+            summary=:summary, content=:content, status=:status, updated_at=:updated_at
+");
+        $arr_update = [
+            ':category_id' => $this->category_id,
+            ':title' => $this->title,
+            ':avatar' => $this->avatar,
+            ':price' => $this->price,
+            ':summary' => $this->summary,
+            ':content' => $this->content,
+            ':status' => $this->status,
+            ':updated_at' => $this->updated_at,
+        ];
+        return $obj_update->execute($arr_update);
+    }
+
+    public function delete($id)
+    {
+        $obj_delete = $this->connection
+            ->prepare("DELETE FROM products WHERE id = $id");
+        return $obj_delete->execute();
+    }
 }
