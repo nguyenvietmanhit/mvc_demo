@@ -30,7 +30,12 @@ require_once 'helpers/Helper.php';
     <input type="submit" name="search" value="Tìm kiếm" class="btn btn-primary"/>
     <a href="index.php?controller=product" class="btn btn-default">Xóa filter</a>
 </form>
+
+
 <h2>Danh sách sản phẩm</h2>
+    <a href="index.php?controller=product&action=create" class="btn btn-success">
+        <i class="fa fa-plus"></i> Thêm mới
+    </a>
 <table class="table table-bordered">
     <tr>
         <th>ID</th>
@@ -71,9 +76,11 @@ require_once 'helpers/Helper.php';
                 </td>
             </tr>
         <?php endforeach; ?>
+
     <?php else: ?>
         <tr>
             <td colspan="9">No data found</td>
         </tr>
     <?php endif; ?>
 </table>
+<?php echo $pages; ?>

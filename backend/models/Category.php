@@ -20,7 +20,9 @@ class Category extends Model
         //nếu có tham số name, hay search theo name, thì tạo câu truy vấn like theo cú pháp PDO
         //và set key cho mảng arr_select tương ứng
         if (isset($_GET['name']) && !empty($_GET['name'])) {
-            $this->query_params .= " AND `name` LIKE '%{$_GET['name']}%'";
+            $name = $_GET['name'];
+            $name = addslashes($name);
+            $this->query_params .= " AND `name` LIKE '%$name%'";
         }
     }
 
@@ -64,12 +66,12 @@ class Category extends Model
         $limit = $params['limit'];
         $page = $params['page'];
         $start = ($page - 1) * $limit;
-        $obj_select = $this->
-        connection->prepare("SELECT * FROM categories WHERE TRUE $this->query_params LIMIT :start, :limit");
+        $obj_select = $this->connection
+            ->prepare("SELECT * FROM categories WHERE TRUE $this->query_params LIMIT $start, $limit");
 
 //    do PDO coi tất cả các param luôn là 1 string, nên cần sử dụng bindValue / bindParam cho các tham số start và limit
-        $obj_select->bindParam(':limit', $limit, PDO::PARAM_INT);
-        $obj_select->bindParam(':start', $start, PDO::PARAM_INT);
+//        $obj_select->bindParam(':limit', $limit, PDO::PARAM_INT);
+//        $obj_select->bindParam(':start', $start, PDO::PARAM_INT);
         $obj_select->execute();
         $categories = $obj_select->fetchAll(PDO::FETCH_ASSOC);
 
