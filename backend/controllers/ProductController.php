@@ -8,20 +8,16 @@ class ProductController extends Controller
 {
     public function index() {
         $arr_params = [];
-        //nếu có hành động search thì truyền lại param
-        if (isset($_GET['search'])) {
-            $title = $_GET['title'];
-            $category_id = $_GET['category_id'];
-            $arr_params['title'] = $title;
-            $arr_params['category_id'] = $category_id;
-        }
-
 //        xử lý phân trang
-        $pagination = new Pagination();
+//        $pagination = new Pagination();
+
 
 
         $product_model = new Product();
-        $products = $product_model->getAll($arr_params);
+        $products = $product_model->getAll();
+
+        //lấy tổng số bản ghi đang có trong bảng products
+        $count_total = $product_model->countTotal();
 
         //lấy danh sách category đang có trên hệ thống để phục vụ cho search
         $category_model = new Category();

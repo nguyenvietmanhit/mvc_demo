@@ -12,7 +12,18 @@ class Category extends Model
   public $created_at;
   public $updated_at;
 
-  public function insert()
+  public $query_params = '';
+
+  public function __construct() {
+      parent::__construct();
+      //nếu có tham số name, hay search theo name, thì tạo câu truy vấn like theo cú pháp PDO
+      //và set key cho mảng arr_select tương ứng
+      if (isset($_GET['name']) && !empty($_GET['name'])) {
+          $this->query_params .= " AND `name` LIKE '%{$_GET['name']}%'";
+      }
+  }
+
+    public function insert()
   {
     //chuẩn bị câu truy vấn
     $obj_insert = $this->connection->prepare("INSERT INTO categories(`name`, `avatar`, `description`, `status`) VALUES (:name, :avatar, :description, :status)");
@@ -34,17 +45,10 @@ class Category extends Model
    */
   public function getAll($params = [])
   {
-    $str_like = '';
-    $arr_select = [];
-    //nếu có tham số name, hay search theo name, thì tạo câu truy vấn like theo cú pháp PDO
-    //và set key cho mảng arr_select tương ứng
-    if (isset($params['name'])) {
-      $str_like .= ' WHERE `name` LIKE :name';
-    }
     //gán thêm chuỗi truy vấn like nếu có vào câu truy vấn
-    $obj_select = $this->connection->prepare("SELECT * FROM categories $str_like");
+    $obj_select = $this->connection->prepare("SELECT * FROM categories WHERE TRUE $this->query_params");
 
-    $obj_select->execute($arr_select);
+    $obj_select->execute();
     $categories = $obj_select->fetchAll(PDO::FETCH_ASSOC);
 
     return $categories;
@@ -57,17 +61,11 @@ class Category extends Model
    */
   public function getAllPagination($params = [])
   {
-    $str_like = '';
-    //xử lý tìm kiếm nếu có
-    if (isset($params['name'])) {
-      $str_like .= " WHERE `name` LIKE '%{$params['name']}%'";
-    }
-
     $limit = $params['limit'];
     $page = $params['page'];
     $start = ($page - 1) * $limit;
-    //gán thêm chuỗi truy vấn like nếu có vào câu truy vấn
-    $obj_select = $this->connection->prepare("SELECT * FROM categories $str_like LIMIT :start, :limit");
+    //gán thêm chuỗi truy vấn nếu có vào câu truy vấn
+    $obj_select = $this->connection->prepare("SELECT * FROM categories WHERE TRUE $this->query_params LIMIT :start, :limit");
 
 //    do PDO coi tất cả các param luôn là 1 string, nên cần sử dụng bindValue / bindParam cho các tham số start và limit
     $obj_select->bindParam(':limit', $limit, PDO::PARAM_INT);
@@ -137,18 +135,12 @@ class Category extends Model
   }
 
   /**
-   * Lấy tổng số bản ghi trong bảng categories theo mảng params truyền vào
-   * @param array $params
+   * Lấy tổng số bản ghi trong bảng categories
    * @return mixed
    */
-  public function countTotal($params = [])
+  public function countTotal()
   {
-    $str_like = '';
-    //xử lý tìm kiếm nếu có
-    if (isset($params['name'])) {
-      $str_like .= " WHERE `name` LIKE '%{$params['name']}%'";
-    }
-    $obj_select = $this->connection->prepare("SELECT COUNT(id) FROM categories $str_like");
+    $obj_select = $this->connection->prepare("SELECT COUNT(id) FROM categories WHERE TRUE $this->query_params");
     $obj_select->execute();
 
     return $obj_select->fetchColumn();

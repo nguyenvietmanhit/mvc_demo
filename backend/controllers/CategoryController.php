@@ -25,14 +25,11 @@ class CategoryController extends Controller
     }
     //xử lý form tìm kiếm
     if (isset($_GET['name'])) {
-      $name = $_GET['name'];
-      //gán biến name cho mảng params với key là name
-      $params['name'] = $name;
-      $params['query_additional'] = '&name=' . $name;
+      $params['query_additional'] = '&name=' . $_GET['name'];
     }
 
     //lấy tổng số bản ghi dựa theo các điều kiện có được từ mảng params truyền vào
-    $count_total = $category_model->countTotal($params);
+    $count_total = $category_model->countTotal();
     $params['total'] = $count_total;
 
     //gán biến name cho mảng params với key là name
