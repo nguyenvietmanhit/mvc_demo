@@ -56,13 +56,13 @@ require_once 'helpers/Helper.php';
                 <td><?php echo $product['title'] ?></td>
                 <td>
                     <?php if (!empty($product['avatar'])): ?>
-                        <img src="assets/uploads/<?php echo $product['avatar'] ?>"/>
+                        <img height="80" src="assets/uploads/<?php echo $product['avatar'] ?>"/>
                     <?php endif; ?>
                 </td>
                 <td><?php echo number_format($product['price']) ?></td>
                 <td><?php echo Helper::getStatusText($product['status']) ?></td>
                 <td><?php echo date('d-m-Y H:i:s', strtotime($product['created_at'])) ?></td>
-                <td><?php echo date('d-m-Y H:i:s', strtotime($product['updated_at'])) ?></td>
+                <td><?php echo !empty($product['updated_at']) ? date('d-m-Y H:i:s', strtotime($product['updated_at'])) : '--' ?></td>
                 <td>
                     <?php
                     $url_detail = "index.php?controller=product&action=detail&id=" . $product['id'];

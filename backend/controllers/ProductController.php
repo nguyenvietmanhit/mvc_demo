@@ -49,17 +49,10 @@ class ProductController extends Controller
         require_once 'views/layouts/main.php';
     }
 
-    public function create() {
+    public function create()
+    {
         //xử lý submit form
         if (isset($_POST['submit'])) {
-            echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
-            print_r($_POST);
-            echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
-            print_r($_FILES);
-            echo "</pre>";
-//            die;
-            echo "</pre>";
-//            die;
             $category_id = $_POST['category_id'];
             $title = $_POST['title'];
             $price = $_POST['price'];
@@ -88,10 +81,34 @@ class ProductController extends Controller
 
             //nếu ko có lỗi thì tiến hành save dữ liệu
             if (empty($this->error)) {
+                $filename = '';
                 //xử lý upload file nếu có
                 if ($_FILES['avatar']['error'] == 0) {
-                    $dir_uploads = __DIR__
+                    $dir_uploads = __DIR__ . '/../assets/uploads';
+                    if (!file_exists($dir_uploads)) {
+                        mkdir($dir_uploads);
+                    }
+                    //tạo tên file theo 1 chuỗi ngẫu nhiên để tránh upload file trùng lặp
+                    $filename = time() . '-product-' . $_FILES['avatar']['name'];
+                    move_uploaded_file($_FILES['avatar']['tmp_name'], $dir_uploads . '/' . $filename);
                 }
+                //save dữ liệu vào bảng products
+                $product_model = new Product();
+                $product_model->category_id = $category_id;
+                $product_model->title = $title;
+                $product_model->avatar = $filename;
+                $product_model->price = $price;
+                $product_model->summary = $summary;
+                $product_model->content = $content;
+                $product_model->status = $status;
+                $is_insert = $product_model->insert();
+                if ($is_insert) {
+                    $_SESSION['success'] = 'Insert dữ liệu thành công';
+                } else {
+                    $_SESSION['error'] = 'Insert dữ liệu thất bại';
+                }
+                header('Location: index.php?controller=product');
+                exit();
             }
         }
 
