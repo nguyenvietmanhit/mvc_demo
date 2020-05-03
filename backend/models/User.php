@@ -57,4 +57,11 @@ class User extends Model {
         $obj_select->execute();
         return $obj_select->fetchColumn();
     }
+
+    public function getById($id) {
+        $obj_select = $this->connection
+            ->prepare("SELECT * FROM users WHERE id = $id");
+        $obj_select->execute();
+        return $obj_select->fetch(PDO::FETCH_ASSOC);
+    }
 }

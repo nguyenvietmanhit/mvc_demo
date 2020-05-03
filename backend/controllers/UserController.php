@@ -43,4 +43,20 @@ class UserController extends Controller {
     public function delete() {
 
     }
+
+    public function detail() {
+        if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
+            header("Location: index.php?controller=user");
+            exit();
+        }
+        $id = $_GET['id'];
+        $user_model = new User();
+        $user = $user_model->getById($id);
+
+        $this->content = $this->render('views/users/detail.php', [
+            'user' => $user
+        ]);
+
+        require_once 'views/layouts/main.php';
+    }
 }
