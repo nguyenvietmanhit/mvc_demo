@@ -113,4 +113,11 @@ VALUES(:username, :password, :first_name, :last_name, :phone, :address, :email, 
 
         return $obj_update->execute($arr_update);
     }
+    public function delete($id)
+    {
+        $obj_delete = $this->connection
+            ->prepare("DELETE FROM users WHERE id = $id");
+        return $obj_delete->execute();
+    }
+
 }
