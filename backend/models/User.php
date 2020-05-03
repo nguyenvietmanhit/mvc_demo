@@ -91,4 +91,26 @@ VALUES(:username, :password, :first_name, :last_name, :phone, :address, :email, 
         ];
         return $obj_insert->execute($arr_insert);
     }
+
+    public function update($id) {
+        $obj_update = $this->connection
+            ->prepare("UPDATE users SET first_name=:first_name, last_name=:last_name, phone=:phone, 
+            address=:address, email=:email, avatar=:avatar, jobs=:jobs, facebook=:facebook, status=:status, updated_at=:updated_at
+             WHERE id = $id");
+        $arr_update = [
+            ':first_name' => $this->first_name,
+            ':last_name' => $this->last_name,
+            ':phone' => $this->phone,
+            ':address' => $this->address,
+            ':email' => $this->email,
+            ':avatar' => $this->avatar,
+            ':jobs' => $this->jobs,
+            ':facebook' => $this->facebook,
+            ':status' => $this->status,
+            ':updated_at' => $this->updated_at,
+        ];
+        $obj_update->execute($arr_update);
+
+        return $obj_update->execute($arr_update);
+    }
 }
