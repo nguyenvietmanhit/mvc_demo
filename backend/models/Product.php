@@ -64,7 +64,7 @@ class Product extends Model
             ->prepare("SELECT products.*, categories.name AS category_name FROM products 
                         INNER JOIN categories ON categories.id = products.category_id
                         WHERE TRUE $this->str_search
-                        ORDER BY products.created_at DESC
+                        ORDER BY products.updated_at DESC, products.created_at DESC
                         LIMIT $start, $limit
                         ");
 
@@ -128,7 +128,7 @@ class Product extends Model
     {
         $obj_update = $this->connection
             ->prepare("UPDATE products SET category_id=:category_id, title=:title, avatar=:avatar, price=:price, 
-            summary=:summary, content=:content, status=:status, updated_at=:updated_at
+            summary=:summary, content=:content, status=:status, updated_at=:updated_at WHERE id = $id
 ");
         $arr_update = [
             ':category_id' => $this->category_id,
