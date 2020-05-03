@@ -1,3 +1,16 @@
+<?php
+$year = '';
+$username = '';
+$jobs = '';
+$avatar = '';
+if (isset($_SESSION['user'])) {
+    $username = $_SESSION['user']['username'];
+    $jobs = $_SESSION['user']['jobs'];
+    $avatar = $_SESSION['user']['avatar'];
+    $year = date('Y', strtotime($_SESSION['user']['created_at']));
+}
+
+?>
 <header class="main-header">
     <!-- Logo -->
     <a href="index2.html" class="logo">
@@ -18,17 +31,18 @@
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="assets/images/user2-160x160.jpg" class="user-image" alt="User Image">
-                        <span class="hidden-xs">Nguyễn Viết Mạnh</span>
+                        <img src="assets/uploads/<?php echo $avatar; ?>" class="user-image" alt="User Image">
+                        <span class="hidden-xs"><?php echo $username; ?></span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                            <img src="assets/images/user2-160x160.jpg" class="img-circle" alt="User Image">
+                            <img src="assets/uploads/<?php echo $avatar; ?>" class="img-circle" alt="User Image">
 
                             <p>
-                                Nguyễn Viết Mạnh - Web Developer
-                                <small>Thành viên từ năm 2012</small>
+                                <?php echo $username . ' - ' . $jobs; ?>
+                                <!--Nguyễn Viết Mạnh - Web Developer-->
+                                <small>Thành viên từ năm <?php echo $year; ?></small>
                             </p>
                         </li>
                         <!-- Menu Footer-->
@@ -37,7 +51,8 @@
                                 <a href="#" class="btn btn-default btn-flat">Profile</a>
                             </div>
                             <div class="pull-right">
-                                <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                <a href="index.php?controller=user&action=logout" class="btn btn-default btn-flat">Sign
+                                    out</a>
                             </div>
                         </li>
                     </ul>
@@ -53,10 +68,10 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="assets/images/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="assets/uploads/<?php echo $avatar; ?>" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>Nguyễn Viết Mạnh</p>
+                <p><?php echo $username; ?></p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
@@ -112,31 +127,31 @@
 <div class="message-wrap content-wrap content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <?php if (isset($_SESSION['error'])): ?>
-          <div class="alert alert-danger">
-            <?php
-            echo $_SESSION['error'];
-            unset($_SESSION['error']);
-            ?>
-          </div>
-      <?php endif; ?>
+        <?php if (isset($_SESSION['error'])): ?>
+            <div class="alert alert-danger">
+                <?php
+                echo $_SESSION['error'];
+                unset($_SESSION['error']);
+                ?>
+            </div>
+        <?php endif; ?>
 
-      <?php if (!empty($this->error)): ?>
-          <div class="alert alert-danger">
-            <?php
-            echo $this->error;
-            ?>
-          </div>
-      <?php endif; ?>
+        <?php if (!empty($this->error)): ?>
+            <div class="alert alert-danger">
+                <?php
+                echo $this->error;
+                ?>
+            </div>
+        <?php endif; ?>
 
-      <?php if (isset($_SESSION['success'])): ?>
-          <div class="alert alert-success">
-            <?php
-            echo $_SESSION['success'];
-            unset($_SESSION['success']);
-            ?>
-          </div>
-      <?php endif; ?>
+        <?php if (isset($_SESSION['success'])): ?>
+            <div class="alert alert-success">
+                <?php
+                echo $_SESSION['success'];
+                unset($_SESSION['success']);
+                ?>
+            </div>
+        <?php endif; ?>
         <!--        <div class="alert alert-danger">Lỗi validate</div>-->
         <!--        <p class="alert alert-success">Thành công</p>-->
     </section>

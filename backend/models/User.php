@@ -120,4 +120,24 @@ VALUES(:username, :password, :first_name, :last_name, :phone, :address, :email, 
         return $obj_delete->execute();
     }
 
+    public function getUserByUsernameAndPassword($username, $password) {
+        echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
+        print_r($username);
+        print_r('<br />');
+        print_r($password);
+        echo "</pre>";
+//        die;
+        $obj_select = $this->connection
+            ->prepare("SELECT * FROM users WHERE username=:username AND password=:password LIMIT 1");
+        $arr_select = [
+            ':username' => $username,
+            ':password' => $password,
+        ];
+        $obj_select->execute($arr_select);
+
+        $user = $obj_select->fetch(PDO::FETCH_ASSOC);
+
+        return $user;
+    }
+
 }
