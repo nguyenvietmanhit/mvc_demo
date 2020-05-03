@@ -13,6 +13,9 @@
 </form>
 
 <h2>Danh sách user</h2>
+<a href="index.php?controller=user&action=create" class="btn btn-success">
+    <i class="fa fa-plus"></i> Thêm mới
+</a>
 <table class="table table-bordered">
     <tr>
         <th>ID</th>

@@ -60,3 +60,4 @@ require_once 'helpers/Helper.php';
         <td><?php echo date('d-m-Y H:i:s', strtotime($user['updated_at'])) ?></td>
     </tr>
 </table>
+<a href="index.php?controller=user&action=index" class="btn btn-default">Back</a>

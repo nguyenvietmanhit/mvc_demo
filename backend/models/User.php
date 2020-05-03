@@ -42,7 +42,7 @@ class User extends Model {
         $start = ($page - 1) * $limit;
         $obj_select = $this->connection
             ->prepare("SELECT * FROM users WHERE TRUE $this->str_search
-              ORDER BY updated_at DESC, created_at DESC
+              ORDER BY created_at DESC
               LIMIT $start, $limit");
 
         $obj_select->execute();
@@ -63,5 +63,32 @@ class User extends Model {
             ->prepare("SELECT * FROM users WHERE id = $id");
         $obj_select->execute();
         return $obj_select->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function getUserByUsername($username) {
+        $obj_select = $this->connection
+            ->prepare("SELECT COUNT(id) FROM users WHERE username='$username'");
+        $obj_select->execute();
+        return $obj_select->fetchColumn();
+    }
+
+    public function insert() {
+        $obj_insert = $this->connection
+            ->prepare("INSERT INTO users(username, password, first_name, last_name, phone, address, email, avatar, jobs, facebook, status)
+VALUES(:username, :password, :first_name, :last_name, :phone, :address, :email, :avatar, :jobs, :facebook, :status)");
+        $arr_insert = [
+            ':username' => $this->username,
+            ':password' => $this->password,
+            ':first_name' => $this->first_name,
+            ':last_name' => $this->last_name,
+            ':phone' => $this->phone,
+            ':address' => $this->address,
+            ':email' => $this->email,
+            ':avatar' => $this->avatar,
+            ':jobs' => $this->jobs,
+            ':facebook' => $this->facebook,
+            ':status' => $this->status,
+        ];
+        return $obj_insert->execute($arr_insert);
     }
 }
