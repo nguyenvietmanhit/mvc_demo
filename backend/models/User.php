@@ -121,12 +121,6 @@ VALUES(:username, :password, :first_name, :last_name, :phone, :address, :email, 
     }
 
     public function getUserByUsernameAndPassword($username, $password) {
-        echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
-        print_r($username);
-        print_r('<br />');
-        print_r($password);
-        echo "</pre>";
-//        die;
         $obj_select = $this->connection
             ->prepare("SELECT * FROM users WHERE username=:username AND password=:password LIMIT 1");
         $arr_select = [
@@ -138,6 +132,18 @@ VALUES(:username, :password, :first_name, :last_name, :phone, :address, :email, 
         $user = $obj_select->fetch(PDO::FETCH_ASSOC);
 
         return $user;
+    }
+
+    public function insertRegister() {
+        $obj_insert = $this->connection
+            ->prepare("INSERT INTO users(username, password, status)
+VALUES(:username, :password, :status)");
+        $arr_insert = [
+            ':username' => $this->username,
+            ':password' => $this->password,
+            ':status' => $this->status,
+        ];
+        return $obj_insert->execute($arr_insert);
     }
 
 }

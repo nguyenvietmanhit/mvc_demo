@@ -237,7 +237,9 @@ class UserController extends Controller {
     public function logout() {
 
 //        session_destroy();
-        unset($_SESSION['user']);
+        $_SESSION = [];
+        session_destroy();
+//        unset($_SESSION['user']);
         $_SESSION['success'] = 'Logout thành công';
         header('Location: index.php?controller=login&action=login');
         exit();
