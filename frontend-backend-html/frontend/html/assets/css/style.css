@@ -1040,3 +1040,10 @@ a.product-cart {
   }
 }
 
+.home-page .product-cart{
+  padding: 7px 30px;
+}
+
+.home-page .product-price {
+  font-size: 25px;
+}
