@@ -757,6 +757,7 @@ a {
   background-color: #fff;
   width: 100%;
   overflow: hidden;
+  margin-top: 60px;
 }
 
 .sub-highlight {
