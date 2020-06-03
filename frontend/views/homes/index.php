@@ -15,8 +15,8 @@
                   <!--Timeline items start -->
                   <div class="timeline-items">
                     <?php foreach ($products AS $product):
-                      $product_link = "/chi-tiet/" . $product['id'];
-                      $product_cart_add = "/them-vao-gio-hang/" . $product['id'];
+                      $product_link = "chi-tiet/" . $product['id'];
+                      $product_cart_add = "them-vao-gio-hang/" . $product['id'];
                       ?>
                         <!--ITEM-->
                         <div class="timeline-item">

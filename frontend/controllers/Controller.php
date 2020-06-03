@@ -8,7 +8,15 @@
 
 class Controller
 {
-    //chứa nội dung view
+  public function __construct()
+  {
+    echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
+    print_r($_SESSION);
+    echo "</pre>";
+//    die;
+  }
+
+  //chứa nội dung view
     public $content;
     //chứa nội dung lỗi validate
     public $error;
