@@ -11,112 +11,52 @@
                     </h1>
                 </div>
 
-                <!--Timeline items start -->
-                <div class="timeline-items">
-
-                    <!--ITEM-->
-                    <div class="timeline-item">
-                        <div class="timeline-left">
-                            <div class="timeline-left-wrapper">
-                                <a href="#" class="timeline-category" data-zebra-tooltip title="Thể thao"><i
-                                            class="material-icons">&#xE894;</i></a>
-                                <span class="timeline-date">3 phút trước</span>
-                            </div>
-                        </div>
-                        <div class="timeline-right">
-                            <div class="timeline-post-image">
-                                <a href="#">
-                                    <img src="http://tevratgundogdu.com/works/ideabox-html-template/img/news-test-images/news-img8.jpg"
-                                         width="260">
-                                </a>
-                            </div>
-                            <div class="home-page timeline-post-content">
-                                <a href="#" class="timeline-category-name font-arial">Điện thoại</a>
-                                <a href="not-defined.html">
-                                    <h3 class="timeline-post-title">Điện thoại Samsung Galaxy Note 10 Lite</h3>
-                                </a>
-                                <div class="product-price timeline-post-info">
-                                    12.490.000₫
+              <?php if (!empty($products)): ?>
+                  <!--Timeline items start -->
+                  <div class="timeline-items">
+                    <?php foreach ($products AS $product):
+                      $product_link = "/chi-tiet/" . $product['id'];
+                      $product_cart_add = "/them-vao-gio-hang/" . $product['id'];
+                      ?>
+                        <!--ITEM-->
+                        <div class="timeline-item">
+                            <div class="timeline-left">
+                                <div class="timeline-left-wrapper">
+                                    <a href="<?php echo $product_link; ?>" class="timeline-category" data-zebra-tooltip
+                                       title="<?php echo $product['title'] ?>"><i
+                                                class="material-icons">&#xE894;</i></a>
+                                    <span class="timeline-date"><?php echo $product['created_at']; ?></span>
                                 </div>
-                                <div class="timeline-post-info">
-                                    <a href="#" class="product-cart">
-                                        Thêm vào giỏ hàng
+                            </div>
+                            <div class="timeline-right">
+                                <div class="timeline-post-image">
+                                    <a href="<?php echo $product_link; ?>">
+                                        <img src="../backend/assets/uploads/<?php echo $product['avatar'] ?>"
+                                             width="260">
                                     </a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--END ITEM-->
-
-                    <!--ITEM-->
-                    <div class="timeline-item">
-                        <div class="timeline-left">
-                            <div class="timeline-left-wrapper">
-                                <a href="#" class="timeline-category" data-zebra-tooltip title="Thể thao"><i
-                                            class="material-icons">&#xE894;</i></a>
-                                <span class="timeline-date">3 phút trước</span>
-                            </div>
-                        </div>
-                        <div class="timeline-right">
-                            <div class="timeline-post-image">
-                                <a href="#">
-                                    <img src="http://tevratgundogdu.com/works/ideabox-html-template/img/news-test-images/news-img8.jpg"
-                                         width="260">
-                                </a>
-                            </div>
-                            <div class="home-page timeline-post-content">
-                                <a href="#" class="timeline-category-name font-arial">Điện thoại</a>
-                                <a href="not-defined.html">
-                                    <h3 class="timeline-post-title">Điện thoại Samsung Galaxy Note 10 Lite</h3>
-                                </a>
-                                <div class="product-price timeline-post-info">
-                                    12.490.000₫
-                                </div>
-                                <div class="timeline-post-info">
-                                    <a href="#" class="product-cart">
-                                        Thêm vào giỏ hàng
+                                <div class="home-page timeline-post-content">
+                                    <a href="<?php echo $product_link; ?>"
+                                       class="timeline-category-name font-arial"><?php echo $product['category_name'] ?></a>
+                                    <a href="not-defined.html">
+                                        <h3 class="timeline-post-title"><?php echo $product['title'] ?></h3>
                                     </a>
+                                    <div class="product-price timeline-post-info">
+                                      <?php echo number_format($product['price']) ?>đ
+                                    </div>
+                                    <div class="timeline-post-info">
+                                        <a href="<?php echo $product_cart_add; ?>" class="product-cart">
+                                            Thêm vào giỏ hàng
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!--END ITEM-->
+                        <!--END ITEM-->
+                    <?php endforeach;; ?>
 
-                    <!--ITEM-->
-                    <div class="timeline-item">
-                        <div class="timeline-left">
-                            <div class="timeline-left-wrapper">
-                                <a href="#" class="timeline-category" data-zebra-tooltip title="Thể thao"><i
-                                            class="material-icons">&#xE894;</i></a>
-                                <span class="timeline-date">3 phút trước</span>
-                            </div>
-                        </div>
-                        <div class="timeline-right">
-                            <div class="timeline-post-image">
-                                <a href="#">
-                                    <img src="http://tevratgundogdu.com/works/ideabox-html-template/img/news-test-images/news-img8.jpg"
-                                         width="260">
-                                </a>
-                            </div>
-                            <div class="home-page timeline-post-content">
-                                <a href="#" class="timeline-category-name font-arial">Điện thoại</a>
-                                <a href="not-defined.html">
-                                    <h3 class="timeline-post-title">Điện thoại Samsung Galaxy Note 10 Lite</h3>
-                                </a>
-                                <div class="product-price timeline-post-info">
-                                    12.490.000₫
-                                </div>
-                                <div class="timeline-post-info">
-                                    <a href="#" class="product-cart">
-                                        Thêm vào giỏ hàng
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--END ITEM-->
-
-                </div>
+                  </div>
+              <?php endif; ?>
                 <!--Timeline items end -->
 
                 <!--Data load more button start  -->
