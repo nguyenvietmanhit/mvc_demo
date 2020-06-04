@@ -56,6 +56,14 @@ class CartController extends Controller {
   }
 
   public function index() {
+//    echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
+//    print_r($_SESSION);
+//    echo "</pre>";
+//    echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
+//    print_r(count($_SESSION['cart']));
+//    echo "</pre>";
+//    die;
+//    die;
     //nếu user update form giỏ hàng
     if (isset($_POST['submit'])) {
       if (!isset($_SESSION['cart'])) {
@@ -68,5 +76,31 @@ class CartController extends Controller {
     }
     $this->content = $this->render('views/carts/index.php');
     require_once 'views/layouts/main.php';
+  }
+
+
+  public function delete() {
+    if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
+      $_SESSION['error'] = 'Không tồn tại id';
+      //sau khi xử lý xong giỏ hàng thì chuyển hướng về trang danh sách giỏ hàng
+      //do đang sử dụng rewwrite url nên các url khi chuyển hướng cần có cả đường dẫn ứng dụng
+      $url_redirect = $_SERVER['SCRIPT_NAME'] . '/gio-hang-cua-ban';
+      header("Location: $url_redirect");
+      exit();
+    }
+
+    $product_id = $_GET['id'];
+    unset($_SESSION['cart'][$product_id]);
+    //nếu sau khi xóa sản phẩm hiện tại, nếu giỏ hàng trống thì xóa session cart này đi
+    if (empty($_SESSION['cart'])) {
+      unset($_SESSION['cart']);
+    }
+
+    //chuyển hướng về trang giỏ hàng
+    //sau khi xử lý xong giỏ hàng thì chuyển hướng về trang danh sách giỏ hàng
+    //do đang sử dụng rewwrite url nên các url khi chuyển hướng cần có cả đường dẫn ứng dụng
+    $url_redirect = $_SERVER['SCRIPT_NAME'] . '/gio-hang-cua-ban';
+    header("Location: $url_redirect");
+    exit();
   }
 }
