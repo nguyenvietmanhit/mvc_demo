@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <base href="<?php echo $_SERVER['SCRIPT_NAME']?>" />
+    <base href="<?php echo $_SERVER['SCRIPT_NAME'] ?>"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sutiin</title>
@@ -33,6 +33,34 @@
 <a href="#" class="scrollup"></a>
 
 <?php require_once 'slide.php'; ?>
+
+<div class="container">
+  <?php if (isset($_SESSION['error'])): ?>
+      <div class="alert alert-danger">
+        <?php
+        echo $_SESSION['error'];
+        unset($_SESSION['error']);
+        ?>
+      </div>
+  <?php endif; ?>
+
+  <?php if (!empty($this->error)): ?>
+      <div class="alert alert-danger">
+        <?php
+        echo $this->error;
+        ?>
+      </div>
+  <?php endif; ?>
+
+  <?php if (isset($_SESSION['success'])): ?>
+      <div class="alert alert-success">
+        <?php
+        echo $_SESSION['success'];
+        unset($_SESSION['success']);
+        ?>
+      </div>
+  <?php endif; ?>
+</div>
 
 <!--Main container start -->
 <main class="main-container">
