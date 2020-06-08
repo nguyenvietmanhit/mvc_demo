@@ -8,7 +8,7 @@ class Order extends Model {
   public $note;
   public $price_total;
   public $payment_status;
-  public function save() {
+  public function insert() {
     $sql_insert = "INSERT INTO orders(`fullname`, `address`, `mobile`, `email`, `note`, `price_total`, `payment_status`)
     VALUES (:fullname, :address, :mobile, :email, :note, :price_total, :payment_status)";
     $obj_insert = $this->connection->prepare($sql_insert);
@@ -21,7 +21,20 @@ class Order extends Model {
         ':price_total' => $this->price_total,
         ':payment_status' => $this->payment_status,
     ];
+    $obj_insert->execute($arr_insert);
+    $order_id = $this->connection->lastInsertId();
 
-    return $obj_insert->execute($arr_insert);
+    return $order_id;
+
+//    return $obj_insert->execute($arr_insert);
+
+  }
+
+  public function getOrder($id) {
+    $sql_select = "SELECT * FROM orders WHERE `id` = $id";
+    $obj_select = $this->connection->prepare($sql_select);
+    $obj_select->execute();
+
+    return $obj_select->fetch(PDO::FETCH_ASSOC);
   }
 }

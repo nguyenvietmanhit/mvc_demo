@@ -1,6 +1,7 @@
 <?php
 require_once 'controllers/Controller.php';
 require_once 'models/Order.php';
+require_once 'models/OrderDetail.php';
 
 class PaymentController extends Controller {
   public function index() {
@@ -36,10 +37,32 @@ class PaymentController extends Controller {
         //mặc định là chưa thanh toán
         $order_model->payment_status = 0;
         //lưu vào bảng orders
-        $is_insert = $order_model->save();
-        if ($is_insert) {
-          //lưu vào bảng order_details 
+        $order_id = $order_model->insert();
+        if ($order_id > 0) {
+          //lưu vào bảng order_details
+          $order_detail = new OrderDetail();
+          $order_detail->order_id = $order_id;
+          foreach ($_SESSION['cart'] AS $product_id => $cart) {
+            $order_detail->product_id = $product_id;
+            $order_detail->quality = $cart['quality'];
+            $order_detail->insert();
+          }
+
+          //lưu thông tin thanh toán vào session để tới trang thanh toán
+          $order = $order_model->getOrder($order_id);
+          //xóa thông tin giỏ hàng
+          unset($_SESSION['cart']);
+          $_SESSION['order'] = $order;
+          $_SESSION['success'] = 'Lưu thông tin thanh toán thành công';
+          header("Location: phuong-thuc-thanh-toan");
+          exit();
+        } else {
+          $_SESSION['error'] = 'Lưu thông tin thanh toán thất bại';
+          header("Location: thanh-toan");
+          exit();
         }
+
+
       }
     }
 
