@@ -51,7 +51,7 @@ class PaymentController extends Controller {
           //lưu thông tin thanh toán vào session để tới trang thanh toán
           $order = $order_model->getOrder($order_id);
           //xóa thông tin giỏ hàng
-          unset($_SESSION['cart']);
+//          unset($_SESSION['cart']);
           $_SESSION['order'] = $order;
           $_SESSION['success'] = 'Lưu thông tin thanh toán thành công';
           header("Location: phuong-thuc-thanh-toan");
@@ -68,6 +68,16 @@ class PaymentController extends Controller {
 
 
     $this->content = $this->render('views/payments/index.php');
+
+    require_once 'views/layouts/main.php';
+  }
+
+  public function payment() {
+    echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
+    print_r("DSadsa");
+    echo "</pre>";
+    die;
+    $this->content = $this->render('configs/nganluong/index.php');
 
     require_once 'views/layouts/main.php';
   }
