@@ -13,8 +13,9 @@ class Pagination
     'query_string' => 'page', //tham số truyền lên url trình duyêt, sẽ có dang là ?page=1
     'controller' => '', //tên controller truyền vào, do mô hình đang sử dụng là MVC nên bắt buộc phải truyền vào controller
     'action' => '', //tên action của controller tương ứng, do mô hình đang sử dụng là MVC nên bắt buộc phải truyền vào controller,
-    'query_additional' => '' //chứa chuỗi query từ url nếu có, ví dụ như khi search theo name, thì biến này sẽ có giá trị là &name=abc chẳng hạn, để đảm bảo phân trang hoạt động đúng
-//    khi có thêm các query từ trình duyệt
+    'query_additional' => '', //chứa chuỗi query từ url nếu có, ví dụ như khi search theo name, thì biến này sẽ có giá trị là &name=abc chẳng hạn, để đảm bảo phân trang hoạt động đúng
+//    khi có thêm các query từ trình duyệt,
+    'full_mode' => false
   ];
 
   public $full_url;
@@ -120,9 +121,29 @@ class Pagination
     if ($this->getTotalPage() == 1) {
       return '';
     }
+
+
+
     //ngược lại xử lý để hiển thị ra cấu trúc phân trang
     $data = '<ul class="pagination">';
     $data .= $this->getPrevPage();
+    if ($this->params['full_mode'] == FALSE) {
+      $current_page = $this->getCurrentPage();
+      //nếu trang hiện tại lớn hơn >= 4 thì mới hiện thị
+      if ($current_page > 4) {
+        $data .= "<li><a href='#'>...</a></li>";
+        $max = $current_page > $this->getTotalPage() ? $this->getTotalPage() : $current_page;
+        for ($i = $current_page; $i <= $max; $i++) {
+          $link_current = $this->full_url . $i;
+          if ($i == $current_page) {
+            $data .= "<li class='active' href='#'>$i</li>";
+          } else {
+            $data .= "<li><a href='$link_current'>$i</a></li>";
+          }
+        }
+        $data .= "<li><a href='#'>...</a></li>";
+      }
+    }
     for ($i = 1; $i <= $this->getTotalPage(); $i++) {
       if ($i == $this->getCurrentPage()) {
         $data .= "<li class='active'><a href=''>$i</a></li>";

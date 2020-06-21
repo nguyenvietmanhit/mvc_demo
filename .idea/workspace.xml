@@ -14,7 +14,7 @@
     <session id="-2039375033">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
@@ -31,7 +31,7 @@
           <entry key="htaccess" value="3" />
           <entry key="html" value="5" />
           <entry key="js" value="4" />
-          <entry key="php" value="75" />
+          <entry key="php" value="76" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -39,7 +39,7 @@
           <entry key="CSS" value="2" />
           <entry key="HTML" value="5" />
           <entry key="JavaScript" value="4" />
-          <entry key="PHP" value="75" />
+          <entry key="PHP" value="76" />
           <entry key="htaccess" value="3" />
         </counts>
       </usages-collector>
@@ -53,14 +53,14 @@
           <entry key="css" value="2" />
           <entry key="htaccess" value="299" />
           <entry key="html" value="1" />
-          <entry key="php" value="22934" />
+          <entry key="php" value="22975" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="2" />
           <entry key="HTML" value="1" />
-          <entry key="PHP" value="22845" />
+          <entry key="PHP" value="22886" />
           <entry key="SQL" value="89" />
           <entry key="htaccess" value="299" />
         </counts>
@@ -90,15 +90,28 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/controllers/PaymentController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="108" column="43" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
+            <state relative-caret-position="853">
+              <caret line="128" column="46" selection-start-line="128" selection-start-column="46" selection-end-line="128" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/configs/PHPMailer/src/PHPMailer.php">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-204">
+              <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/configs/PHPMailer/src/Exception.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -136,20 +149,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
               <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/views/layouts/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2193">
-              <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="153" selection-end-column="23" />
-              <folding>
-                <element signature="e#5193#5437#0#PHP" />
-                <element signature="e#5456#5646#0#PHP" />
-                <element signature="e#5665#5916#0#PHP" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -221,6 +220,8 @@
         <option value="$PROJECT_DIR$/frontend/.htaccess" />
         <option value="$PROJECT_DIR$/frontend/configs/nganluong/index.php" />
         <option value="$PROJECT_DIR$/frontend/controllers/PaymentController.php" />
+        <option value="$PROJECT_DIR$/frontend/configs/PHPMailer/src/Exception.php" />
+        <option value="$PROJECT_DIR$/frontend/configs/PHPMailer/src/PHPMailer.php" />
       </list>
     </option>
   </component>
@@ -397,12 +398,12 @@
       <workItem from="1591262350598" duration="1973000" />
       <workItem from="1591573878928" duration="1954000" />
       <workItem from="1591630003123" duration="1202000" />
-      <workItem from="1591653937620" duration="3593000" />
+      <workItem from="1591653937620" duration="3681000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55680000" />
+    <option name="totallyTimeSpent" value="55768000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -436,13 +437,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/views/users/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/products/create.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -744,9 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/configs/PHPMailer/src/PHPMailer.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/configs/PHPMailer/src/OAuth.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -755,10 +746,24 @@
         <state relative-caret-position="-357" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/configs/PHPMailer/src/Exception.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/configs/PHPMailer/src/PHPMailer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/controllers/PaymentController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="108" column="43" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
+        <state relative-caret-position="853">
+          <caret line="128" column="46" selection-start-line="128" selection-start-column="46" selection-end-line="128" selection-end-column="46" />
         </state>
       </provider>
     </entry>

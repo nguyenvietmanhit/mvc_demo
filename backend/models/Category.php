@@ -85,19 +85,11 @@ class Category extends Model
      */
     public function getCategoryById($id)
     {
-        $obj_select = $this->connection->prepare('SELECT * FROM categories WHERE id = :id');
-        $arr_select = [
-            ':id' => $id
-        ];
+        $obj_select = $this->connection->prepare('SELECT * FROM categories WHERE id = $id');
+        $obj_select->execute();
+        $category = $obj_select->fetch(PDO::FETCH_ASSOC);
 
-        $obj_select->execute($arr_select);
-
-        $categories = $obj_select->fetchAll(PDO::FETCH_ASSOC);
-        if (isset($categories[0])) {
-            return $categories[0];
-        }
-
-        return [];
+        return $category;
     }
 
     /**
