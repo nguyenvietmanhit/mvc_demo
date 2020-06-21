@@ -122,8 +122,6 @@ class Pagination
       return '';
     }
 
-
-
     //ngược lại xử lý để hiển thị ra cấu trúc phân trang
     $data = '<ul class="pagination">';
     $data .= $this->getPrevPage();
