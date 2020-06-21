@@ -127,29 +127,32 @@ class Pagination
     //ngược lại xử lý để hiển thị ra cấu trúc phân trang
     $data = '<ul class="pagination">';
     $data .= $this->getPrevPage();
+    $current_page = $this->getCurrentPage();
+    $total_page = $this->getTotalPage();
     if ($this->params['full_mode'] == FALSE) {
-      $current_page = $this->getCurrentPage();
-      //nếu trang hiện tại lớn hơn >= 4 thì mới hiện thị
-      if ($current_page > 4) {
-        $data .= "<li><a href='#'>...</a></li>";
-        $max = $current_page > $this->getTotalPage() ? $this->getTotalPage() : $current_page;
-        for ($i = $current_page; $i <= $max; $i++) {
+      for ($i = 1; $i <= $total_page; $i++) {
+        //hiển thị trang 1, trang cuối, trang ngay trước trang hiện tại và trang ngay sau trang hiện tại
+        if ($i == 1 || $i == $total_page || $i  == $current_page - 1 || $i == $current_page + 1) {
           $link_current = $this->full_url . $i;
-          if ($i == $current_page) {
-            $data .= "<li class='active' href='#'>$i</li>";
-          } else {
-            $data .= "<li><a href='$link_current'>$i</a></li>";
-          }
+          $data .= "<li><a href='$link_current'>$i</a></li>";
         }
-        $data .= "<li><a href='#'>...</a></li>";
+        //nếu là trang hiện tại thì sẽ ko có link
+        else if ($i == $current_page) {
+          $data .= "<li class='active'><a href=''>$i</a></li>";
+        }
+//        còn nếu hoặc là trang 2, trang 3 hoặc trang tổng - 1, trang tổng -2 thì hiển thị ..
+        else if ($i == 2 || $i == 3 || $i  == $total_page - 1 || $i == $total_page - 2){
+          $data .= "<li><a href=''>...</a></li>";
+        }
       }
-    }
-    for ($i = 1; $i <= $this->getTotalPage(); $i++) {
-      if ($i == $this->getCurrentPage()) {
-        $data .= "<li class='active'><a href=''>$i</a></li>";
-      } else {
-        $link_current = $this->full_url . $i;
-        $data .= "<li><a href='$link_current'>$i</a></li>";
+    } else {
+      for ($i = 1; $i <= $this->getTotalPage(); $i++) {
+        if ($i == $current_page) {
+          $data .= "<li class='active'><a href=''>$i</a></li>";
+        } else {
+          $link_current = $this->full_url . $i;
+          $data .= "<li><a href='$link_current'>$i</a></li>";
+        }
       }
     }
 
