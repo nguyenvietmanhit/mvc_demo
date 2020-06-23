@@ -8,12 +8,10 @@
                   <?php if (!empty($categories)): ?>
                       <div class="form-group">
                           <b>Danh mục</b> <br/>
-                          <input type="checkbox" name="category[]" value="0"/> Tivi <br/>
-                          <input type="checkbox" name="category[]" value="1"/> Tủ lạnh <br/>
-                          <input type="checkbox" name="category[]" value="2"/> Thể thao <br/>
-                          <input type="checkbox" name="category[]" value="2"/> Thế giới <br/>
-                          <input type="checkbox" name="category[]" value="2"/> Tin tức <br/>
-                          <input type="checkbox" name="category[]" value="2"/> Sức khỏe <br/>
+                        <?php foreach ($categories AS $category): ?>
+                            <input type="checkbox" name="category[]"
+                                   value="<?php echo $category['id']; ?>"/> <?php echo $category['name']; ?> <br/>
+                        <?php endforeach; ?>
                       </div>
                   <?php endif; ?>
 
@@ -31,122 +29,31 @@
             </div>
             <div class="main-right col-md-9 col-sm-9 col-xs-12">
                 <h2>Danh sách sản phẩm</h2>
-                <div class="row">
-                    <div class="product-item col-md-4 col-sm-4 col-xs-12">
-                        <a href="chi-tiet/2" class="product-link">
-                            <img src="../backend/assets/uploads/1584528663-1.JPEG" height="150" class="product-image">
-                        </a>
-                        <div class="home-page">
-                            <a href="#" class="timeline-category-name font-arial">Thể thao</a>
-                            <a href="chi-tiet/2" class="product-link">
-                                <h3 class="timeline-post-title">Vợt cầu lông</h3>
-                            </a>
-                            <div class="product-price timeline-post-info">
-                                121đ
-                            </div>
-                            <div class="timeline-post-info">
-                                <a href="them-vao-gio-hang/2" class="product-cart">
-                                    Thêm vào giỏ hàng
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item col-md-4 col-sm-4 col-xs-12">
-                        <a href="chi-tiet/2" class="product-link">
-                            <img src="../backend/assets/uploads/1584528663-1.JPEG" height="150" class="product-image">
-                        </a>
-                        <div class="home-page">
-                            <a href="#" class="timeline-category-name font-arial">Thể thao</a>
-                            <a href="chi-tiet/2" class="product-link">
-                                <h3 class="timeline-post-title">Vợt cầu lông</h3>
-                            </a>
-                            <div class="product-price timeline-post-info">
-                                121đ
-                            </div>
-                            <div class="timeline-post-info">
-                                <a href="them-vao-gio-hang/2" class="product-cart">
-                                    Thêm vào giỏ hàng
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item col-md-4 col-sm-4 col-xs-12">
-                        <a href="chi-tiet/2" class="product-link">
-                            <img src="../backend/assets/uploads/1584528663-1.JPEG" height="150" class="product-image">
-                        </a>
-                        <div class="home-page">
-                            <a href="#" class="timeline-category-name font-arial">Thể thao</a>
-                            <a href="chi-tiet/2" class="product-link">
-                                <h3 class="timeline-post-title">Vợt cầu lông</h3>
-                            </a>
-                            <div class="product-price timeline-post-info">
-                                121đ
-                            </div>
-                            <div class="timeline-post-info">
-                                <a href="them-vao-gio-hang/2" class="product-cart">
-                                    Thêm vào giỏ hàng
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item col-md-4 col-sm-4 col-xs-12">
-                        <a href="chi-tiet/2" class="product-link">
-                            <img src="../backend/assets/uploads/1584528663-1.JPEG" height="150" class="product-image">
-                        </a>
-                        <div class="home-page">
-                            <a href="#" class="timeline-category-name font-arial">Thể thao</a>
-                            <a href="chi-tiet/2" class="product-link">
-                                <h3 class="timeline-post-title">Vợt cầu lông</h3>
-                            </a>
-                            <div class="product-price timeline-post-info">
-                                121đ
-                            </div>
-                            <div class="timeline-post-info">
-                                <a href="them-vao-gio-hang/2" class="product-cart">
-                                    Thêm vào giỏ hàng
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item col-md-4 col-sm-4 col-xs-12">
-                        <a href="chi-tiet/2" class="product-link">
-                            <img src="../backend/assets/uploads/1584528663-1.JPEG" height="150" class="product-image">
-                        </a>
-                        <div class="home-page">
-                            <a href="#" class="timeline-category-name font-arial">Thể thao</a>
-                            <a href="chi-tiet/2" class="product-link">
-                                <h3 class="timeline-post-title">Vợt cầu lông</h3>
-                            </a>
-                            <div class="product-price timeline-post-info">
-                                121đ
-                            </div>
-                            <div class="timeline-post-info">
-                                <a href="them-vao-gio-hang/2" class="product-cart">
-                                    Thêm vào giỏ hàng
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item col-md-4 col-sm-4 col-xs-12">
-                        <a href="chi-tiet/2" class="product-link">
-                            <img src="../backend/assets/uploads/1584528663-1.JPEG" height="150" class="product-image">
-                        </a>
-                        <div class="home-page">
-                            <a href="#" class="timeline-category-name font-arial">Thể thao</a>
-                            <a href="chi-tiet/2" class="product-link">
-                                <h3 class="timeline-post-title">Vợt cầu lông</h3>
-                            </a>
-                            <div class="product-price timeline-post-info">
-                                121đ
-                            </div>
-                            <div class="timeline-post-info">
-                                <a href="them-vao-gio-hang/2" class="product-cart">
-                                    Thêm vào giỏ hàng
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              <?php if (!empty($products)): ?>
+                  <div class="row">
+                      <?php foreach ($products AS $product): ?>
+                      <div class="product-item col-md-4 col-sm-4 col-xs-12">
+                          <a href="chi-tiet/<?php echo $product['id']?>" class="product-link">
+                              <img src="../backend/assets/uploads/<?php echo $product['avatar']?>" height="150" class="product-image">
+                          </a>
+                          <div class="home-page">
+                              <a href="#" class="timeline-category-name font-arial"><?php echo $product['category_name']?></a>
+                              <a href="chi-tiet/<?php echo $product['id']?>" class="product-link">
+                                  <h3 class="timeline-post-title"><?php echo $product['title']?></h3>
+                              </a>
+                              <div class="product-price timeline-post-info">
+                                <?php echo number_format($product['price'])?>đ
+                              </div>
+                              <div class="timeline-post-info">
+                                  <a href="them-vao-gio-hang/<?php echo $product['id']?>" class="product-cart">
+                                      Thêm vào giỏ hàng
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      <?php endforeach; ?>
+                  </div>
+              <?php endif; ?>
             </div>
         </div>
 
