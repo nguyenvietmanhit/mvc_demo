@@ -27,25 +27,22 @@
         <div class="form-group">
             <?php
             $selected_active = '';
-            $selected_disabled = 'selected';
-            if ($category['status'] == 1) {
-                $selected_active = 'selected';
-            }
+            $selected_disabled = '';
             if (isset($_POST['status'])) {
                 switch ($_POST['status']) {
                     case 0:
-                        $selected_active = 'selected';
+                      $selected_disabled = 'selected';
                         break;
                     case 1:
-                        $selected_disabled = 'selected';
+                      $selected_active = 'selected';
                         break;
                 }
             }
             ?>
             <label>Trạng thái</label>
             <select name="status" class="form-control">
-                <option value="0" <?php echo $selected_active ?> >Active</option>
-                <option value="1" <?php echo $selected_disabled ?> >Disabled</option>
+                <option value="0" <?php echo $selected_active ?> >Disabled</option>
+                <option value="1" <?php echo $selected_disabled ?> >Active</option>
             </select>
         </div>
 

@@ -125,4 +125,33 @@ VALUES (:name, :avatar, :description, :status)";
 
     return $is_delete;
   }
+
+  /**
+   * Lấy tổng số bản ghi trong bảng categories
+   * @return mixed
+   */
+  public function countTotal()
+  {
+    $obj_select = $this->connection->prepare("SELECT COUNT(id) FROM categories");
+    $obj_select->execute();
+
+    return $obj_select->fetchColumn();
+  }
+
+  public function getAllPagination($params = [])
+  {
+    $limit = $params['limit'];
+    $page = $params['page'];
+    $start = ($page - 1) * $limit;
+    $obj_select = $this->connection
+      ->prepare("SELECT * FROM categories LIMIT $start, $limit");
+
+//    do PDO coi tất cả các param luôn là 1 string, nên cần sử dụng bindValue / bindParam cho các tham số start và limit
+//        $obj_select->bindParam(':limit', $limit, PDO::PARAM_INT);
+//        $obj_select->bindParam(':start', $start, PDO::PARAM_INT);
+    $obj_select->execute();
+    $categories = $obj_select->fetchAll(PDO::FETCH_ASSOC);
+
+    return $categories;
+  }
 }
