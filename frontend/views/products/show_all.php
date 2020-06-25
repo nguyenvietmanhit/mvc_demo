@@ -1,5 +1,8 @@
-<div class="product-main">
+<!--Chức nwang filter do kết hợp với rewrite url nên ko dùng phương thức GET cho form, vì xử lý rewrite sẽ rất phức tạp
+thay vào đó sẽ dùng POST
+-->
 
+<div class="product-main">
     <div class="container">
         <div class="row">
             <div class="main-left col-md-3 col-sm-3 col-xs-12">
