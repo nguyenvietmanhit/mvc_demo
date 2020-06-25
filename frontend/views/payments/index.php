@@ -2,6 +2,7 @@
 require_once 'helpers/Helper.php';
 ?>
 <div class="container">
+    <h2>Thanh toán</h2>
     <form action="" method="POST">
         <div class="row">
             <div class="col-md-6 col-sm-6">
@@ -28,12 +29,6 @@ require_once 'helpers/Helper.php';
                 </div>
             </div>
             <div class="col-md-6 col-sm-6">
-              <?php
-              echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
-              print_r($_SESSION);
-              echo "</pre>";
-              //                die;
-              ?>
                 <h5 class="center-align">Thông tin đơn hàng của bạn</h5>
               <?php
               //biến lưu tổng giá trị đơn hàng
@@ -95,9 +90,10 @@ require_once 'helpers/Helper.php';
                       </tbody>
                   </table>
               <?php endif; ?>
-                <input type="submit" name="submit" value="Thanh toán" class="btn btn-primary">
-                <a href="gio-hang-cua-ban" class="btn btn-secondary">Về trang giỏ hàng</a>
+
             </div>
         </div>
+        <input type="submit" name="submit" value="Thanh toán" class="btn btn-primary">
+        <a href="gio-hang-cua-ban" class="btn btn-secondary">Về trang giỏ hàng</a>
     </form>
 </div>

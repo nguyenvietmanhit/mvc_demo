@@ -1,6 +1,7 @@
 <!--Timeline items start -->
 <!--Nếu tồn tại giỏ hàng, thì hiển thị ra màn hình-->
 <div class="timeline-items container">
+    <h2>Giỏ hàng của bạn</h2>
   <?php if (isset($_SESSION['cart'])) : ?>
       <form action="" method="post">
           <table class="table table-bordered">
