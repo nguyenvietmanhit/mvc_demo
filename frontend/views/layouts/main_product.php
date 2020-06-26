@@ -62,7 +62,7 @@
 </div>
 
 <!--Main container start -->
-<main class="main-container">
+<main class="main-container container">
     <!--MAIN CONTENT-->
   <?php echo $this->content; ?>
 </main>

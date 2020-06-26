@@ -80,10 +80,6 @@
 </style>
 </head>
 <?php
-echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
-print_r("SDADSA");
-echo "</pre>";
-die;
 if(@$_POST['nlpayment']) {
 	include('config.php');	
 	include('include/NL_Checkoutv3.php');	
@@ -173,7 +169,7 @@ if(@$_POST['nlpayment']) {
 <body>	
 
 	<h3>Chọn phương thức thanh toán</h3>
-	<form  name="NLpayBank" action="#" method="post">	
+	<form  name="NLpayBank" action="" method="post">
 		<table style="clear:both;width:500px;padding-left:46px;"> 
 			<tr><td colspan="2"><p><span style="color:#ff5a00;font-weight:bold;text-decoration:underline;">Lưu ý</span> Bạn nhập đầy đủ thông tin sau </td>
 				

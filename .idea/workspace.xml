@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19abbde9-d211-48c5-bd5e-1afe3a9821f8" name="Default Changelist" comment="" />
+    <list default="true" id="19abbde9-d211-48c5-bd5e-1afe3a9821f8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/configs/nganluong/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/configs/nganluong/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/controllers/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/controllers/PaymentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/layouts/main_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/layouts/main_product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/payments/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/payments/index.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,27 +26,28 @@
           <entry key="project.open.time.12" value="3" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.33" value="2" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="4" />
           <entry key="htaccess" value="6" />
-          <entry key="html" value="8" />
+          <entry key="html" value="9" />
           <entry key="js" value="4" />
-          <entry key="php" value="102" />
+          <entry key="php" value="116" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="4" />
-          <entry key="HTML" value="8" />
+          <entry key="HTML" value="9" />
           <entry key="JavaScript" value="4" />
-          <entry key="PHP" value="102" />
+          <entry key="PHP" value="116" />
           <entry key="htaccess" value="6" />
         </counts>
       </usages-collector>
@@ -51,18 +59,18 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="30" />
-          <entry key="htaccess" value="478" />
+          <entry key="htaccess" value="525" />
           <entry key="html" value="1" />
-          <entry key="php" value="27562" />
+          <entry key="php" value="28651" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="30" />
           <entry key="HTML" value="1" />
-          <entry key="PHP" value="27473" />
+          <entry key="PHP" value="28562" />
           <entry key="SQL" value="89" />
-          <entry key="htaccess" value="478" />
+          <entry key="htaccess" value="525" />
         </counts>
       </usages-collector>
     </session>
@@ -70,79 +78,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/views/products/show_all.php">
+        <entry file="file://$PROJECT_DIR$/frontend/.htaccess">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="4" lean-forward="true" selection-start-column="4" selection-end-line="1" selection-end-column="24" />
+            <state relative-caret-position="306">
+              <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/.htaccess">
+        <entry file="file://$PROJECT_DIR$/frontend/controllers/PaymentController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+            <state relative-caret-position="515">
+              <caret line="68" column="71" lean-forward="true" selection-start-line="68" selection-start-column="71" selection-end-line="68" selection-end-column="71" />
+              <folding>
+                <element signature="n#sendMail#0;n#PaymentController#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/views/payments/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="745">
-              <caret line="96" column="82" selection-start-line="96" selection-start-column="82" selection-end-line="96" selection-end-column="82" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/views/carts/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/helpers/Helper.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="37" column="51" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/helpers/Helper.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/controllers/ProductController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="51" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/models/Product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="25" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/views/products/update.php">
+        <entry file="file://$PROJECT_DIR$/frontend/views/payments/thank.php">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="26" selection-start-column="26" selection-end-column="26" />
@@ -151,10 +108,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/controllers/ProductController.php">
+        <entry file="file://$PROJECT_DIR$/frontend/views/payments/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="216" lean-forward="true" selection-start-line="216" selection-end-line="216" />
+            <state relative-caret-position="680">
+              <caret line="40" column="44" lean-forward="true" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/configs/nganluong/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="392">
+              <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/views/layouts/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/views/layouts/main_product.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="521">
+              <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -180,6 +164,11 @@
       <find>required=&quot;&quot;</find>
       <find>total_amount</find>
       <find>Thông tin đơn hàng của bạn</find>
+      <find>option_payment</find>
+      <find>submit</find>
+      <find>pay n</find>
+      <find>Pay Now!</find>
+      <find>&lt;form</find>
     </findStrings>
     <replaceStrings>
       <replace>$_GET</replace>
@@ -192,9 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/backend/views/products/detail.php" />
-        <option value="$PROJECT_DIR$/backend/views/products/create.php" />
-        <option value="$PROJECT_DIR$/backend/models/Product.php" />
         <option value="$PROJECT_DIR$/backend/views/users/detail.php" />
         <option value="$PROJECT_DIR$/backend/views/users/index.php" />
         <option value="$PROJECT_DIR$/backend/views/users/create.php" />
@@ -219,13 +205,9 @@
         <option value="$PROJECT_DIR$/frontend/views/homes/index.php" />
         <option value="$PROJECT_DIR$/frontend/b.php" />
         <option value="$PROJECT_DIR$/frontend/controllers/CartController.php" />
-        <option value="$PROJECT_DIR$/frontend/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/frontend/models/OrderDetail.php" />
         <option value="$PROJECT_DIR$/frontend/models/Order.php" />
-        <option value="$PROJECT_DIR$/frontend/configs/nganluong/index.php" />
-        <option value="$PROJECT_DIR$/frontend/controllers/PaymentController.php" />
         <option value="$PROJECT_DIR$/frontend/controllers/Controller.php" />
-        <option value="$PROJECT_DIR$/frontend/views/layouts/main_product.php" />
         <option value="$PROJECT_DIR$/a.html" />
         <option value="$PROJECT_DIR$/frontend/assets/css/style.css" />
         <option value="$PROJECT_DIR$/backend/models/Category.php" />
@@ -239,10 +221,17 @@
         <option value="$PROJECT_DIR$/backend/views/products/update.php" />
         <option value="$PROJECT_DIR$/backend/helpers/Helper.php" />
         <option value="$PROJECT_DIR$/frontend/helpers/Helper.php" />
-        <option value="$PROJECT_DIR$/frontend/.htaccess" />
         <option value="$PROJECT_DIR$/frontend/views/carts/index.php" />
-        <option value="$PROJECT_DIR$/frontend/views/payments/index.php" />
         <option value="$PROJECT_DIR$/frontend/views/products/show_all.php" />
+        <option value="$PROJECT_DIR$/frontend/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/frontend/views/layouts/main_product.php" />
+        <option value="$PROJECT_DIR$/frontend/configs/nganluong/index.php" />
+        <option value="$PROJECT_DIR$/frontend/configs/onepay/index.php" />
+        <option value="$PROJECT_DIR$/frontend/configs/onepay/do.php" />
+        <option value="$PROJECT_DIR$/frontend/views/payments/index.php" />
+        <option value="$PROJECT_DIR$/frontend/views/payments/thank.php" />
+        <option value="$PROJECT_DIR$/frontend/.htaccess" />
+        <option value="$PROJECT_DIR$/frontend/controllers/PaymentController.php" />
       </list>
     </option>
   </component>
@@ -281,38 +270,6 @@
             <path>
               <item name="mvc_demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="mvc_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mvc_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mvc_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mvc_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mvc_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mvc_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mvc_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="categories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mvc_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mvc_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="products" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mvc_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mvc_demo" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -340,14 +297,6 @@
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="configs" type="462c0819:PsiDirectoryNode" />
               <item name="nganluong" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mvc_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mvc_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="configs" type="462c0819:PsiDirectoryNode" />
-              <item name="nganluong" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mvc_demo" type="b2602c69:ProjectViewProjectNode" />
@@ -410,15 +359,15 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\mvc_demo" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\mvc_demo\frontend\configs" />
       <recent name="C:\xampp\htdocs\mvc_demo\frontend" />
       <recent name="C:\xampp\htdocs\mvc_demo\frontend\models" />
       <recent name="C:\xampp\htdocs\mvc_demo\frontend\views\layouts" />
-      <recent name="C:\xampp\htdocs\mvc_demo\frontend\configs" />
       <recent name="C:\xampp\htdocs\mvc_demo\frontend-backend-html\frontend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\mvc_demo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -463,16 +412,18 @@
       <workItem from="1592962091296" duration="5202000" />
       <workItem from="1593063314140" duration="2283000" />
       <workItem from="1593071920932" duration="8375000" />
+      <workItem from="1593134900661" duration="6540000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83306000" />
+    <option name="totallyTimeSpent" value="89846000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49729145" visible="true" weight="0.23347548" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49729145" visible="true" weight="0.16151386" />
       <window_info id="Structure" order="1" sideWeight="0.50270855" side_tool="true" weight="0.2675906" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -500,38 +451,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/b.php" />
-    <entry file="file://$PROJECT_DIR$/backend/controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4080">
-          <caret line="240" column="23" selection-start-line="240" selection-start-column="23" selection-end-line="240" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/users/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/configs/database.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1139">
@@ -546,13 +465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/controllers/CartController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/layouts/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2924">
@@ -562,13 +474,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend-backend-html/frontend/html/payment.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/configs/nganluong/include/NL_Checkoutv3.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -609,20 +514,6 @@
     <entry file="file://$PROJECT_DIR$/vnpay_php/vnpay_create_payment.php" />
     <entry file="file://$PROJECT_DIR$/vnpay_php/index.php" />
     <entry file="file://$PROJECT_DIR$/vnpay_php/config.php" />
-    <entry file="file://$PROJECT_DIR$/frontend/configs/nganluong/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="84" column="14" lean-forward="true" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/layouts/main_product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3315">
-          <caret line="195" column="36" selection-start-line="195" selection-start-column="36" selection-end-line="195" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend-backend-html/frontend/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9180">
@@ -662,13 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/controllers/PaymentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -721,24 +605,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/products/update.php">
+    <entry file="file://$PROJECT_DIR$/frontend/views/products/show_all.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
+          <caret column="4" selection-start-column="4" selection-end-line="1" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/controllers/ProductController.php">
+    <entry file="file://$PROJECT_DIR$/frontend/views/carts/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="216" lean-forward="true" selection-start-line="216" selection-end-line="216" />
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/controllers/ProductController.php">
+    <entry file="file://$PROJECT_DIR$/frontend/helpers/Helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="51" selection-end-column="3" />
+        <state relative-caret-position="629">
+          <caret line="37" column="51" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/helpers/Helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -749,47 +640,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/helpers/Helper.php">
+    <entry file="file://$PROJECT_DIR$/backend/views/products/update.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="37" column="51" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/helpers/Helper.php">
+    <entry file="file://$PROJECT_DIR$/backend/controllers/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+        <state relative-caret-position="3672">
+          <caret line="216" selection-start-line="216" selection-end-line="216" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/carts/index.php">
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="29" />
+        <state relative-caret-position="697">
+          <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/CartController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="101" column="4" lean-forward="true" selection-start-line="101" selection-start-column="4" selection-end-line="102" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/layouts/main_product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/configs/onepay/VPC_PHP_QueryDR.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/configs/onepay/ipn.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/configs/onepay/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="158" column="5" selection-start-line="158" selection-end-line="158" selection-end-column="5" />
+          <folding>
+            <element signature="n#table#0;n#center#0;n#form#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#thead#0;n#table#0;n#center#0;n#form#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#table#1;n#center#0;n#form#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/configs/onepay/dr.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/configs/onepay/do.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="804">
+          <caret line="74" column="63" lean-forward="true" selection-start-line="74" selection-start-column="63" selection-end-line="74" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/configs/nganluong/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/payments/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="745">
-          <caret line="96" column="82" selection-start-line="96" selection-start-column="82" selection-end-line="96" selection-end-column="82" />
+        <state relative-caret-position="680">
+          <caret line="40" column="44" lean-forward="true" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/products/show_all.php">
+    <entry file="file://$PROJECT_DIR$/frontend/views/payments/thank.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="4" lean-forward="true" selection-start-column="4" selection-end-line="1" selection-end-column="24" />
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+        <state relative-caret-position="306">
+          <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/PaymentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="68" column="71" lean-forward="true" selection-start-line="68" selection-start-column="71" selection-end-line="68" selection-end-column="71" />
+          <folding>
+            <element signature="n#sendMail#0;n#PaymentController#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
   </component>
-</project>                              
+</project>

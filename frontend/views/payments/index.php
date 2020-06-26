@@ -27,6 +27,11 @@ require_once 'helpers/Helper.php';
                     <label>Ghi chú thêm</label>
                     <textarea name="note" class="form-control"></textarea>
                 </div>
+                <div class="form-group">
+                    <label>Chọn phương thức thanh toán</label> <br />
+                    <input type="radio" name="method" value="0" /> Thanh toán trực tuyến <br />
+                    <input type="radio" name="method" checked value="1" /> COD (dựa vào địa chỉ của bạn) <br />
+                </div>
             </div>
             <div class="col-md-6 col-sm-6">
                 <h5 class="center-align">Thông tin đơn hàng của bạn</h5>
