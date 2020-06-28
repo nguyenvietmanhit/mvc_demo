@@ -21,6 +21,7 @@ class PaymentController extends Controller {
       $mobile = $_POST['mobile'];
       $email = $_POST['email'];
       $note = $_POST['note'];
+      $method = $_POST['method'];
       if (empty($fullname) || empty($address) || empty($mobile)) {
         $this->error = 'Fullname, address, mobile ko đc để trống';
       }
@@ -51,6 +52,15 @@ class PaymentController extends Controller {
             $order_detail->insert();
           }
 
+          //trường hợp chọn phương thức thanh toán là COD thì chuyển tới trang cảm ơn
+          if ($method == 1) {
+            //gửi mail xác nhận đã thanh toán
+            $this->sendMail($email);
+            $url_redirect = $_SERVER['SCRIPT_NAME'] . '/cam-on';
+            header("Location: $url_redirect");
+            exit();
+          }
+          //trường hợp ngược lại là thanh toán trực tuyến, thì cần lưu thông tin order và chuyển hướng đến trang thanh toán trực tuyến
           //lưu thông tin thanh toán vào session để tới trang thanh toán
           $order = $order_model->getOrder($order_id);
           //xóa thông tin giỏ hàng
@@ -59,33 +69,32 @@ class PaymentController extends Controller {
           $_SESSION['success'] = 'Lưu thông tin thanh toán thành công';
           //gửi mail
           $this->sendMail($email);
-          die;
-          header("Location: cam-on");
+          //chuyển hướng sang màn hình chọn phương thức thanh toán
+          $url_redirect = $_SERVER['SCRIPT_NAME'] . '/phuong-thuc-thanh-toan';
+          header("Location: $url_redirect");
           exit();
         } else {
           $_SESSION['error'] = 'Lưu thông tin thanh toán thất bại';
           header("Location: thanh-toan");
           exit();
         }
-
-
       }
     }
 
-
     $this->content = $this->render('views/payments/index.php');
-
     require_once 'views/layouts/main.php';
   }
 
+  public function thank() {
+    $this->content = $this->render('views/payments/thank.php');
+    require_once 'views/layouts/main_product.php';
+  }
+
   public function payment() {
-    echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
-    print_r("DSadsa");
-    echo "</pre>";
-    die;
+
     $this->content = $this->render('configs/nganluong/index.php');
 
-    require_once 'views/layouts/main.php';
+    require_once 'views/layouts/main_product.php';
   }
 
   protected function sendMail($email) {

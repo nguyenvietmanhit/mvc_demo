@@ -9,6 +9,11 @@ RewriteRule gio-hang-cua-ban index.php?controller=cart&action=index
 RewriteRule xoa-san-pham/([0-9]+) index.php?controller=cart&action=delete&id=$1
 #rewrite cho trang thanh toán
 RewriteRule thanh-toan index.php?controller=payment&action=index
-
+#rewrite cho trang danh sách sản phẩm
+RewriteRule ^san-pham$ index.php?controller=product&action=showAll
+#rewrite cho trang chi tiết sản phẩm
+RewriteRule san-pham/(.*)/([0-9]+) index.php?controller=product&action=detail
 #rewrite cho trang phương thức thanh toán
-#RewriteRule phuong-thuc-thanh-toan index.php?controller=payment&action=payment
+RewriteRule phuong-thuc-thanh-toan index.php?controller=payment&action=payment
+#rewrite cho trang cảm ơn đã đặt hàng
+RewriteRule cam-on index.php?controller=payment&action=thank
