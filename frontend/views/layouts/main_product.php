@@ -59,13 +59,9 @@
         ?>
       </div>
   <?php endif; ?>
-</div>
 
-<!--Main container start -->
-<main class="main-container container">
-    <!--MAIN CONTENT-->
   <?php echo $this->content; ?>
-</main>
+</div>
 
 <?php require_once 'footer.php'; ?>
 

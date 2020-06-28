@@ -60,13 +60,10 @@
         ?>
       </div>
   <?php endif; ?>
+
+  <?php echo $this->content; ?>
 </div>
 
-<!--Main container start -->
-<main class="main-container">
-    <!--MAIN CONTENT-->
-  <?php echo $this->content; ?>
-</main>
 
 <?php require_once 'footer.php'; ?>
 

@@ -7,7 +7,7 @@
                 <!--Timeline header area start -->
                 <div class="post-list-header">
                     <h1 class="post-list-title">
-                        <a href="#" class="link-category-item">Tin nổi bật</a>
+                        <a href="san-pham" class="link-category-item">Sản phẩm nổi bật</a>
                     </h1>
                 </div>
 
