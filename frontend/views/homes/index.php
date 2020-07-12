@@ -1,3 +1,6 @@
+<?php
+require_once 'helpers/Helper.php';
+?>
 <!--MAIN CONTENT-->
 <section class="main-content">
     <div class="main-content-wrapper">
@@ -7,7 +10,7 @@
                 <!--Timeline header area start -->
                 <div class="post-list-header">
                     <h1 class="post-list-title">
-                        <a href="san-pham" class="link-category-item">Sản phẩm nổi bật</a>
+                        <a href="san-pham" class="link-category-item">Danh sách sản phẩm</a>
                     </h1>
                 </div>
 
@@ -15,7 +18,8 @@
                   <!--Timeline items start -->
                   <div class="timeline-items">
                     <?php foreach ($products AS $product):
-                      $product_link = "chi-tiet/" . $product['id'];
+                      $slug = Helper::getSlug($product['title']);
+                      $product_link = "san-pham/$slug/" . $product['id'];
                       $product_cart_add = "them-vao-gio-hang/" . $product['id'];
                       ?>
                         <!--ITEM-->

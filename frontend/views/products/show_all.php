@@ -1,7 +1,9 @@
 <!--Chức nwang filter do kết hợp với rewrite url nên ko dùng phương thức GET cho form, vì xử lý rewrite sẽ rất phức tạp
 thay vào đó sẽ dùng POST
 -->
-
+<?php
+require_once 'helpers/Helper.php';
+?>
 <div class="product-main">
     <div class="container">
         <div class="row">
@@ -71,16 +73,19 @@ thay vào đó sẽ dùng POST
                 <h2>Danh sách sản phẩm</h2>
               <?php if (!empty($products)): ?>
                   <div class="row">
-                    <?php foreach ($products AS $product): ?>
+                    <?php foreach ($products AS $product):
+                      $slug = Helper::getSlug($product['title']);
+                      $product_link = "chi-tiet/$slug/" . $product['id'];
+                      ?>
                         <div class="product-item col-md-4 col-sm-4 col-xs-12">
-                            <a href="chi-tiet/<?php echo $product['id'] ?>" class="product-link">
+                            <a href="<?php echo $product_link; ?>" class="product-link">
                                 <img src="../backend/assets/uploads/<?php echo $product['avatar'] ?>" height="150"
                                      class="product-image">
                             </a>
                             <div class="home-page">
                                 <a href="#"
                                    class="timeline-category-name font-arial"><?php echo $product['category_name'] ?></a>
-                                <a href="chi-tiet/<?php echo $product['id'] ?>" class="product-link">
+                                <a href="<?php echo $product_link; ?>" class="product-link">
                                     <h3 class="timeline-post-title"><?php echo $product['title'] ?></h3>
                                 </a>
                                 <div class="product-price timeline-post-info">

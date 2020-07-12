@@ -25,16 +25,19 @@ class Product extends Model {
     return $products;
   }
 
-  public function getById($id) {
-    $sql_select = "SELECT * FROM products WHERE id = $id";
-    $obj_select = $this->connection->prepare($sql_select);
+  /**
+   * Lấy thông tin sản phẩm theo id
+   * @param $id
+   * @return mixed
+   */
+  public function getById($id)
+  {
+    $obj_select = $this->connection
+      ->prepare("SELECT products.*, categories.name AS category_name FROM products 
+          INNER JOIN categories ON products.category_id = categories.id WHERE products.id = $id");
+
     $obj_select->execute();
-    $product = $obj_select->fetch(PDO::FETCH_ASSOC);
-    return $product;
-
-
-
-
+    return $obj_select->fetch(PDO::FETCH_ASSOC);
   }
 }
 
