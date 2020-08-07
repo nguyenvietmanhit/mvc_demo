@@ -48,7 +48,7 @@ class ProductController extends Controller {
       'categories' => $categories,
     ]);
 
-    require_once 'views/layouts/main_product.php';
+    require_once 'views/layouts/main.php';
   }
 
   public function detail() {

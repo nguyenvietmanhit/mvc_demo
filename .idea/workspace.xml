@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19abbde9-d211-48c5-bd5e-1afe3a9821f8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/controllers/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/controllers/PaymentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/payments/mail_template_order.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/payments/mail_template_order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/payments/thank.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/payments/thank.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/controllers/ProductController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,10 +31,10 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="4" />
-          <entry key="htaccess" value="7" />
+          <entry key="htaccess" value="8" />
           <entry key="html" value="9" />
           <entry key="js" value="6" />
-          <entry key="php" value="147" />
+          <entry key="php" value="148" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -45,8 +42,8 @@
           <entry key="CSS" value="4" />
           <entry key="HTML" value="9" />
           <entry key="JavaScript" value="6" />
-          <entry key="PHP" value="147" />
-          <entry key="htaccess" value="7" />
+          <entry key="PHP" value="148" />
+          <entry key="htaccess" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -60,7 +57,7 @@
           <entry key="htaccess" value="610" />
           <entry key="html" value="1" />
           <entry key="js" value="80" />
-          <entry key="php" value="30044" />
+          <entry key="php" value="30089" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -68,7 +65,7 @@
           <entry key="CSS" value="30" />
           <entry key="HTML" value="1" />
           <entry key="JavaScript" value="80" />
-          <entry key="PHP" value="29955" />
+          <entry key="PHP" value="30000" />
           <entry key="SQL" value="89" />
           <entry key="htaccess" value="610" />
         </counts>
@@ -78,15 +75,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/views/layouts/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="145" column="84" selection-start-line="145" selection-start-column="75" selection-end-line="145" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/views/payments/thank.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -95,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/controllers/PaymentController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="85" column="63" lean-forward="true" selection-start-line="85" selection-start-column="63" selection-end-line="85" selection-end-column="63" />
+            <state relative-caret-position="493">
+              <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -118,6 +106,24 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
               <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="65" lean-forward="true" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/controllers/ProductController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
             </state>
           </provider>
         </entry>
@@ -156,15 +162,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/controllers/CartController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="93" column="31" lean-forward="true" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/views/carts/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="317">
@@ -184,7 +181,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>detail()</find>
       <find>update</find>
       <find>product</find>
       <find>insert</find>
@@ -214,6 +210,7 @@
       <find>$total_cart</find>
       <find>quality</find>
       <find>$order_model</find>
+      <find>product.html</find>
     </findStrings>
     <replaceStrings>
       <replace>$_GET</replace>
@@ -227,6 +224,7 @@
       <replace>quanti</replace>
       <replace>quantity</replace>
       <replace>$order</replace>
+      <replace />
     </replaceStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\mvc_demo\frontend\configs</dir>
@@ -263,7 +261,6 @@
         <option value="$PROJECT_DIR$/backend/views/categories/create.php" />
         <option value="$PROJECT_DIR$/backend/controllers/CategoryController.php" />
         <option value="$PROJECT_DIR$/frontend/models/Category.php" />
-        <option value="$PROJECT_DIR$/frontend/controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/backend/controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/backend/views/products/update.php" />
         <option value="$PROJECT_DIR$/backend/helpers/Helper.php" />
@@ -290,6 +287,7 @@
         <option value="$PROJECT_DIR$/frontend/models/Product.php" />
         <option value="$PROJECT_DIR$/frontend/views/payments/mail_template_order.php" />
         <option value="$PROJECT_DIR$/frontend/controllers/PaymentController.php" />
+        <option value="$PROJECT_DIR$/frontend/controllers/ProductController.php" />
       </list>
     </option>
   </component>
@@ -419,12 +417,12 @@
       <workItem from="1593071920932" duration="8375000" />
       <workItem from="1593134900661" duration="6540000" />
       <workItem from="1594523485468" duration="1188000" />
-      <workItem from="1596773311745" duration="10282000" />
+      <workItem from="1596773311745" duration="10526000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101224000" />
+    <option name="totallyTimeSpent" value="101468000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -552,13 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/controllers/ProductController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/configs/onepay/VPC_PHP_QueryDR.html" />
     <entry file="file://$PROJECT_DIR$/frontend/configs/onepay/ipn.php" />
     <entry file="file://$PROJECT_DIR$/frontend/configs/onepay/index.php" />
@@ -683,13 +674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="65" lean-forward="true" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/layouts/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
@@ -768,8 +752,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/controllers/PaymentController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="85" column="63" lean-forward="true" selection-start-line="85" selection-start-column="63" selection-end-line="85" selection-end-column="63" />
+        <state relative-caret-position="493">
+          <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="65" lean-forward="true" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
         </state>
       </provider>
     </entry>
