@@ -27,7 +27,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="gio-hang.html" class="cart-link">
+                        <a href="gio-hang-cua-ban.html" class="cart-link">
                             <i class="fa fa-cart-plus"></i>
                           <?php
                           $cart_total = 0;
@@ -71,13 +71,13 @@
             <!-- header left menu start -->
             <ul class="header-navigation" data-show-menu-on-mobile>
                 <li>
-                    <a href="/" class="home-link material-button submenu-toggle">
+                    <a href="index.php" class="home-link material-button submenu-toggle">
                         LOGO
                     </a>
 
                 </li>
                 <li>
-                    <a href="/" class="material-button submenu-toggle">Trang chủ</a>
+                    <a href="index.php" class="material-button submenu-toggle">Trang chủ</a>
                 </li>
 
                 <li>
@@ -95,7 +95,7 @@
                     <a href="product.html" class="material-button submenu-toggle">Sản phẩm</a>
                 </li>
                 <li>
-                    <a href="gio-hang.html" class="material-button submenu-toggle">Giỏ hàng</a>
+                    <a href="gio-hang-cua-ban.html" class="material-button submenu-toggle">Giỏ hàng</a>
                 </li>
                 <li>
                     <a href="login.html" class="material-button submenu-toggle">Đăng nhập</a>
@@ -107,7 +107,7 @@
             <!-- header right menu start -->
             <ul class="header-navigation">
                 <li>
-                    <a href="/gio-hang.html" class="">
+                    <a href="/gio-hang-cua-ban.html" class="">
                         <i class="fa fa-cart-plus"></i>
                         <span class="cart-amount-mobile">
                                 <?php echo $cart_total; ?>
@@ -143,7 +143,7 @@
         <!-- sidebar menu start -->
         <ul class="sidebar-menu">
             <li>
-                <a href="/" class="material-button submenu-toggle">Trang chủ</a>
+                <a href="index.php" class="material-button submenu-toggle">Trang chủ</a>
             </li>
             <li>
                 <a href="#" class="material-button submenu-toggle">Sản phẩm</a>

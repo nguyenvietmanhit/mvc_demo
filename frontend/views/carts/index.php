@@ -44,7 +44,7 @@
                         ?>
                       </td>
                       <td>
-                          <a class="content-product-a" href="xoa-san-pham/<?php echo $product_id ?>">
+                          <a class="content-product-a" href="xoa-san-pham/<?php echo $product_id ?>.html">
                               Xóa
                           </a>
                       </td>

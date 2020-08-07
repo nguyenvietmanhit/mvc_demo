@@ -56,7 +56,7 @@ class PaymentController extends Controller {
           if ($method == 1) {
             //gửi mail xác nhận đã thanh toán
             $this->sendMail($email);
-            $url_redirect = $_SERVER['SCRIPT_NAME'] . '/cam-on';
+            $url_redirect = $_SERVER['SCRIPT_NAME'] . '/cam-on.html';
             header("Location: $url_redirect");
             exit();
           }

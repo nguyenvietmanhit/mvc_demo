@@ -1,10 +1,13 @@
 <?php
 require_once 'controllers/Controller.php';
 require_once 'models/Product.php';
-class CartController extends Controller {
+
+class CartController extends Controller
+{
 
 
-  public function add() {
+  public function add()
+  {
 
     if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
       $_SESSION['error'] = 'ID sản phẩm ko hợp lệ';
@@ -32,8 +35,7 @@ class CartController extends Controller {
     //sau đó add sản phẩm đầu tiên vào
     if (!isset($_SESSION['cart'])) {
       $_SESSION['cart'][$product_id] = $product_cart;
-    }
-    //trường hợp tồn tại giỏ hàng r thì lại xảy ra 2 trường hợp
+    } //trường hợp tồn tại giỏ hàng r thì lại xảy ra 2 trường hợp
     else {
       //nếu sản phẩm thêm vào chưa tồn tại trong giỏ hàng, thì chỉ việc add mới vào
       //việc check xem sản phẩm đã tồn tại trong giỏ hàng hay chưa sẽ dựa vào key - hay chính là product id - của giỏ hàng, nếu tồn tại key
@@ -58,31 +60,24 @@ class CartController extends Controller {
 
   }
 
-  public function index() {
-//    echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
-//    print_r($_SESSION);
-//    echo "</pre>";
-//    echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
-//    print_r(count($_SESSION['cart']));
-//    echo "</pre>";
-//    die;
-//    die;
+  public function index()
+  {
     //nếu user update form giỏ hàng
     if (isset($_POST['submit'])) {
-      if (!isset($_SESSION['cart'])) {
-        return;
-      }
       //lặp mảng giỏ hàng để tiến hành update lại số lượng cho giỏ hàng
       foreach ($_SESSION['cart'] AS $product_id => $cart) {
         $_SESSION['cart'][$product_id]['quality'] = $_POST[$product_id];
       }
+      $_SESSION['success'] = 'Cập nhật giỏ hàng thành công';
     }
+
     $this->content = $this->render('views/carts/index.php');
     require_once 'views/layouts/main.php';
   }
 
 
-  public function delete() {
+  public function delete()
+  {
     if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
       $_SESSION['error'] = 'Không tồn tại id';
       //sau khi xử lý xong giỏ hàng thì chuyển hướng về trang danh sách giỏ hàng
@@ -98,6 +93,8 @@ class CartController extends Controller {
     if (empty($_SESSION['cart'])) {
       unset($_SESSION['cart']);
     }
+
+    $_SESSION['success'] = 'Xóa sản phẩm khỏi giỏ hàng thành công';
 
     //chuyển hướng về trang giỏ hàng
     //sau khi xử lý xong giỏ hàng thì chuyển hướng về trang danh sách giỏ hàng
