@@ -66,6 +66,6 @@ class ProductController extends Controller {
     $this->content = $this->render('views/products/detail.php', [
       'product' => $product
     ]);
-    require_once 'views/layouts/main_product.php';
+    require_once 'views/layouts/main.php';
   }
 }
