@@ -1,5 +1,5 @@
 <?php
-require_once 'configs/database.php';
+require_once 'configs/Database.php';
 class Model {
   public $connection;
 
@@ -9,7 +9,7 @@ class Model {
 
   public function getConnection() {
     try {
-      $connection = new PDO(DB_DSN, DB_USERNAME, DB_PASSWORD);
+      $connection = new PDO(Database::DB_DSN, Database::DB_USERNAME, Database::DB_PASSWORD);
     } catch (PDOException $e) {
       die("Kết nối CSDL theo PDO thất bại: " . $e->getMessage());
     }

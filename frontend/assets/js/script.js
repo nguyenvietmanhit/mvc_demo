@@ -50,9 +50,11 @@ var showHideHeader = function (e) {
     } else {
         if (currentScroll <= scrollPos) {
             $('header').removeClass('hide');
+            $('.header-top').removeClass('hide');
         }
         else {
             $('header').addClass('hide');
+            $('.header-top').addClass('hide');
             $('.search-bar').removeClass('active');
         }
     }
@@ -64,20 +66,20 @@ var showHideHeader = function (e) {
 
 //add material wave effect to element
 var addWaveEffect = function (self, e) {
-    var wave = '.wave-effect',
-        btnWidth = self.outerWidth(),
-        x = e.offsetX,
-        y = e.offsetY;
-
-    self.prepend('<span class="wave-effect"></span>')
-
-    $(wave).css({'top': y, 'left': x}).animate({
-        opacity: '0',
-        width: btnWidth * 2,
-        height: btnWidth * 2
-    }, 500, function () {
-        self.find(wave).remove()
-    })
+    // var wave = '.wave-effect',
+    //     btnWidth = self.outerWidth(),
+    //     x = e.offsetX,
+    //     y = e.offsetY;
+    //
+    // self.prepend('<span class="wave-effect"></span>')
+    //
+    // $(wave).css({'top': y, 'left': x}).animate({
+    //   opacity: '0',
+    //   width: btnWidth * 2,
+    //   height: btnWidth * 2
+    // }, 500, function () {
+    //   self.find(wave).remove()
+    // })
 }
 
 //making sidebars fix to screen top.
@@ -185,7 +187,7 @@ $(document).ready(function () {
     createMobileMenu();
 
     //first show header submenus
-    $('.header-submenu').show();
+    // $('.header-submenu').show();
 
     //close sidebar panel, clicked overlay and close sidebar button.
     $('.overlay, .sidebar-toggle-button').on('click', function () {
@@ -212,12 +214,15 @@ $(document).ready(function () {
         });
     }
 
-    $('.header-submenu').parent().find('a:first').on('click', function (e) {
+    $('.submenu-toggle').on('mouseenter', function (e) {
         e.stopPropagation();
         e.preventDefault();
-        $(this).parents('.header-navigation').find('.header-submenu').not($(this).parents('li').find('.header-submenu')).removeClass('active');
-        $(this).parents('li').find('.header-submenu').show().toggleClass('active');
+        $('.header-submenu').removeClass('active');
+        $(this).next('.header-submenu').addClass('active').show();
+    });
 
+    $('.header-submenu').on('mouseleave', function (e) {
+        $(this).removeClass('active').hide();
     });
 
     $('.sidebar-menu > li > a').on('click', function (e) {
@@ -244,7 +249,9 @@ $(document).ready(function () {
     makeParallax.call($(window));
 
     $('.material-button').on('click', function (e) {
-        addWaveEffect($(this), e);
+        $('.material-button').not($(this)).next('.header-submenu').hide();
+        // addWaveEffect($(this), e);
+        $(this).next('.header-submenu').toggleClass('active');
     });
 
     $(document).on('click', function (event) {
@@ -261,6 +268,17 @@ $(document).ready(function () {
         }
     });
 
+    //sidebar boxed posts scripts
+    $('.team-link').on('mouseover', function (e) {
+        $(this).find('.service-img').addClass('service-img-hover');
+        $(this).find('.team-more').addClass('team-more-hover');
+    });
+
+    $('.team-link').on('mouseleave', function (e) {
+        $(this).find('.service-img').removeClass('service-img-hover');
+        $(this).find('.team-more').removeClass('team-more-hover');
+    });
+
     //trigger scrollable elements actions
     $(window).on('scroll', function () {
         showHideHeader.call(this);
@@ -268,7 +286,7 @@ $(document).ready(function () {
         makeParallax.call(this);
     });
 
-    //sidebar boxed posts scripts    
+    //sidebar boxed posts scripts
     $('.w-boxed-post ul li').on('mouseover', function (e) {
         $(this).parent().find('li').removeClass();
     });
@@ -303,13 +321,55 @@ $(document).on('click', '.m-modal-close, .m-modal-overlay', function (e) {
 });
 
 //Owl carousel initializing
-$('#postCarousel').owlCarousel({
+// $('#postCarousel').owlCarousel({
+//   loop: true,
+//   dots: true,
+//   nav: true,
+//   navText: ['<span><i class="material-icons">&#xE314;</i></span>', '<span><i class="material-icons">&#xE315;</i></span>'],
+//   items: 1,
+//   margin: 20
+// });
+
+//Owl carousel initializing
+$('.map-slideshow').owlCarousel({
     loop: true,
     dots: true,
+    items: 1,
+    margin: 20,
+    autoplay: true
+})
+
+$('.act-carousel').owlCarousel({
+    centerMode: true,
+    loop: true,
+    dots: true,
+    margin: 10,
     nav: true,
     navText: ['<span><i class="material-icons">&#xE314;</i></span>', '<span><i class="material-icons">&#xE315;</i></span>'],
-    items: 1,
-    margin: 20
+    items: 3,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        600: {
+            items: 2,
+        },
+        1000: {
+            items: 3,
+        }
+    }
+})
+
+// $('.act-carousel').owlCarousel();
+
+var url_split = window.location.pathname.split('/');
+var path_info = url_split.pop();
+
+$('.header-navigation a').each(function () {
+    var href = $(this).attr('href');
+    if (path_info.indexOf(href) >= 0) {
+        $(this).addClass('menu-active');
+    }
 })
 
 //widget carousel initialize
@@ -319,9 +379,53 @@ $('#widgetCarousel').owlCarousel({
     items: 1
 })
 
-$(document).ready(function(){
+//widget carousel initialize
+$('#myCarousel1').owlCarousel({
+    dots: true,
+    nav: false,
+    items: 1
+})
 
-    $(window).scroll(function(){
+$(document).ready(function () {
+
+    $('.add-to-cart').each(function () {
+        $(this).click(function () {
+            event.preventDefault();
+            var product_id = $(this).attr('data-id');
+            $.ajax({
+                url: window.location.href,
+                method: 'POST',
+                data: {
+                    product_id: product_id,
+                    is_ajax: true,
+                },
+                success: function (data) {
+                    $('.ajax-message').html('Thêm sản phẩm vào giỏ thành công').addClass('ajax-message-active');
+
+                    setTimeout(function () {
+                        $('.ajax-message').removeClass('ajax-message-active');
+                    }, 3000);
+                    var cart_total = $('.cart-amount').text();
+                    cart_total++;
+                    $('.cart-amount').text(cart_total);
+                    $('.cart-amount-mobile').text(cart_total);
+                }
+            })
+        })
+    })
+
+
+
+    //show more text
+    $(".detail-description").showMore({
+        minheight: 1350, // measured in px
+        buttontxtmore: 'Đọc thêm',
+        buttontxtless: 'Rút gọn',
+        buttoncss: 'read-more',
+        animationspeed: 1500
+    });
+
+    $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.scrollup').fadeIn();
         } else {
@@ -329,9 +433,19 @@ $(document).ready(function(){
         }
     });
 
-    $('.scrollup').click(function(){
-        $("html, body").animate({ scrollTop: 0 }, 600);
+    $('.scrollup').click(function () {
+        $("html, body").animate({scrollTop: 0}, 600);
         return false;
     });
+
+    $('.click-scroll-service').click(function () {
+        $('.header-submenu').hide();
+        $(this).next('.header-submenu').show();
+        $('html, body').animate({
+            scrollTop: $(".service-info").offset().top
+        }, 1000);
+    });
+
+    $('[data-toggle="tooltip"]').tooltip()
 
 });
