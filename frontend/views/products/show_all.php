@@ -64,7 +64,7 @@ require_once 'helpers/Helper.php';
                 </div>
                 <div class="form-group">
                     <input type="submit" name="filter" value="Filter" class="btn btn-primary"/>
-                    <a href="san-pham" class="btn btn-default">Xóa filter</a>
+                    <a href="danh-sach-san-pham.html" class="btn btn-default">Xóa filter</a>
                 </div>
             </form>
         </div>
