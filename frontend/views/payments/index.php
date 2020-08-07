@@ -65,7 +65,7 @@ require_once 'helpers/Helper.php';
                               </td>
                               <td>
                               <span class="product-amount">
-                                  <?php echo $cart['quality']; ?>
+                                  <?php echo $cart['quantity']; ?>
                               </span>
                               </td>
                               <td>
@@ -76,7 +76,7 @@ require_once 'helpers/Helper.php';
                               <td>
                               <span class="product-price-payment">
                                   <?php
-                                  $price_total = $cart['price'] * $cart['quality'];
+                                  $price_total = $cart['price'] * $cart['quantity'];
                                   $total += $price_total;
                                   ?>
                                 <?php echo number_format($price_total, 0, '.', '.') ?> vnđ

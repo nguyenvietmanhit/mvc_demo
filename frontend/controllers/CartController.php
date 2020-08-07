@@ -27,7 +27,7 @@ class CartController extends Controller
       'name' => $product['title'],
       'price' => $product['price'],
       'avatar' => $product['avatar'],
-      'quality' => 1, //mỗi lần click vào link thêm giỏ hàng tương đương với số lượng tăng 1
+      'quantity' => 1, //mỗi lần click vào link thêm giỏ hàng tương đương với số lượng tăng 1
     ];
 
     //giỏ hàng sẽ dùng cơ chế session để lưu, chứ sẽ ko lưu vào csdl để tiết kiệm dữ liệu
@@ -46,7 +46,7 @@ class CartController extends Controller
         $_SESSION['cart'][$product_id] = $product_cart;
       } else {
         //nếu đã tồn tại thì chỉ update số lượng của sản phẩm đó dựa theo key
-        $_SESSION['cart'][$product_id]['quality']++;
+        $_SESSION['cart'][$product_id]['quantity']++;
       }
     }
 
@@ -66,7 +66,7 @@ class CartController extends Controller
     if (isset($_POST['submit'])) {
       //lặp mảng giỏ hàng để tiến hành update lại số lượng cho giỏ hàng
       foreach ($_SESSION['cart'] AS $product_id => $cart) {
-        $_SESSION['cart'][$product_id]['quality'] = $_POST[$product_id];
+        $_SESSION['cart'][$product_id]['quantity'] = $_POST[$product_id];
       }
       $_SESSION['success'] = 'Cập nhật giỏ hàng thành công';
     }

@@ -35,7 +35,7 @@ class PaymentController extends Controller {
         $order_model->note = $note;
         $price_total = 0;
         foreach ($_SESSION['cart'] as $cart) {
-          $price_total += $cart['quality'] * $cart['price'];
+          $price_total += $cart['quantity'] * $cart['price'];
         }
         $order_model->price_total = $price_total;
         //mặc định là chưa thanh toán
@@ -48,13 +48,25 @@ class PaymentController extends Controller {
           $order_detail->order_id = $order_id;
           foreach ($_SESSION['cart'] AS $product_id => $cart) {
             $order_detail->product_id = $product_id;
-            $order_detail->quality = $cart['quality'];
+            $order_detail->quantity = $cart['quantity'];
             $order_detail->insert();
           }
 
           //trường hợp chọn phương thức thanh toán là COD thì chuyển tới trang cảm ơn
           if ($method == 1) {
+            $order_model->id = $order_id;
+//            echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
+//            print_r($order_model);
+//            echo "</pre>";
+//            die;
             //gửi mail xác nhận đã thanh toán
+            //lấy nội dung mail từ template có sẵn
+            $body = $this->render('views/payments/mail_template_order.php', ['order_model' => $order_model]);
+            echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
+            print_r($body);
+            echo "</pre>";
+            die;
+
             $this->sendMail($email);
             $url_redirect = $_SERVER['SCRIPT_NAME'] . '/cam-on.html';
             header("Location: $url_redirect");
@@ -67,8 +79,6 @@ class PaymentController extends Controller {
 //          unset($_SESSION['cart']);
           $_SESSION['order'] = $order;
           $_SESSION['success'] = 'Lưu thông tin thanh toán thành công';
-          //gửi mail
-          $this->sendMail($email);
           //chuyển hướng sang màn hình chọn phương thức thanh toán
           $url_redirect = $_SERVER['SCRIPT_NAME'] . '/phuong-thuc-thanh-toan.html';
           header("Location: $url_redirect");
@@ -87,17 +97,17 @@ class PaymentController extends Controller {
 
   public function thank() {
     $this->content = $this->render('views/payments/thank.php');
-    require_once 'views/layouts/main_product.php';
+    require_once 'views/layouts/main.php';
   }
 
   public function payment() {
 
     $this->content = $this->render('configs/nganluong/index.php');
 
-    require_once 'views/layouts/main_product.php';
+    require_once 'views/layouts/main.php';
   }
 
-  protected function sendMail($email) {
+  protected function sendMail($email, $body = '') {
     // Instantiation and passing `true` enables exceptions
     $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
 
@@ -134,8 +144,8 @@ class PaymentController extends Controller {
 
       // Content
       $mail->isHTML(true);                                  // Set email format to HTML
-      $mail->Subject = 'Tiêu đề mail';
-      $mail->Body    = 'Cảm ơn bạn đã đặt hàng';
+      $mail->Subject = 'Xác nhận thông tin thanh toán';
+      $mail->Body    = $body;
 //    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
       $mail->send();

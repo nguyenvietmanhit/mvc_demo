@@ -33,7 +33,7 @@
                           $cart_total = 0;
                           if (isset($_SESSION['cart'])) {
                             foreach ($_SESSION['cart'] AS $cart) {
-                              $cart_total += $cart['quality'];
+                              $cart_total += $cart['quantity'];
                             }
                           }
                           ?>

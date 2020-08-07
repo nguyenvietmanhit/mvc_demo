@@ -31,14 +31,14 @@
                       <td>
 <!--                      cần khéo léo đặt name cho input số lượng, để khi xử lý submit form update lại giỏ hànTin nổi bậtg sẽ đơn giản hơn    -->
                           <input type="number" min="0" name="<?php echo $product_id?>" class="product-amount form-control"
-                                 value="<?php echo $product['quality'] ?>">
+                                 value="<?php echo $product['quantity'] ?>">
                       </td>
                       <td>
                         <?php echo number_format($product['price']); ?>
                       </td>
                       <td>
                         <?php
-                        $product_price = $product['price'] * $product['quality'];
+                        $product_price = $product['price'] * $product['quantity'];
                         $total_price += $product_price;
                         echo number_format($product_price);
                         ?>
