@@ -6,8 +6,10 @@ require_once 'configs/PHPMailer/src/PHPMailer.php';
 require_once 'configs/PHPMailer/src/SMTP.php';
 require_once 'configs/PHPMailer/src/Exception.php';
 
-class PaymentController extends Controller {
-  public function index() {
+class PaymentController extends Controller
+{
+  public function index()
+  {
     //nếu giỏ hàng trống thì ko cho phép truy cập trang này
     if (!isset($_SESSION['cart'])) {
       $_SESSION['error'] = 'Bạn chưa có sản phẩm nào trong giỏ hàng';
@@ -51,23 +53,13 @@ class PaymentController extends Controller {
             $order_detail->quantity = $cart['quantity'];
             $order_detail->insert();
           }
-
           //trường hợp chọn phương thức thanh toán là COD thì chuyển tới trang cảm ơn
           if ($method == 1) {
             $order_model->id = $order_id;
-//            echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
-//            print_r($order_model);
-//            echo "</pre>";
-//            die;
-            //gửi mail xác nhận đã thanh toán
             //lấy nội dung mail từ template có sẵn
-            $body = $this->render('views/payments/mail_template_order.php', ['order_model' => $order_model]);
-            echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
-            print_r($body);
-            echo "</pre>";
-            die;
-
-            $this->sendMail($email);
+            $body = $this->render('views/payments/mail_template_order.php', ['order' => $order_model]);
+//gửi mail xác nhận đã thanh toán
+            $this->sendMail($email, $body);
             $url_redirect = $_SERVER['SCRIPT_NAME'] . '/cam-on.html';
             header("Location: $url_redirect");
             exit();
@@ -95,19 +87,22 @@ class PaymentController extends Controller {
     require_once 'views/layouts/main.php';
   }
 
-  public function thank() {
+  public function thank()
+  {
     $this->content = $this->render('views/payments/thank.php');
     require_once 'views/layouts/main.php';
   }
 
-  public function payment() {
+  public function payment()
+  {
 
     $this->content = $this->render('configs/nganluong/index.php');
 
     require_once 'views/layouts/main.php';
   }
 
-  protected function sendMail($email, $body = '') {
+  protected function sendMail($email, $body = '')
+  {
     // Instantiation and passing `true` enables exceptions
     $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
 
@@ -117,17 +112,17 @@ class PaymentController extends Controller {
       $mail->isSMTP();
       // Send using SMTP
       //host miễn phí của gmail
-      $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
-      $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+      $mail->Host = 'smtp.gmail.com';                    // Set the SMTP server to send through
+      $mail->SMTPAuth = true;                                   // Enable SMTP authentication
       //username gmail của chính bạn
-      $mail->Username   = 'nguyenvietmanhit@gmail.com';                     // SMTP username
+      $mail->Username = 'nguyenvietmanhit@gmail.com';                     // SMTP username
       //password cho ứng dụng, ko phải password của tài khoảng
 //    đăng nhập gmail
 //    tạo mật khẩu ứng dụng tại link:
 // https://myaccount.google.com/ - menu Bảo mật
-      $mail->Password   = 'yichffdzhetottuw';                               // SMTP password
+      $mail->Password = 'yichffdzhetottuw';                               // SMTP password
       $mail->SMTPSecure = \PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-      $mail->Port       = 587;                                    // TCP port to connect to
+      $mail->Port = 587;                                    // TCP port to connect to
 
       //Recipients
       $mail->setFrom('abc@gmail.com', 'ABC');
@@ -145,7 +140,7 @@ class PaymentController extends Controller {
       // Content
       $mail->isHTML(true);                                  // Set email format to HTML
       $mail->Subject = 'Xác nhận thông tin thanh toán';
-      $mail->Body    = $body;
+      $mail->Body = $body;
 //    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
       $mail->send();

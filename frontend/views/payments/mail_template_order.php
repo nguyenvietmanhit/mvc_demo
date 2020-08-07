@@ -1,15 +1,11 @@
 <?php
-echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
-print_r($_SESSION);
-echo "</pre>";
-die;
 ?>
-<h2>Cảm ơn bạn đã đặt hàng, <b><?php echo $order_model->fullname; ?></b></h2>
+<h2>Cảm ơn bạn đã đặt hàng, <b><?php echo $order->fullname; ?></b></h2>
 <p>
-    Mã đơn hàng của bạn: <b>#<?php echo $order_model->id; ?></b>
+    Mã đơn hàng của bạn: <b>#<?php echo $order->id; ?></b>
 </p>
 <p>
-    Số tiền cần thanh toán: <b><?php echo number_format($order_model->price_total, 0, '.', '.'); ?>đ</b>
+    Số tiền cần thanh toán: <b><?php echo number_format($order->price_total, 0, '.', '.'); ?>đ</b>
 </p>
 <div>
     <p>
@@ -20,7 +16,7 @@ die;
             112121212121111111 <br/>
             Chi nhành Hà Nội <br/>
         </b>
-        Nội dung chuyển khoản: Thanh toán đơn hàng #<?php echo $order_model->id; ?>
+        Nội dung chuyển khoản: Thanh toán đơn hàng #<?php echo $order->id; ?>
     </p>
     <p>
         - Hoặc bạn có thể liên hệ trực tiếp với chúng tôi qua số điện thoại:
@@ -36,10 +32,10 @@ die;
         <th>Địa chỉ</th>
     </tr>
     <tr>
-        <td><?php echo $order_model->fullname; ?></td>
-        <td><?php echo $order_model->mobile; ?></td>
-        <td><?php echo $order_model->email; ?></td>
-        <td><?php echo $order_model->address; ?></td>
+        <td><?php echo $order->fullname; ?></td>
+        <td><?php echo $order->mobile; ?></td>
+        <td><?php echo $order->email; ?></td>
+        <td><?php echo $order->address; ?></td>
     </tr>
 </table>
 <br/>
@@ -89,7 +85,7 @@ die;
             Tổng giá trị đơn hàng:
             <span class="product-price">
                       <?php
-                      echo number_format($order_model->price_total, 0, '.', '.');
+                      echo number_format($order->price_total, 0, '.', '.');
                       ?>đ
                     </span>
         </td>

@@ -92,7 +92,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="product.html" class="material-button submenu-toggle">Sản phẩm</a>
+                    <a href="danh-sach-san-pham.html" class="material-button submenu-toggle">Sản phẩm</a>
                 </li>
                 <li>
                     <a href="gio-hang-cua-ban.html" class="material-button submenu-toggle">Giỏ hàng</a>
