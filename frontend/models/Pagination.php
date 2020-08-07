@@ -24,9 +24,9 @@ class Pagination
     //giới hạn bản ghi trên 1 trang
     'limit' => 0,
     //controller xử lý phân trang
-    'controller' => '',
+//    'controller' => '',
     //action xử lý phân trang
-    'action' => '',
+//    'action' => '',
     //chế độ hiển thị phân trang (show ra tất cả page hay ko)
     'full_mode' => FALSE
   ];
@@ -80,11 +80,11 @@ class Pagination
     if ($current_page >= 2) {
       //lấy ra các giá trị của controller và action
       //từ thuộc tính params
-      $controller = $this->params['controller'];
-      $action = $this->params['action'];
+//      $controller = $this->params['controller'];
+//      $action = $this->params['action'];
       $page = $current_page - 1;
-      $prev_url =
-        "index.php?controller=$controller&action=$action&page=$page";
+      $prev_url = $_SERVER['REQUEST_URI'];
+      $prev_url = preg_replace('/[0-9]+/', $page, $prev_url);
       //tạo cấu trúc li cho biến $prev_page
       $prev_page = "<li><a href='$prev_url'>Prev</a></li>";
     }
@@ -101,11 +101,11 @@ class Pagination
     $current_page = $this->getCurrentPage();
     $total_page = $this->getTotalPage();
     if ($current_page < $total_page) {
-      $controller = $this->params['controller'];
-      $action = $this->params['action'];
+//      $controller = $this->params['controller'];
+//      $action = $this->params['action'];
       $page = $current_page + 1;
-      $next_url =
-        "index.php?controller=$controller&action=$action&page=$page";
+      $next_url = $_SERVER['REQUEST_URI'];
+      $next_url = preg_replace('/[0-9]+/', $page, $next_url);
       $next_page = "<li><a href='$next_url'>Next</a></li>";
     }
     return $next_page;
@@ -128,18 +128,19 @@ class Pagination
     $data .= $prev_link;
 
     //tạo các biến controller, action lấy từ thuộc tính params
-    $controller = $this->params['controller'];
-    $action = $this->params['action'];
+//    $controller = $this->params['controller'];
+//    $action = $this->params['action'];
 
     //nếu như hiển thị phân trang theo kiểu ..
     // -> full_mode = FALSE
-    $full_mode = $this->params['full_mode'];
+//    $full_mode = $this->params['full_mode'];
     if ($this->params['full_mode'] == FALSE) {
       for ($page = 1; $page <= $total_page; $page++) {
         $current_page = $this->getCurrentPage();
         //hiển thị trang 1, trang cuối, trang ngay trước trang hiện tại và trang ngay sau trang hiện tại
         if ($page == 1 || $page == $total_page || $page  == $current_page - 1 || $page == $current_page + 1) {
-          $page_url = "index.php?controller=$controller&action=$action&page=$page";
+          $page_url = $_SERVER['REQUEST_URI'];
+          $page_url = preg_replace('/[0-9]+/', $page, $page_url);
           $data .= "<li><a href='$page_url'>$page</a></li>";
         }
         //nếu là trang hiện tại thì sẽ ko có link
@@ -165,8 +166,8 @@ class Pagination
         if ($current_page == $page) {
           $data .= "<li class='active'><a href='#'>$page</a></li>";
         } else {
-          $page_url
-            = "index.php?controller=$controller&action=$action&page=$page";
+          $page_url = $_SERVER['REQUEST_URI'];
+          $page_url = preg_replace('/[0-9]+/', $page, $page_url);
           $data .= "<li><a href='$page_url'>$page</a></li>";
         }
       }

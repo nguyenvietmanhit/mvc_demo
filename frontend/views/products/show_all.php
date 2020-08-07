@@ -26,6 +26,7 @@ require_once 'helpers/Helper.php';
                       <?php echo $category['name']; ?>
                         <br/>
                     <?php endforeach; ?>
+
                   </div>
               <?php endif; ?>
 
@@ -98,6 +99,8 @@ require_once 'helpers/Helper.php';
                     </span>
                     </div>
                 <?php endforeach; ?>
+
+                <?php echo $pagination; ?>
               </div>
           <?php endif; ?>
         </div>

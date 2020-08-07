@@ -2,8 +2,13 @@
 require_once 'controllers/Controller.php';
 require_once 'models/Product.php';
 require_once 'models/Category.php';
+require_once 'models/Pagination.php';
 class ProductController extends Controller {
   public function showAll() {
+//    echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
+//    print_r($_REQUEST);
+//    echo "</pre>";
+//    die;
     $params = [];
     //nếu user có hành động filter
     if (isset($_POST['filter'])) {
@@ -35,6 +40,15 @@ class ProductController extends Controller {
         $params['price'] = $str_price;
       }
     }
+
+    $params_pagination = [
+      'total' => 5,
+      'limit' => 1,
+      'full_mode' => FALSE,
+    ];
+    //xử lý phân trang
+    $pagination_model = new Pagination($params_pagination);
+    $pagination = $pagination_model->getPagination();
     //get products
     $product_model = new Product();
     $products = $product_model->getProductInHomePage($params);
@@ -46,6 +60,7 @@ class ProductController extends Controller {
     $this->content = $this->render('views/products/show_all.php', [
       'products' => $products,
       'categories' => $categories,
+      'pagination' => $pagination,
     ]);
 
     require_once 'views/layouts/main.php';
