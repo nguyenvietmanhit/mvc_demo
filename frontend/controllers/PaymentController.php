@@ -53,6 +53,9 @@ class PaymentController extends Controller
             $order_detail->quantity = $cart['quantity'];
             $order_detail->insert();
           }
+
+          //xóa thông tin giỏ hàng đi
+//          unset($_SESSION['cart']);
           //trường hợp chọn phương thức thanh toán là COD thì chuyển tới trang cảm ơn
           if ($method == 1) {
             $order_model->id = $order_id;
@@ -76,9 +79,7 @@ class PaymentController extends Controller
           header("Location: $url_redirect");
           exit();
         } else {
-          $_SESSION['error'] = 'Lưu thông tin thanh toán thất bại';
-          header("Location: thanh-toan.html");
-          exit();
+          $this->error = 'Lưu thông tin thanh toán thất bại';
         }
       }
     }
@@ -89,6 +90,8 @@ class PaymentController extends Controller
 
   public function thank()
   {
+    //xóa thông tin giỏ hàng đi
+    unset($_SESSION['cart']);
     $this->content = $this->render('views/payments/thank.php');
     require_once 'views/layouts/main.php';
   }
@@ -108,7 +111,7 @@ class PaymentController extends Controller
 
     try {
       //Server settings
-      $mail->SMTPDebug = \PHPMailer\PHPMailer\SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+      $mail->SMTPDebug = \PHPMailer\PHPMailer\SMTP::DEBUG_OFF;                      // Enable verbose debug output
       $mail->isSMTP();
       // Send using SMTP
       //host miễn phí của gmail
