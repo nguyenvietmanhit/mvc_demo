@@ -1,3 +1,4 @@
+
 #categories
 CREATE TABLE IF NOT EXISTS categories (
 id INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -64,7 +65,7 @@ updated_at DATETIME COMMENT "Ngày cập nhật cuối"
 CREATE TABLE IF NOT EXISTS order_details(
 order_id INT(11) COMMENT "Id của order tương ứng, là khóa ngoại liên kết với bảng orders",
 product_id INT(11) COMMENT "Id của product tương ứng, là khóa ngoại liên kết với bảng products",
-quality INT(11) COMMENT "Số sản phẩm đã đặt"
+quantity INT(11) COMMENT "Số sản phẩm đã đặt"
 );
 #users
 CREATE TABLE IF NOT EXISTS users (
