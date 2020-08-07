@@ -28,6 +28,7 @@
     <div class="form-group">
         <label for="avatar">Ảnh đại diện</label>
         <input type="file" name="avatar" value="" class="form-control" id="avatar"/>
+        <img src="#" id="img-preview" style="display: none" width="100" height="100"/>
       <?php if (!empty($product['avatar'])): ?>
           <img height="80" src="assets/uploads/<?php echo $product['avatar'] ?>"/>
       <?php endif; ?>

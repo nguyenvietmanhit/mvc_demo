@@ -23,6 +23,7 @@
     <div class="form-group">
         <label for="avatar">Ảnh đại diện</label>
         <input type="file" name="avatar" value="" class="form-control" id="avatar"/>
+        <img src="#" id="img-preview" style="display: none" width="100" height="100"/>
     </div>
     <div class="form-group">
         <label for="price">Giá</label>

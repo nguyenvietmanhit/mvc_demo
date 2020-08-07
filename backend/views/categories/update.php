@@ -13,6 +13,7 @@
         <div class="form-group">
             <label>Ảnh đại diện</label>
             <input type="file" name="avatar" class="form-control"/>
+            <img src="#" id="img-preview" style="display: none" width="100" height="100"/>
         </div>
         <?php if (!empty($category['avatar'])): ?>
             <img src="assets/uploads/<?php echo $category['avatar']; ?>" height="50"/>

@@ -8,7 +8,8 @@
 
     <div class="form-group">
         <label>Ảnh đại diện</label>
-        <input type="file" name="avatar" class="form-control"/>
+        <input type="file" name="avatar" class="form-control" id="category-avatar"/>
+        <img src="#" id="img-preview" style="display: none" width="100" height="100"/>
     </div>
 
     <div class="form-group">
