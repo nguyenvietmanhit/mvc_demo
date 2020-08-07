@@ -16,6 +16,7 @@ class CategoryController extends Controller
       'query_string' => 'page',
       'controller' => 'category',
       'action' => 'index',
+      'full_mode' => FALSE,
     ];
 //    mặc đinh page hiện tại là 1
     $page = 1;
