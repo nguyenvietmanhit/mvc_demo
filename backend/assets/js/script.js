@@ -7,7 +7,6 @@ $(document).ready(function () {
       reader.onload = function (e) {
         $('#img-preview').attr('src', e.target.result).show();
       }
-
       reader.readAsDataURL(input.files[0]); // convert to base64 string
     }
   }

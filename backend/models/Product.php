@@ -9,6 +9,7 @@ class Product extends Model
     public $title;
     public $avatar;
     public $price;
+    public $amount;
     public $summary;
     public $content;
     public $status;
@@ -94,13 +95,14 @@ class Product extends Model
     public function insert()
     {
         $obj_insert = $this->connection
-            ->prepare("INSERT INTO products(category_id, title, avatar, price, summary, content, status) 
-                                VALUES (:category_id, :title, :avatar, :price, :summary, :content, :status)");
+            ->prepare("INSERT INTO products(category_id, title, avatar, price, amount, summary, content, status) 
+                                VALUES (:category_id, :title, :avatar, :price, :amount, :summary, :content, :status)");
         $arr_insert = [
             ':category_id' => $this->category_id,
             ':title' => $this->title,
             ':avatar' => $this->avatar,
             ':price' => $this->price,
+            ':amount' => $this->amount,
             ':summary' => $this->summary,
             ':content' => $this->content,
             ':status' => $this->status,
@@ -127,7 +129,7 @@ class Product extends Model
     public function update($id)
     {
         $obj_update = $this->connection
-            ->prepare("UPDATE products SET category_id=:category_id, title=:title, avatar=:avatar, price=:price, 
+            ->prepare("UPDATE products SET category_id=:category_id, title=:title, avatar=:avatar, price=:price,amount=:amount 
             summary=:summary, content=:content, status=:status, updated_at=:updated_at WHERE id = $id
 ");
         $arr_update = [
@@ -135,6 +137,7 @@ class Product extends Model
             ':title' => $this->title,
             ':avatar' => $this->avatar,
             ':price' => $this->price,
+            ':amount' => $this->amount,
             ':summary' => $this->summary,
             ':content' => $this->content,
             ':status' => $this->status,

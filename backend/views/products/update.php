@@ -40,6 +40,12 @@
                class="form-control" id="price"/>
     </div>
     <div class="form-group">
+        <label for="amount">Số lượng</label>
+        <input type="number" name="amount"
+               value="<?php echo isset($_POST['amount']) ? $_POST['amount'] : $product['amount'] ?>"
+               class="form-control" id="amount"/>
+    </div>
+    <div class="form-group">
         <label for="summary">Mô tả ngắn sản phẩm</label>
         <textarea name="summary" id="summary"
                   class="form-control"><?php echo isset($_POST['summary']) ? $_POST['summary'] : $product['summary'] ?></textarea>

@@ -43,6 +43,7 @@ require_once 'helpers/Helper.php';
         <th>Title</th>
         <th>Avatar</th>
         <th>Price</th>
+        <th>Amount</th>
         <th>Status</th>
         <th>Created_at</th>
         <th>Updated_at</th>
@@ -60,6 +61,7 @@ require_once 'helpers/Helper.php';
                     <?php endif; ?>
                 </td>
                 <td><?php echo number_format($product['price']) ?></td>
+                <td><?php echo $product['amount'] ?></td>
                 <td><?php echo Helper::getStatusText($product['status']) ?></td>
                 <td><?php echo date('d-m-Y H:i:s', strtotime($product['created_at'])) ?></td>
                 <td><?php echo !empty($product['updated_at']) ? date('d-m-Y H:i:s', strtotime($product['updated_at'])) : '--' ?></td>

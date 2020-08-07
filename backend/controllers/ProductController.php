@@ -54,6 +54,7 @@ class ProductController extends Controller
             $category_id = $_POST['category_id'];
             $title = $_POST['title'];
             $price = $_POST['price'];
+            $amount = $_POST['amount'];
             $summary = $_POST['summary'];
             $content = $_POST['content'];
             $status = $_POST['status'];
@@ -96,6 +97,7 @@ class ProductController extends Controller
                 $product_model->title = $title;
                 $product_model->avatar = $filename;
                 $product_model->price = $price;
+                $product_model->amount = $amount;
                 $product_model->summary = $summary;
                 $product_model->content = $content;
                 $product_model->status = $status;
@@ -154,6 +156,7 @@ class ProductController extends Controller
             $category_id = $_POST['category_id'];
             $title = $_POST['title'];
             $price = $_POST['price'];
+            $amount = $_POST['amount'];
             $summary = $_POST['summary'];
             $content = $_POST['content'];
             $status = $_POST['status'];
@@ -197,6 +200,7 @@ class ProductController extends Controller
                 $product_model->title = $title;
                 $product_model->avatar = $filename;
                 $product_model->price = $price;
+                $product_model->amount = $amount;
                 $product_model->summary = $summary;
                 $product_model->content = $content;
                 $product_model->status = $status;
