@@ -62,7 +62,7 @@
               <tr>
                   <td colspan="5" class="product-payment">
                       <input type="submit" name="submit" value="Cập nhật lại giá" class="btn btn-primary">
-                      <a href="thanh-toan" class="btn btn-success">Đến trang thanh toán</a>
+                      <a href="thanh-toan.html" class="btn btn-success">Đến trang thanh toán</a>
                   </td>
               </tr>
               </tbody>

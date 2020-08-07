@@ -87,7 +87,7 @@ class CartController extends Controller {
       $_SESSION['error'] = 'Không tồn tại id';
       //sau khi xử lý xong giỏ hàng thì chuyển hướng về trang danh sách giỏ hàng
       //do đang sử dụng rewwrite url nên các url khi chuyển hướng cần có cả đường dẫn ứng dụng
-      $url_redirect = $_SERVER['SCRIPT_NAME'] . '/gio-hang-cua-ban';
+      $url_redirect = $_SERVER['SCRIPT_NAME'] . '/gio-hang-cua-ban.html';
       header("Location: $url_redirect");
       exit();
     }
@@ -102,7 +102,7 @@ class CartController extends Controller {
     //chuyển hướng về trang giỏ hàng
     //sau khi xử lý xong giỏ hàng thì chuyển hướng về trang danh sách giỏ hàng
     //do đang sử dụng rewwrite url nên các url khi chuyển hướng cần có cả đường dẫn ứng dụng
-    $url_redirect = $_SERVER['SCRIPT_NAME'] . '/gio-hang-cua-ban';
+    $url_redirect = $_SERVER['SCRIPT_NAME'] . '/gio-hang-cua-ban.html';
     header("Location: $url_redirect");
     exit();
   }

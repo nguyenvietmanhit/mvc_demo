@@ -99,6 +99,6 @@ require_once 'helpers/Helper.php';
             </div>
         </div>
         <input type="submit" name="submit" value="Thanh toán" class="btn btn-primary">
-        <a href="gio-hang-cua-ban" class="btn btn-secondary">Về trang giỏ hàng</a>
+        <a href="gio-hang-cua-ban.html" class="btn btn-secondary">Về trang giỏ hàng</a>
     </form>
 </div>

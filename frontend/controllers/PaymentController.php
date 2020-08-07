@@ -70,12 +70,12 @@ class PaymentController extends Controller {
           //gửi mail
           $this->sendMail($email);
           //chuyển hướng sang màn hình chọn phương thức thanh toán
-          $url_redirect = $_SERVER['SCRIPT_NAME'] . '/phuong-thuc-thanh-toan';
+          $url_redirect = $_SERVER['SCRIPT_NAME'] . '/phuong-thuc-thanh-toan.html';
           header("Location: $url_redirect");
           exit();
         } else {
           $_SESSION['error'] = 'Lưu thông tin thanh toán thất bại';
-          header("Location: thanh-toan");
+          header("Location: thanh-toan.html");
           exit();
         }
       }

@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="19abbde9-d211-48c5-bd5e-1afe3a9821f8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/controllers/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/homes/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/homes/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/layouts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/layouts/header.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,8 +99,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/assets/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+            <state relative-caret-position="459">
+              <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -205,11 +200,14 @@
       <find>&lt;form</find>
       <find>cart.html</find>
       <find>amount</find>
+      <find>Cammpin</find>
+      <find>Cammping Sport</find>
     </findStrings>
     <replaceStrings>
       <replace>$_GET</replace>
       <replace>user</replace>
       <replace>gio-hang.html</replace>
+      <replace>MVC Demo Frontend</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\mvc_demo\frontend</dir>
@@ -282,10 +280,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-390" />
-    <option name="y" value="2" />
+    <option name="x" value="10" />
+    <option name="y" value="20" />
     <option name="width" value="1346" />
-    <option name="height" value="641" />
+    <option name="height" value="688" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -447,12 +445,12 @@
       <workItem from="1593071920932" duration="8375000" />
       <workItem from="1593134900661" duration="6540000" />
       <workItem from="1594523485468" duration="1188000" />
-      <workItem from="1596773311745" duration="6141000" />
+      <workItem from="1596773311745" duration="6383000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97083000" />
+    <option name="totallyTimeSpent" value="97325000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -781,8 +779,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/assets/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        <state relative-caret-position="459">
+          <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
         </state>
       </provider>
     </entry>
