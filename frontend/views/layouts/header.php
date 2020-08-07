@@ -27,10 +27,19 @@
                         </a>
                     </li>
                     <li>
-                        <a href="cart.html" class="cart-link">
+                        <a href="gio-hang.html" class="cart-link">
                             <i class="fa fa-cart-plus"></i>
+                          <?php
+                          $cart_total = 0;
+                          if (isset($_SESSION['cart'])) {
+                            foreach ($_SESSION['cart'] AS $cart) {
+                              $cart_total += $cart['quality'];
+                            }
+                          }
+                          ?>
                             <span class="cart-amount">
-                                0                            </span>
+                                <?php echo $cart_total; ?>
+                            </span>
                         </a>
                     </li>
                 </ul>
@@ -86,7 +95,7 @@
                     <a href="product.html" class="material-button submenu-toggle">Sản phẩm</a>
                 </li>
                 <li>
-                    <a href="cart.html" class="material-button submenu-toggle">Giỏ hàng</a>
+                    <a href="gio-hang.html" class="material-button submenu-toggle">Giỏ hàng</a>
                 </li>
                 <li>
                     <a href="login.html" class="material-button submenu-toggle">Đăng nhập</a>
@@ -101,7 +110,7 @@
                     <a href="/gio-hang.html" class="">
                         <i class="fa fa-cart-plus"></i>
                         <span class="cart-amount-mobile">
-                                0
+                                <?php echo $cart_total; ?>
                         </span>
                     </a>
                 </li>

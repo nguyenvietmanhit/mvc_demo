@@ -4,7 +4,7 @@
     <base href="<?php echo $_SERVER['SCRIPT_NAME'] ?>"
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cammping Sport</title>
+    <title>MVC Demo Frontend</title>
 
 
     <link rel="canonical" href="http://localhost"/>
@@ -14,7 +14,7 @@
     <meta name="author" content="http://localhost">
     <meta name="copyright" content="http://localhost"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Cammping Sport"/>
+    <meta property="og:title" content="MVC Demo Frontend"/>
     <meta property="og:url" content="http://localhost"/>
     <meta property="og:site_name" content="http://localhost"/>
     <!-- SEO META DESCRIPTION -->

@@ -11,8 +11,8 @@ require_once 'helpers/Helper.php';
           <div class="link-secondary-wrap row">
             <?php foreach ($products AS $product):
               $slug = Helper::getSlug($product['title']);
-              $product_link = "san-pham/$slug/" . $product['id'];
-              $product_cart_add = "them-vao-gio-hang/" . $product['id'];
+              $product_link = "san-pham/$slug/" . $product['id'] . ".html";
+              $product_cart_add = "them-vao-gio-hang/" . $product['id'] . ".html";
               ?>
                 <div class="service-link col-md-3 col-sm-6 col-xs-12">
                     <a href="<?php echo $product_link; ?>">
@@ -26,7 +26,10 @@ require_once 'helpers/Helper.php';
                     <span class="shop-price">
                             <?php echo number_format($product['price']) ?>
                 </span>
-                    <span data-id="<?php echo $product['id'] ?>" class="add-to-cart">Thêm vào giỏ</span>
+
+                    <span data-id="<?php echo $product['id'] ?>" class="add-to-cart">
+                        <a href="<?php echo $product_cart_add ?>" style="color: inherit">Thêm vào giỏ</a>
+                    </span>
                 </div>
             <?php endforeach; ?>
           </div>

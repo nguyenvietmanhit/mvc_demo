@@ -5,6 +5,7 @@ class CartController extends Controller {
 
 
   public function add() {
+
     if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
       $_SESSION['error'] = 'ID sản phẩm ko hợp lệ';
       header('Location: index.php');
@@ -12,10 +13,10 @@ class CartController extends Controller {
     }
 
     $product_id = $_GET['id'];
+
     //lấy thông tin của sản phẩm sẽ thêm vào giỏ hàng
     $product_model = new Product();
     $product = $product_model->getById($product_id);
-
     //cấu trúc giỏ hàng đang dự kiến như sau: product_id => mảng các thông tin tương ứng
 
     //tạo ra 1 mảng giỏ hảng tương ứng với sản phẩm vừa lấy đc, để chuẩn bị thêm vào giỏ hàng
@@ -47,11 +48,13 @@ class CartController extends Controller {
       }
     }
 
+    echo TRUE;
+
     //sau khi xử lý xong giỏ hàng thì chuyển hướng về trang danh sách giỏ hàng
     //do đang sử dụng rewwrite url nên các url khi chuyển hướng cần có cả đường dẫn ứng dụng
-    $url_redirect = $_SERVER['SCRIPT_NAME'] . '/gio-hang-cua-ban';
-    header("Location: $url_redirect");
-    exit();
+//    $url_redirect = $_SERVER['SCRIPT_NAME'] . '/gio-hang-cua-ban';
+//    header("Location: $url_redirect");
+//    exit();
 
   }
 
