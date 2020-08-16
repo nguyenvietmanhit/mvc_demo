@@ -12,6 +12,9 @@ class Product extends Model
     public $amount;
     public $summary;
     public $content;
+    public $seo_title;
+    public $seo_description;
+    public $seo_keywords;
     public $status;
     public $created_at;
     public $updated_at;
@@ -95,8 +98,8 @@ class Product extends Model
     public function insert()
     {
         $obj_insert = $this->connection
-            ->prepare("INSERT INTO products(category_id, title, avatar, price, amount, summary, content, status) 
-                                VALUES (:category_id, :title, :avatar, :price, :amount, :summary, :content, :status)");
+            ->prepare("INSERT INTO products(category_id, title, avatar, price, amount, summary, content, seo_title, seo_description, seo_keywords, status) 
+                                VALUES (:category_id, :title, :avatar, :price, :amount, :summary, :content, :seo_title, :seo_description, :seo_keywords, :status)");
         $arr_insert = [
             ':category_id' => $this->category_id,
             ':title' => $this->title,
@@ -105,6 +108,9 @@ class Product extends Model
             ':amount' => $this->amount,
             ':summary' => $this->summary,
             ':content' => $this->content,
+            ':seo_title' => $this->seo_title,
+            ':seo_description' => $this->seo_description,
+            ':seo_keywords' => $this->seo_keywords,
             ':status' => $this->status,
         ];
         return $obj_insert->execute($arr_insert);
@@ -129,8 +135,8 @@ class Product extends Model
     public function update($id)
     {
         $obj_update = $this->connection
-            ->prepare("UPDATE products SET category_id=:category_id, title=:title, avatar=:avatar, price=:price,amount=:amount 
-            summary=:summary, content=:content, status=:status, updated_at=:updated_at WHERE id = $id
+            ->prepare("UPDATE products SET category_id=:category_id, title=:title, avatar=:avatar, price=:price,amount=:amount,
+            summary=:summary, content=:content, seo_title=:seo_title, seo_description=:seo_description, seo_keywords=:seo_keywords, status=:status, updated_at=:updated_at WHERE id = $id
 ");
         $arr_update = [
             ':category_id' => $this->category_id,
@@ -140,6 +146,9 @@ class Product extends Model
             ':amount' => $this->amount,
             ':summary' => $this->summary,
             ':content' => $this->content,
+            ':seo_title' => $this->seo_title,
+            ':seo_description' => $this->seo_description,
+            ':seo_keywords' => $this->seo_keywords,
             ':status' => $this->status,
             ':updated_at' => $this->updated_at,
         ];

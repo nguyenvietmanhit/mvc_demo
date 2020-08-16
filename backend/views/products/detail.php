@@ -27,6 +27,18 @@ require_once 'helpers/Helper.php';
         <td><?php echo number_format($product['price']) ?></td>
     </tr>
     <tr>
+        <th>Seo Title</th>
+        <td><?php echo $product['seo_title'] ?></td>
+    </tr>
+    <tr>
+        <th>Seo description</th>
+        <td><?php echo $product['seo_description'] ?></td>
+    </tr>
+    <tr>
+        <th>Seo keywords</th>
+        <td><?php echo $product['seo_keywords'] ?></td>
+    </tr>
+    <tr>
         <th>Status</th>
         <td><?php echo Helper::getStatusText($product['status']) ?></td>
     </tr>
