@@ -11,6 +11,12 @@ $(document).ready(function () {
     }
   }
 
+
+    //Chọn file thì sẽ show ảnh thumbnail lên
+    $('input[type=file]').change(function () {
+        readURL(this);
+    });
+
   CKEDITOR.replace('description', {
     //đường dẫn đến file ckfinder.html của ckfinder
     filebrowserBrowseUrl: 'assets/ckfinder/ckfinder.html',
@@ -18,8 +24,4 @@ $(document).ready(function () {
     filebrowserUploadUrl: 'assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
   });
 
-  //Chọn file thì sẽ show ảnh thumbnail lên
-  $('input[type=file]').change(function () {
-    readURL(this);
-  });
 });
