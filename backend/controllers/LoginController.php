@@ -14,8 +14,6 @@ class LoginController
      * @return false|string
      */
     public function render($file, $variables = []) {
-        date_default_timezone_set("Asia/Ho_Chi_Minh");
-
         //Nhập các giá trị của mảng vào các biến có tên tương ứng chính là key của phần tử đó.
         //khi muốn sử dụng biến từ bên ngoài vào trong hàm
         extract($variables);
