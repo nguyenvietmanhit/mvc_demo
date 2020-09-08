@@ -99,12 +99,12 @@ class PaymentController extends Controller
   public function payment()
   {
 
-    $this->content = $this->render('configs/nganluong/index.php');
+    $this->content = $this->render('libraries/nganluong/index.php');
 
     require_once 'views/layouts/main.php';
   }
 
-  protected function sendMail($email, $body = '')
+  protected function sendMail($email, $body)
   {
     // Instantiation and passing `true` enables exceptions
     $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
