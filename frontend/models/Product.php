@@ -37,7 +37,8 @@ class Product extends Model {
           INNER JOIN categories ON products.category_id = categories.id WHERE products.id = $id");
 
     $obj_select->execute();
-    return $obj_select->fetch(PDO::FETCH_ASSOC);
+    $product =  $obj_select->fetch(PDO::FETCH_ASSOC);
+    return $product;
   }
 }
 

@@ -30,6 +30,11 @@ class Helper
     return $status_text;
   }
 
+    /**
+     * Chuyển đổi chuỗi ký tự có dấu thành chuỗi ký tự không dấu, ngăn cách  nhau bởi ký tự -
+     * @param $str
+     * @return null|string|string[]
+     */
   public static function getSlug($str) {
     $str = trim(mb_strtolower($str));
     $str = preg_replace('/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/', 'a', $str);

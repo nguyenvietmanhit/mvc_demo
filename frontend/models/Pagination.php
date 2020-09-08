@@ -24,9 +24,9 @@ class Pagination
     //giới hạn bản ghi trên 1 trang
     'limit' => 0,
     //controller xử lý phân trang
-//    'controller' => '',
+    'controller' => '',
     //action xử lý phân trang
-//    'action' => '',
+    'action' => '',
     //chế độ hiển thị phân trang (show ra tất cả page hay ko)
     'full_mode' => FALSE
   ];
