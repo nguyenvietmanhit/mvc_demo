@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <base href="<?php echo $_SERVER['SCRIPT_NAME'] ?>"
+    <base href="<?php echo $_SERVER['SCRIPT_NAME'] ?>" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MVC Demo Frontend</title>

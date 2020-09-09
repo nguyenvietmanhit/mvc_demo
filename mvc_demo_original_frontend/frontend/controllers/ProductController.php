@@ -47,8 +47,8 @@ class ProductController extends Controller {
       'full_mode' => FALSE,
     ];
     //xử lý phân trang
-    $pagination_model = new Pagination($params_pagination);
-    $pagination = $pagination_model->getPagination();
+//    $pagination_model = new Pagination($params_pagination);
+//    $pagination = $pagination_model->getPagination();
     //get products
     $product_model = new Product();
     $products = $product_model->getProductInHomePage($params);
@@ -59,8 +59,8 @@ class ProductController extends Controller {
 
     $this->content = $this->render('views/products/show_all.php', [
       'products' => $products,
-      'categories' => $categories,
-      'pagination' => $pagination,
+      'categories' => $categories
+//      'pagination' => $pagination,
     ]);
 
     require_once 'views/layouts/main.php';

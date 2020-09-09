@@ -2,9 +2,9 @@
 require_once 'controllers/Controller.php';
 require_once 'models/Order.php';
 require_once 'models/OrderDetail.php';
-require_once 'configs/PHPMailer/src/PHPMailer.php';
-require_once 'configs/PHPMailer/src/SMTP.php';
-require_once 'configs/PHPMailer/src/Exception.php';
+require_once 'libraries/PHPMailer/src/PHPMailer.php';
+require_once 'libraries/PHPMailer/src/SMTP.php';
+require_once 'libraries/PHPMailer/src/Exception.php';
 
 class PaymentController extends Controller
 {
@@ -61,6 +61,10 @@ class PaymentController extends Controller
             $order_model->id = $order_id;
             //lấy nội dung mail từ template có sẵn
             $body = $this->render('views/payments/mail_template_order.php', ['order' => $order_model]);
+            echo "<pre> >>> " . __FILE__ . "(" . __LINE__ . ")<br/>";
+            print_r($body);
+            echo "</pre>";
+            die;
 //gửi mail xác nhận đã thanh toán
             $this->sendMail($email, $body);
             $url_redirect = $_SERVER['SCRIPT_NAME'] . '/cam-on.html';
