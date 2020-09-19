@@ -2,9 +2,7 @@
 require_once 'controllers/Controller.php';
 require_once 'models/Order.php';
 require_once 'models/OrderDetail.php';
-require_once 'libraries/PHPMailer/src/PHPMailer.php';
-require_once 'libraries/PHPMailer/src/SMTP.php';
-require_once 'libraries/PHPMailer/src/Exception.php';
+require_once 'helpers/Helper.php';
 
 class PaymentController extends Controller
 {
@@ -62,7 +60,7 @@ class PaymentController extends Controller
             //lấy nội dung mail từ template có sẵn
             $body = $this->render('views/payments/mail_template_order.php', ['order' => $order_model]);
 //gửi mail xác nhận đã thanh toán
-            $this->sendMail($email, $body);
+            Helper::sendMail($email, 'Subject', $body, 'nguyenvietmanhit@gmail.com', 'yichffdzhetottuw');
             $url_redirect = $_SERVER['SCRIPT_NAME'] . '/cam-on.html';
             header("Location: $url_redirect");
             exit();
@@ -104,52 +102,5 @@ class PaymentController extends Controller
     require_once 'views/layouts/main.php';
   }
 
-  protected function sendMail($email, $body)
-  {
-    // Instantiation and passing `true` enables exceptions
-    $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
 
-    try {
-      //Server settings
-      $mail->SMTPDebug = \PHPMailer\PHPMailer\SMTP::DEBUG_OFF;                      // Enable verbose debug output
-      $mail->isSMTP();
-      // Send using SMTP
-      //host miễn phí của gmail
-      $mail->Host = 'smtp.gmail.com';                    // Set the SMTP server to send through
-      $mail->SMTPAuth = true;                                   // Enable SMTP authentication
-      //username gmail của chính bạn
-      $mail->Username = 'nguyenvietmanhit@gmail.com';                     // SMTP username
-      //password cho ứng dụng, ko phải password của tài khoảng
-//    đăng nhập gmail
-//    tạo mật khẩu ứng dụng tại link:
-// https://myaccount.google.com/ - menu Bảo mật
-      $mail->Password = 'yichffdzhetottuw';                               // SMTP password
-      $mail->SMTPSecure = \PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-      $mail->Port = 587;                                    // TCP port to connect to
-
-      //Recipients
-      $mail->setFrom('abc@gmail.com', 'ABC');
-      //setting mail người gửi
-      $mail->addAddress($email, 'Manh');     // Add a recipient
-//    $mail->addAddress('ellen@example.com');               // Name is optional
-//    $mail->addReplyTo('info@example.com', 'Information');
-//    $mail->addCC('cc@example.com');
-//    $mail->addBCC('bcc@example.com');
-
-      // Attachments
-//      $mail->addAttachment('rose.jpeg');         // Add attachments
-//    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-
-      // Content
-      $mail->isHTML(true);                                  // Set email format to HTML
-      $mail->Subject = 'Xác nhận thông tin thanh toán';
-      $mail->Body = $body;
-//    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-      $mail->send();
-      echo 'Message has been sent';
-    } catch (Exception $e) {
-      echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-    }
-  }
 }
