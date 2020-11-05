@@ -61,7 +61,7 @@ class ProductController extends Controller
         $filename = '';
         //xử lý upload file nếu có
         if ($_FILES['avatar']['error'] == 0) {
-          $dir_uploads = __DIR__ . '/../assets/uploads';
+          $dir_uploads = 'assets/uploads';
           if (!file_exists($dir_uploads)) {
             mkdir($dir_uploads);
           }
@@ -169,7 +169,7 @@ class ProductController extends Controller
         $filename = $product['avatar'];
         //xử lý upload file nếu có
         if ($_FILES['avatar']['error'] == 0) {
-          $dir_uploads = __DIR__ . '/../assets/uploads';
+          $dir_uploads = 'assets/uploads';
           //xóa file cũ, thêm @ vào trước hàm unlink để tránh báo lỗi khi xóa file ko tồn tại
           @unlink($dir_uploads . '/' . $filename);
           if (!file_exists($dir_uploads)) {

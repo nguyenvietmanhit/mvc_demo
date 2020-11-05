@@ -83,7 +83,7 @@ class UserController extends Controller {
                 $filename = '';
                 //xử lý upload ảnh nếu có
                 if ($_FILES['avatar']['error'] == 0) {
-                    $dir_uploads = __DIR__ . '/../assets/uploads';
+                    $dir_uploads = 'assets/uploads';
                     if (!file_exists($dir_uploads)) {
                         mkdir($dir_uploads);
                     }
@@ -161,7 +161,7 @@ class UserController extends Controller {
                 $filename = $user['avatar'];
                 //xử lý upload ảnh nếu có
                 if ($_FILES['avatar']['error'] == 0) {
-                    $dir_uploads = __DIR__ . '/../assets/uploads';
+                    $dir_uploads = 'assets/uploads';
                     //xóa file ảnh đã update trc đó
                     @unlink($dir_uploads . '/' . $filename);
                     if (!file_exists($dir_uploads)) {
