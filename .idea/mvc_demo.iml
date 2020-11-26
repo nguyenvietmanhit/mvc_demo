@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../PHP0720E" />
+    <content url="file://$MODULE_DIR$/../PHP0920E_SKDA" />
+    <content url="file://$MODULE_DIR$/../PHP1020E_HDT" />
+    <content url="file://$MODULE_DIR$/../itplus_private" />
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
