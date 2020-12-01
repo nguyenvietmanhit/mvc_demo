@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData">
+    <serverData>
+      <paths name="10.0.1.128">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/../PHP0720E" web="/" />
+            <mapping local="$PROJECT_DIR$/../PHP0920E_SKDA" web="/" />
+            <mapping local="$PROJECT_DIR$/../PHP1020E_HDT" web="/" />
+            <mapping local="$PROJECT_DIR$/../itplus_private" web="/" />
+            <mapping local="$PROJECT_DIR$/../laravel_team" web="/" />
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="10.0.1.38">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/../PHP0720E" web="/" />
+            <mapping local="$PROJECT_DIR$/../PHP0920E_SKDA" web="/" />
+            <mapping local="$PROJECT_DIR$/../PHP1020E_HDT" web="/" />
+            <mapping local="$PROJECT_DIR$/../itplus_private" web="/" />
+            <mapping local="$PROJECT_DIR$/../laravel_team" web="/" />
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="ladtest01.pm33.net">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/../PHP0720E" web="/" />
+            <mapping local="$PROJECT_DIR$/../PHP0920E_SKDA" web="/" />
+            <mapping local="$PROJECT_DIR$/../PHP1020E_HDT" web="/" />
+            <mapping local="$PROJECT_DIR$/../itplus_private" web="/" />
+            <mapping local="$PROJECT_DIR$/../laravel_team" web="/" />
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
