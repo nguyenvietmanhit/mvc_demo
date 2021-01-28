@@ -5,12 +5,15 @@
         <select name="category_id" class="form-control" id="category_id">
           <?php
           foreach ($categories as $category):
-            $selected = '';
             if ($category['id'] == $product['category_id']) {
               $selected = 'selected';
+            } else {
+                $selected = '';
             }
             if (isset($_POST['category_id']) && $category['id'] == $_POST['category_id']) {
               $selected = 'selected';
+            } else {
+              $selected = '';
             }
             ?>
               <option value="<?php echo $category['id'] ?>" <?php echo $selected; ?>>
