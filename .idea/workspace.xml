@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19abbde9-d211-48c5-bd5e-1afe3a9821f8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/mvc_demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mvc_demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc_demo_original_frontend/frontend/controllers/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc_demo_original_frontend/frontend/controllers/PaymentController.php" afterDir="false" />
-    </list>
+    <list default="true" id="19abbde9-d211-48c5-bd5e-1afe3a9821f8" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,10 +33,10 @@
         <counts>
           <entry key="css" value="11" />
           <entry key="htaccess" value="11" />
-          <entry key="html" value="26" />
+          <entry key="html" value="27" />
           <entry key="jpg" value="1" />
           <entry key="js" value="13" />
-          <entry key="php" value="275" />
+          <entry key="php" value="276" />
           <entry key="png" value="1" />
           <entry key="psd" value="2" />
           <entry key="sql" value="7" />
@@ -53,7 +49,7 @@
           <entry key="HTML" value="10" />
           <entry key="Image" value="4" />
           <entry key="JavaScript" value="13" />
-          <entry key="PHP" value="291" />
+          <entry key="PHP" value="293" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="SQL" value="7" />
           <entry key="htaccess" value="11" />
@@ -90,33 +86,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../tools/send_mail_hosting_itplus/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="68" column="29" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
-              <folding>
-                <element signature="n#style#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#form#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../tools/send_mail_hosting_itplus/includes/database.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../tools/send_mail_hosting_itplus/includes/functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="691">
-              <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -130,11 +103,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mvc_demo_original_frontend/frontend/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
-              <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+              <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../PHP0920E_SKDA/Day37_PHP_Website_Part_5_Cart_RewriteUrl/mvc_project/backend/views/users/index.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../PHP0920E_SKDA/Day35_PHP_Website_Part_4_Pagination/file_create_db.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="647">
+              <caret line="91" column="90" lean-forward="true" selection-end-line="97" />
             </state>
           </provider>
         </entry>
@@ -148,7 +135,7 @@
         <entry file="file://$PROJECT_DIR$/mvc_demo_original_frontend/frontend/controllers/PaymentController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -162,7 +149,7 @@
         <entry file="file://$PROJECT_DIR$/mvc_demo_original_frontend/frontend/controllers/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -406,6 +393,25 @@
               <item name="mvc_demo" type="47feb1d3:ProjectViewModuleNode" />
               <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="mvc_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mvc_demo" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
+              <item name="Day35_PHP_Website_Part_4_Pagination" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mvc_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mvc_demo" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
+              <item name="Day37_PHP_Website_Part_5_Cart_RewriteUrl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mvc_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mvc_demo" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="PHP0920E_SKDA" type="462c0819:PsiDirectoryNode" />
+              <item name="Day37_PHP_Website_Part_5_Cart_RewriteUrl" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc_project" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -423,11 +429,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PHP0920E_SKDA\Day37" />
       <recent name="C:\xampp\htdocs\tools\send_mail_hosting_itplus" />
       <recent name="C:\xampp\htdocs\php1220e2\Day13_Javascript_jQuery_2\Code_demo_tren_lop\Draft" />
       <recent name="C:\xampp\htdocs\php1220e2" />
       <recent name="C:\xampp\htdocs\PHP1020E_HDT" />
-      <recent name="C:\xampp\htdocs\PHP0920E_SKDA\Day36_PHP_Website_Part_5_Pagination_Cart" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\tools\send_mail_hosting_itplus\includes" />
@@ -543,12 +549,12 @@
       <workItem from="1615356566788" duration="969000" />
       <workItem from="1615428849545" duration="507000" />
       <workItem from="1615437451821" duration="471000" />
-      <workItem from="1615777033855" duration="6070000" />
+      <workItem from="1615777033855" duration="6342000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193445000" />
+    <option name="totallyTimeSpent" value="193717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -582,16 +588,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../php1220e2/Day09_Javascript_Basic_Part_1/Code_demo_tren_lop/Draft/js_phan_1.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/products/update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../PHP0920E_SKDA/Day35_PHP_Website_Part_4_Pagination/Draft/Pagination.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
@@ -830,7 +826,7 @@
     <entry file="file://$PROJECT_DIR$/mvc_demo_original_frontend/frontend/controllers/PaymentController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -840,7 +836,7 @@
     <entry file="file://$PROJECT_DIR$/mvc_demo_original_frontend/frontend/controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -852,7 +848,17 @@
     <entry file="file://$PROJECT_DIR$/mvc_demo_original_frontend/frontend/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
-          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PHP0920E_SKDA/Day37_PHP_Website_Part_5_Cart_RewriteUrl/mvc_project/backend/views/users/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PHP0920E_SKDA/Day35_PHP_Website_Part_4_Pagination/file_create_db.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="91" column="90" lean-forward="true" selection-end-line="97" />
         </state>
       </provider>
     </entry>
