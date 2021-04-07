@@ -13,6 +13,9 @@ class Controller
     //chứa nội dung lỗi validate
     public $error;
 
+    // Tiêu đề trang
+    public $page_title;
+
     /**
      * @param $file string Đường dẫn tới file
      * @param array $variables array Danh sách các biến truyền vào file
@@ -27,7 +30,7 @@ class Controller
         ob_start();
         //thông thường nếu ko có ob_start thì sẽ hiển thị 1 dòng echo lên màn hình
         //tuy nhiên do dùng ob_Start nên nội dung của nó đã đc lưu lại, chứ ko hiển thị ra màn hình nữa
-        require_once $file;
+        require $file;
         //lấy dữ liệu từ bộ nhớ tạm đã lưu khi gọi hàm ob_Start để xử lý, lấy xong rồi xóa luôn dữ liệu đó
         $render_view = ob_get_clean();
 
