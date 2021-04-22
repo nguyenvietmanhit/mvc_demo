@@ -42,8 +42,8 @@
             ?>
             <label>Trạng thái</label>
             <select name="status" class="form-control">
-                <option value="0" <?php echo $selected_active ?> >Disabled</option>
                 <option value="1" <?php echo $selected_disabled ?> >Active</option>
+                <option value="0" <?php echo $selected_active ?> >Disabled</option>
             </select>
         </div>
 
