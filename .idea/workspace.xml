@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19abbde9-d211-48c5-bd5e-1afe3a9821f8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="19abbde9-d211-48c5-bd5e-1afe3a9821f8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -249,7 +247,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tools" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../php1220e2/Day32_Demo_Website_Part_2" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -261,18 +259,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\php1220e2\Day32_Demo_Website_Part_2" />
+      <recent name="C:\xampp\htdocs\mvc_demo\mvc_demo_original\frontend\assets" />
       <recent name="C:\xampp\htdocs\php1220e2" />
       <recent name="C:\xampp\htdocs\PHP1020E_HDT\Day36_Demo_Project_Frontend_Cart" />
       <recent name="C:\xampp\htdocs\PHP1020E_HDT" />
-      <recent name="C:\xampp\htdocs\php1220e2\Day21_PHP_Cookie_Login_MySQL_Database\Bai_tap_ve_nha" />
-      <recent name="C:\xampp\htdocs\PHP1020E_HDT\Day35_Demo_Project_Part_4_Login_Register" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\php1220e2\Day32_Demo_Website_Part_2" />
+      <recent name="C:\xampp\htdocs\php1220e2\Day32_Demo_Website_Part_2\Codes_demo" />
       <recent name="C:\xampp\htdocs\php1220e2\Day22_MySQL_Database\Codes_demo\login" />
       <recent name="C:\xampp\htdocs\php1220e2\Day22_MySQL_Database\Codes_demo\Draft" />
       <recent name="C:\xampp\htdocs\PHP1020E_HDT\Day36\mvc_project" />
-      <recent name="C:\xampp\htdocs\php1220e2\Day19_Process_File_Form_Upload\Codes_demo\Draft" />
-      <recent name="C:\xampp\htdocs\php1220e2\Day18_PHP_Form\Code_demo\Draft" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
