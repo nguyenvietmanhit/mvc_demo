@@ -1,23 +1,16 @@
 <?php
+//models/Model.php
+//Model cha
 require_once 'configs/Database.php';
 class Model {
   public $connection;
 
   public function __construct() {
-    $this->connection = $this->getConnection();
-  }
-
-  public function getConnection() {
+    //khởi tạo kết nối cho thuộc tính connection ngay khi có class con kế thừa từ nó
     try {
-      $connection = new PDO(Database::DB_DSN, Database::DB_USERNAME, Database::DB_PASSWORD);
+      $this->connection = new PDO(Database::DB_DSN, Database::DB_USERNAME, Database::DB_PASSWORD);
     } catch (PDOException $e) {
-      die("Kết nối CSDL theo PDO thất bại: " . $e->getMessage());
+      die("Lỗi kết nối: " . $e->getMessage());
     }
-
-    return $connection;
-  }
-
-  public function closeConnection() {
-    $this->connection = null;
   }
 }

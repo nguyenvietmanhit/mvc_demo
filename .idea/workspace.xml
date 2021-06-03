@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19abbde9-d211-48c5-bd5e-1afe3a9821f8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc_demo_begin_login_register/backend/configs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc_demo_begin_login_register/backend/configs/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc_demo_begin_login_register/backend/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc_demo_begin_login_register/backend/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc_demo_original_frontend/backend/configs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc_demo_original_frontend/backend/configs/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc_demo_original_frontend/frontend/configs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc_demo_original_frontend/frontend/configs/Database.php" afterDir="false" />
-    </list>
+    <list default="true" id="19abbde9-d211-48c5-bd5e-1afe3a9821f8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -398,6 +392,7 @@
       <workItem from="1622548321180" duration="674000" />
       <workItem from="1622549341558" duration="37000" />
       <workItem from="1622555147905" duration="14000" />
+      <workItem from="1622610989408" duration="29000" />
     </task>
     <servers />
   </component>
