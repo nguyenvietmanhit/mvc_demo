@@ -8,6 +8,13 @@
 
 class Controller
 {
+
+  //chứa nội dung view
+  public $content;
+  //chứa nội dung lỗi validate
+  public $error;
+//    Tiêu đề động của trang
+  public $page_title;
   public function __construct()
   {
 //    echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
@@ -16,10 +23,7 @@ class Controller
 //    die;
   }
 
-  //chứa nội dung view
-    public $content;
-    //chứa nội dung lỗi validate
-    public $error;
+
 
     /**
      * @param $file string Đường dẫn tới file
