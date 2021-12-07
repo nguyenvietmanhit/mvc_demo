@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19abbde9-d211-48c5-bd5e-1afe3a9821f8" name="Default Changelist" comment="" />
+    <list default="true" id="19abbde9-d211-48c5-bd5e-1afe3a9821f8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abc.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file_create_db.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc_demo_original_frontend/mvc_project.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc_project.rar" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -247,7 +253,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../php1220e2/Day33_Demo_Website_Part_3_Register_Login" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -259,11 +265,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\mvc_demo" />
       <recent name="C:\xampp\htdocs\php1220e2\Day33_Demo_Website_Part_3_Register_Login" />
       <recent name="C:\xampp\htdocs\php1220e2\Day33\mvc_project" />
       <recent name="C:\xampp\htdocs\php1220e2" />
       <recent name="C:\xampp\htdocs\php1220e2\Day32_Demo_Website_Part_2" />
-      <recent name="C:\xampp\htdocs\mvc_demo\mvc_demo_original\frontend\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\php1220e2\Day33\mvc_project" />
@@ -393,6 +399,7 @@
       <workItem from="1622549341558" duration="37000" />
       <workItem from="1622555147905" duration="14000" />
       <workItem from="1622610989408" duration="29000" />
+      <workItem from="1638848916361" duration="1297000" />
     </task>
     <servers />
   </component>
@@ -426,6 +433,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../PHP0920E_SKDA/Day36_PHP_Website_Part_5_Pagination_Cart/mvc_project/frontend/views/carts/index.php">

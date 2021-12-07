@@ -57,9 +57,9 @@ username VARCHAR(255) COMMENT "Tên đăng nhập",
 password VARCHAR(255) COMMENT "Mật khẩu đăng nhập",
 first_name VARCHAR(255)  COMMENT "Fist name",
 last_name VARCHAR(255)  COMMENT "Last name",
-phone  int(11) COMMENT 'SĐT user' ,
-address  varchar(255) COMMENT 'Địa chỉ user' ,
-email  varchar(255)   COMMENT 'Email của user' ,
+phone  int(11) COMMENT "SĐT user" ,
+address  varchar(255) COMMENT "Địa chỉ user" ,
+email  varchar(255)   COMMENT "Email của user" ,
 avatar VARCHAR(255)  COMMENT "File ảnh đại diện",
 jobs VARCHAR(255)  COMMENT "Nghề nghiệp",
 last_login DATETIME COMMENT "Lần đăng nhập gần đây nhất",
@@ -89,10 +89,9 @@ FOREIGN KEY (user_id) REFERENCES users(id)
 
 #order_details
 CREATE TABLE IF NOT EXISTS order_details(
-order_id INT(11) COMMENT "Id của order tương ứng, là khóa ngoại liên kết với bảng orders",
-product_id INT(11) COMMENT "Id của product tương ứng, là khóa ngoại liên kết với bảng products",
-quantity INT(11) COMMENT "Số sản phẩm đã đặt",
-FOREIGN KEY (order_id) REFERENCES orders(id),
-FOREIGN KEY (product_id) REFERENCES products(id)
-
+order_id int(11) DEFAULT NULL COMMENT "Id của order tương ứng, là khóa ngoại liên kết với bảng orders",
+product_name varchar(150) DEFAULT NULL COMMENT "Tên sp tại thời điểm đặt hàng",
+product_price int(11) DEFAULT NULL COMMENT "Giá sản phẩm tương ứng tại thời điểm đặt hàng",
+quantity int(11) DEFAULT NULL COMMENT "Số lượng sản phẩm tương ứng tại thời điểm đặt hàng",
+FOREIGN KEY (order_id) REFERENCES orders(id)
 );
