@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19abbde9-d211-48c5-bd5e-1afe3a9821f8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/mvc_demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mvc_demo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_create_db.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc_demo_original_frontend/mvc_project.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc_project.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc_project.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mvc_project.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,6 +258,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -399,7 +398,7 @@
       <workItem from="1622549341558" duration="37000" />
       <workItem from="1622555147905" duration="14000" />
       <workItem from="1622610989408" duration="29000" />
-      <workItem from="1638848916361" duration="1297000" />
+      <workItem from="1638848916361" duration="1693000" />
     </task>
     <servers />
   </component>
