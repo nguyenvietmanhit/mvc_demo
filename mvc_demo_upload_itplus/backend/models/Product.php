@@ -6,7 +6,7 @@ class Product extends Model
 
     public $id;
     public $category_id;
-    public $title;
+    public $name;
     public $avatar;
     public $price;
     public $amount;
@@ -26,8 +26,8 @@ class Product extends Model
     public function __construct()
     {
         parent::__construct();
-        if (isset($_GET['title']) && !empty($_GET['title'])) {
-            $this->str_search .= " AND products.title LIKE '%{$_GET['title']}%'";
+        if (isset($_GET['name']) && !empty($_GET['name'])) {
+            $this->str_search .= " AND products.name LIKE '%{$_GET['name']}%'";
         }
         if (isset($_GET['category_id']) && !empty($_GET['category_id'])) {
             $this->str_search .= " AND products.category_id = {$_GET['category_id']}";
@@ -98,11 +98,11 @@ class Product extends Model
     public function insert()
     {
         $obj_insert = $this->connection
-            ->prepare("INSERT INTO products(category_id, title, avatar, price, amount, summary, content, seo_title, seo_description, seo_keywords, status) 
-                                VALUES (:category_id, :title, :avatar, :price, :amount, :summary, :content, :seo_title, :seo_description, :seo_keywords, :status)");
+            ->prepare("INSERT INTO products(category_id, name, avatar, price, amount, summary, content, seo_title, seo_description, seo_keywords, status) 
+                                VALUES (:category_id, :name, :avatar, :price, :amount, :summary, :content, :seo_title, :seo_description, :seo_keywords, :status)");
         $arr_insert = [
             ':category_id' => $this->category_id,
-            ':title' => $this->title,
+            ':name' => $this->name,
             ':avatar' => $this->avatar,
             ':price' => $this->price,
             ':amount' => $this->amount,
@@ -135,12 +135,12 @@ class Product extends Model
     public function update($id)
     {
         $obj_update = $this->connection
-            ->prepare("UPDATE products SET category_id=:category_id, title=:title, avatar=:avatar, price=:price,amount=:amount,
+            ->prepare("UPDATE products SET category_id=:category_id, name=:name, avatar=:avatar, price=:price,amount=:amount,
             summary=:summary, content=:content, seo_title=:seo_title, seo_description=:seo_description, seo_keywords=:seo_keywords, status=:status, updated_at=:updated_at WHERE id = $id
 ");
         $arr_update = [
             ':category_id' => $this->category_id,
-            ':title' => $this->title,
+            ':name' => $this->name,
             ':avatar' => $this->avatar,
             ':price' => $this->price,
             ':amount' => $this->amount,
