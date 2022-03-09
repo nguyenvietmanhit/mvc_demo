@@ -65,10 +65,14 @@ VALUES (:name, :avatar, :description, :status)";
   }
 
   public function getById($id) {
-    $sql_select_one = "SELECT * FROM categories WHERE id = $id";
+    $sql_select_one = "SELECT * FROM categories WHERE id = :id";
     $obj_select_one = $this->connection
       ->prepare($sql_select_one);
-    $obj_select_one->execute();
+    $selects = [
+        ':id' => $id
+    ];
+
+    $obj_select_one->execute($selects);
     $category = $obj_select_one->fetch(PDO::FETCH_ASSOC);
     return $category;
   }

@@ -1,16 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: nvmanh
- * Date: 3/13/2020
- * Time: 11:02 PM
- */
-
 class Controller
 {
     public function __construct()
     {
-        if (!isset($_SESSION['user'])) {
+        $controller = isset($_GET['controller']) ? $_GET['controller'] : 'category';
+        $action = isset($_GET['action']) ? $_GET['action'] : 'index';
+        if (!isset($_SESSION['user']) && $controller != 'login' && !in_array($action, ['login', 'register'])) {
             $_SESSION['error'] = 'Bạn cần đăng nhập';
             header('Location: index.php?controller=login&action=login');
             exit();

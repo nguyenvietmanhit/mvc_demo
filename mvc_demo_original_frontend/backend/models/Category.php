@@ -36,9 +36,9 @@ VALUES (:name, :avatar, :description, :status)";
    * @return array
    */
   public function getAll($params = []) {
-    echo "<pre>";
-    print_r($params);
-    echo "</pre>";
+//    echo "<pre>";
+//    print_r($params);
+//    echo "</pre>";
     //tạo 1 chuỗi truy vấn để thêm các điều kiện search
     //dựa vào mảng params truyền vào
     $str_search = 'WHERE TRUE';
