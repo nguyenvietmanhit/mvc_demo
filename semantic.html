@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--{#    <header>#}-->
+
+<!--{#    </header>#}-->
+<!--{#    <section>#}-->
+<!--{#        <article>#}-->
+<!--{#            <figure>#}-->
+<!--{#                <img>#}-->
+<!--{#                <figcaption></figcaption>#}-->
+<!--{#            </figure>#}-->
+<!--{#        </article>#}-->
+<!--{#    </section>#}-->
+<!--{#    <footer></footer>#}-->
+<!--    <div id="header">-->
+<!--        Header-->
+<!--    </div>-->
+<!--    <div id="main-content">-->
+<!--        Main content-->
+<!--    </div>-->
+<!--    <div id="footer">-->
+<!--        Footer-->
+<!--    </div>-->
+<header>
+    Header
+    <img src="img1.png" alt="logo" />
+
+</header>
+<nav>
+    <a href="#">home</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+    <a href="#">About us</a>
+</nav>
+<main>
+    <style>
+        /*div {*/
+        /*    width: 100px;*/
+        /*    height: 100px;*/
+        /*    background: red;*/
+        /*    transition: width 2s, height 4s, transform 2s;*/
+        /*    !*transition-timing-function: ease-in;*!*/
+        /*    !*transition-delay: 2s;*!*/
+
+        /*}*/
+        /*div:hover {*/
+        /*    width: 200px;*/
+        /*    height: 400px;*/
+        /*    transform: rotate(180deg);*/
+        /*}*/
+        /*div {*/
+        /*    !*transition-property: opacity;*!*/
+        /*    !*transition-duration: 2s;*!*/
+        /*    !*transition-timing-function: linear;*!*/
+        /*    !*transition-delay: 1s;*!*/
+        /*    transition: width 2s linear 1s;*/
+        /*}*/
+        /*div:hover {*/
+        /*    opacity: 0.5;*/
+        /*}*/
+
+        div {
+            width: 200px;
+            height: 200px;
+            background: red;
+            transition: all 2s linear;
+            box-shadow: 4px 5px 12px 5px green;
+        }
+        div:hover {
+            /*transform: translate(20px,10px);*/
+            /*transform: rotate(20deg);*/
+            /*transform: scale(2, 5);*/
+            /*transform: skew(30deg, 10deg);*/
+            /*transform: matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY());*/
+            /*transform: matrix(2,0,-0.8,0.866,10,20);*/
+            transform: rotateZ(150deg);
+        }
+
+        h1 {
+            text-shadow: 2px 4px 3px red;
+        }
+    </style>
+    <h1>
+        Text shadow
+    </h1>
+    <div>
+        Hello div
+    </div>
+    <article>
+        <h1>JavaScript Basics</h1>
+        <p>JavaScript is a rich and expressive language...</p>
+
+        <section>
+            <h2>Syntax Basics</h2>
+            <p>Understanding statements, variable naming, whitespace...</p>
+        </section>
+        <section>
+            <h2>Operators</h2>
+            <p>Operators allow you to manipulate values...</p>
+        </section>
+        <section>
+            <h2>Conditional Code</h2>
+            <p>Sometimes you only want to run a block of code under certain conditions...</p>
+        </section>
+        <aside>
+            <p>Viewed by 1503 people</p>
+        </aside>
+        The <code>while(condition)</code> loop is useful for loops with an unknown number of iterations
+
+        <aside>
+            <p>Viewed by 1503 people</p>
+            <p>Author: John Smith</p>
+            <figure>
+                <img src="John Doe.png" alt="John Doe"/>
+                <img src="Maggie Smith.png" alt="Maggie Smith"/>
+                <img src="Tom Hardy.png" alt="Tom Hardy"/>
+                <figcaption>People who liked the article</figcaption>
+            </figure>
+        </aside>
+    </article>
+</main>
+<footer>
+    Footer
+</footer>
+</body>
+</html>
