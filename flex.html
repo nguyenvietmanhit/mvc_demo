@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    .item1 {
+        background: red;
+    }
+
+    .item2 {
+        background: green;
+    }
+
+    .item3 {
+        background: blue;
+    }
+
+    .item4 {
+        background: yellow;
+    }
+
+    .row {
+        /*
+        - display: flex | inline-flex
+        Set cơ chế flex cho các con trực tiếp
+        */
+        display: flex;
+        /*
+        - flex-direction : row | row-reverse | column | column-reverse;
+        Set chiều hiển thị cho flex, mặc định là theo hàng (row)
+        + row (default): left to right in ltr; right to left in rtl
+        + row-reverse: right to left in ltr; left to right in rtl
+        + column: same as row but top to bottom
+        + column-reverse: same as row-reverse but bottom to top
+        */
+        flex-direction: row;
+        /*
+        - flex-wrap : nowrap | wrap | wrap-reverse;
+        Set cơ chế cho phép wrap (bao) các item bên trong 1 hàng hay ko
+        + nowrap (default): các flex item luôn nằm trên 1 hàng
+        + wrap: flex items nằm trên nhiều dòng nếu như width của 1 row lớn hơn 100%, từ trên xuống dưới
+        + wrap-reverse: flex items nằm trên nhiều dòng nếu như width của 1 row lớn hơn 100%, từ dưới lên trên
+        */
+        flex-wrap: nowrap;
+        /*
+        - flex-flow
+        Viết tắt của flex-direction và flex-wrap
+        */
+        flex-flow: row nowrap;
+        /*
+        justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;
+        Căn flex item theo chiều ngang
+         */
+        justify-content: center;
+
+        /*
+        align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;
+        Căn flex item theo chiều dọc trên hàng hiện tại, có thể nói align-items chính là justify-content theo chiều ngang
+         */
+        align-items: center;
+        /*
+        align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe;
+        - Căn nội dung của các hàng theo trục dọc, giống như căn từng flex item khi sử dụng justify-content theo chiều ngang, chú ý chỉ có tác dụng khi có nhiều
+        hàng, còn flex mà chỉ có 1 hàng thì sẽ ko có tác dụng
+        */
+        align-content: end;
+        /*
+        gap, row-gap, column-gap
+         */
+        gap: 23px 35px;
+
+
+
+    }
+
+    .item1 {
+        /*
+            order
+            Set thứ tự hiển thị cho từng item, mặc định là 0
+            Các item có cùng thứ tự sẽ đc tính như thứ tự mặc định
+        */
+        /*order: 1;*/
+
+        /*
+        flex-grow: xác định tỉ lệ độ rộng của item so với các item khác, mặc định = 0, chỉ định tỉ lệ khoảng trống có sẵn bên trong container mà item sẽ chiếm
+        Nếu 1 item có flex-grow = 2, nó sẽ cố gắng chiếm khoảng không gian còn lại trong container gấp đôi các item khác, phụ thuộc vào không gian trống còn lại
+         */
+        /*flex-grow: 2;*/
+
+        /*
+        flex-basis:
+        - Xác định kích thước của flex item trc khi khoảng trống trong flex đc phân phối, đơn vị giống như width, mặc định là auto, ưu tiên flex-grow hơn
+         */
+    }
+</style>
+<div class="row">
+    <div class="item1">Item 1</div>
+    <div class="item2">Item 2</div>
+    <div class="item3">Item 3</div>
+    <div class="item4">Item 4</div>
+</div>
+</body>
+</html>

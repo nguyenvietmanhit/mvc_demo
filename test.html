@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<style type="text/css">
+    #a1:after {
+        content: attr(href);
+    }
+
+</style>
+
+<style>
+    #calc-func {
+        background: red;
+        width: calc(100% - 100px);
+        text-align: center;
+        border: 1px solid green;
+        position: absolute;
+        left: 50px;
+    }
+</style>
+
+<div id="calc-func">
+    Calc function demo
+</div>
+
+<style>
+    body {
+        counter-reset: ul-li;
+    }
+    ul li:before {
+        counter-increment: ul-li;
+        content: "Counter " counter(ul-li) ": ";
+    }
+</style>
+<ul>
+    <li>First Li</li>
+    <li>Second Li</li>
+    <li>Third Li</li>
+</ul>
+
+<div id="div1">
+    Some text...
+</div>
+
+<a id="a1" href="abc.php">Link 1</a>
+
+<style>
+  @keyframes example {
+    /*from { background: pink; }*/
+    /*to { background: purple; }*/
+
+    /*0% { background: red; }*/
+    /*25% { background: blue; }*/
+    /*50% { background: yellow; }*/
+    /*100% { background: purple; }*/
+
+    0% {background: red; left: 0; top: 0; }
+    25% {background: yellow; left: 200px; top: 0; }
+    50% {background: blue; left: 200px; top: 200px; }
+    75% {background: green; left: 0; top: 200px; }
+    100% {background: red; left: 0; top: 0; }
+
+  }
+  /*div {*/
+  /*  width: 100px;*/
+  /*  height: 100px;*/
+  /*  position: relative;*/
+  /*  background: red;*/
+  /*   !*- Tên animation:*!*/
+  /*  animation-name: example;*/
+  /*  !* - Thời gian chạy hiệu ứng - bắt buộc *!*/
+  /*  animation-duration: 4s;*/
+  /*  !*- Độ trễ trước khi bắt đầu hiệu ứng*!*/
+  /*  animation-delay: 1s;*/
+  /*  !* - Số lần thực hiện animation, infinite là vô hạn*!*/
+  /*  animation-iteration-count: 2;*/
+  /*  !* - Chiều chuyển động animation: *!*/
+  /*!* + normal: animation di chuyển bình thường tiến về phía trước (mặc định)*!*/
+  /*!* + reverse: animation di chuyển theo hướng ngược lại, lui về sau.*!*/
+  /*!* + alternate: animation di chuyển tiến về trước, sau đó lui theo hướng ngược lại*!*/
+  /*!* + alternate-reverse: animation di chuyển ngược lại trước, rồi đổi chiều tiến về trước.*!*/
+  /*  animation-direction: normal;*/
+  /*  !* - Tốc độ khi animation *!*/
+  /*  !* + ease: tạo hiệu ứng chuyển đổi khi bắt đầu thì chậm sau đó nhanh dần và gần kết thúc lại chậm dần (giá trị mặc định).*!*/
+  /*  !* + linear: tạo hiệu ứng chuyển đổi từ lúc bắt đầu với lúc kết thúc tốc độ là như nhau.*!*/
+  /*  !* + ease-in: tạo hiệu ứng chuyển đổi chậm lúc bắt đầu.*!*/
+  /*  !* + ease-out: tạo hiệu ứng chuyển đổi chậm lúc kết thúc.*!*/
+  /*  !* + ease-in-out: tạo hiệu ứng chuyển đổi chậm cả lúc bắt đầu và kết thúc.*!*/
+  /*  !* + cubic-bezier(n,n,n,n): cho phép bạn xác định một giá trị của riêng mình theo hàm bezier (Quantrimang.com sẽ giới thiệu ở một bài riêng sau nhé).*!*/
+  /*  animation-timing-function: linear;*/
+
+  /*!*  - Viết gộp*!*/
+  /*!*animation: name | duration | timing-function | delay | iteration-count | direction | fill-mode*!*/
+  /*  animation: example 4s linear 1s infinite normal;*/
+
+  /*}*/
+  div:hover {
+    /*animation-name: example;*/
+    /*animation-duration: 4s;*/
+
+  }
+</style>
+  <div>
+    Hello
+  </div>
+
+  <style>
+      :root {
+          --main-bg-color: green;
+      }
+      #var1, #var2 {
+          background: var(--main-bg-color);
+      }
+  </style>
+
+ <div id="var1">Var 1</div>
+ <div id="var2">Var 2</div>
+
+</body>
+</html>
