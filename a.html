@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Title</title>
 </head>
 <style>
@@ -106,85 +106,109 @@
     /*    text-align: center;*/
     /*}*/
 
-    @media (max-width: 767px) {
+    @media(max-width: 767px) {
 
     }
+
+
 
 
     .container {
+        display: grid;
+        grid-template-columns: 0.4fr 0.3fr 0.3fr;
         max-width: 60%;
         margin: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+        grid-template-areas:
+        "header header header"
+        "hero main main"
+        "sidebar main main"
+        "sidebar extra extra"
+        "images images posts"
+        "footer footer footer";
     }
 
-    main.main {
-        display: flex;
-        gap: 10px;
-        /* min-height: 200px; */
-    }
-
-    .hero-sidebar {
-        /* min-height: 200px; */
-        flex: 1;
-    }
-
-    .main-extra {
-        flex: 3;
+    header.header.grid-item {
+        grid-area: header;
+        text-align: center;
+        padding: 20px 0;
     }
 
     section.hero.grid-item {
-        padding: 30px 0;
-        text-align: center;
-    }
-
-    section.sidebar.grid-item {
+        grid-area: hero;
         padding: 50px 0;
         text-align: center;
     }
 
-    section.extra-content.grid-item {
-        height: 66px;
+    section.sidebar.grid-item {
+        grid-area: sidebar;
+        padding: 70px 0;
+        text-align: center;
     }
 
     section.main-content.grid-item {
-        height: 130px;
+        grid-area: main;
+        /* text-align: center; */
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .images-posts {
+    section.extra-content.grid-item {
+        grid-area: extra;
+        padding: 30px 0px;
         display: flex;
-        gap: 0 10px;
+        justify-content: center;
     }
 
     section.related-images.grid-item {
-        flex: 3;
+        grid-area: images;
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     section.related-posts.grid-item {
-        flex: 1;
+        grid-area: posts;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer.footer.grid-item {
+        grid-area: footer;
+        padding: 30px 0;
+        text-align: center;
+    }
+
+    @media(max-width: 767px) {
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            max-width: 100%;
+            margin: auto;
+            grid-template-areas:
+        "header"
+        "main"
+        "hero"
+        "sidebar"
+
+        "extra"
+        "images"
+        "posts"
+        "footer";
+        }
     }
 </style>
 <body>
 <div class="container">
     <header class="header grid-item">Header</header>
-    <main class="main">
-        <div class="hero-sidebar">
-            <section class="hero grid-item">Hero</section>
-            <section class="sidebar grid-item">Sidebar</section>
-        </div>
-        <div class="main-extra">
-            <section class="main-content grid-item">Main Content</section>
-            <section class="extra-content grid-item">Extra item</section>
-        </div>
-    </main>
-    <div class="images-posts">
-        <section class="related-images grid-item">Related Images</section>
-        <section class="related-posts grid-item">Related Posts</section>
-    </div>
+    <section class="hero grid-item">Hero</section>
+    <section class="sidebar grid-item">Sidebar</section>
+    <section class="main-content grid-item">Main Content</section>
+    <section class="extra-content grid-item">Extra content</section>
+    <section class="related-images grid-item">Related Images</section>
+    <section class="related-posts grid-item">Related Posts</section>
     <footer class="footer grid-item">Footer</footer>
 </div>
 </body>
