@@ -87,6 +87,7 @@
             margin: 1rem 0;
             color: #50c6db;
         }
+
         .main {
             grid-area: main;
         }
@@ -108,6 +109,7 @@
             background-color: #f9f9f9;
             grid-area: sidebar;
         }
+
         .sidebar ul {
             list-style-type: none;
             margin-top: 1rem;
@@ -133,7 +135,7 @@
         }
 
         @media (max-width: 600px) {
-            .container{
+            .container {
                 /*  Redefine the grid into a single column layout. */
                 grid-template-columns: 1fr;
                 grid-template-areas:
@@ -163,29 +165,32 @@
         <button>Login</button>
     </header>
 
-<!--    <main class="wrapper">-->
-        <aside class="sidebar">
-            <h3>Recent Posts</h3>
-            <ul>
-                <li><a href="#">Post one</a></li>
-                <li><a href="#">Post Two</a></li>
-                <li><a href="#">Post Three</a></li>
-                <li><a href="#">Post Four</a></li>
-                <li><a href="#">Post Five</a></li>
-            </ul>
-        </aside>
-        <section class="main">
-            <img src="http://abbeyjfitzgerald.com/wp-content/uploads/2017/06/flexbox-header.jpg">
-            <h2>Flexbox Layout</h2>
+    <!--    <main class="wrapper">-->
+    <aside class="sidebar">
+        <h3>Recent Posts</h3>
+        <ul>
+            <li><a href="#">Post one</a></li>
+            <li><a href="#">Post Two</a></li>
+            <li><a href="#">Post Three</a></li>
+            <li><a href="#">Post Four</a></li>
+            <li><a href="#">Post Five</a></li>
+        </ul>
+    </aside>
+    <section class="main">
+        <img src="http://abbeyjfitzgerald.com/wp-content/uploads/2017/06/flexbox-header.jpg">
+        <h2>CSS Grid Layout</h2>
 
-            <p>Starting from the outside and working in, adding display: flex; to the container is the first step in any
-                flexbox layout. The flex-direction is column, so this will position all sections under each other. </p>
+        <p>To begin working with a CSS Grid Layout, it is very important to have display: grid; set on the container.
+            The grid-template-columns are declared here to give the overall structure of the page. Remember how the
+            Flexbox example had the .main class set to a flex-grow of 3 and the sidebar had a flex-grow of 1 to
+            establish sizing? Well, here the grid-template-columns have been set as 1fr and 3fr.</p>
 
-            <p>One handy thing is how easy it is to align text. In the navigation, with align-items: baseline, all
-                navigation items are aligned to the baseline of the text so they look more uniform. </p>
+        <p> This is where the grid is taking shape with the fractional units. With these values, it is apparent that
+            there are two columns and they are not equal with. The column set to 3fr is three times wider than the
+            other. This explains how the sidebar appears more narrow than the content area.</p>
 
-        </section>
-<!--    </main>-->
+    </section>
+    <!--    </main>-->
 
     <footer>
         <h3>Flexbox Layout Example</h3>
