@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr;
+            max-width: 30%;
+            margin: auto;
+            grid-template-areas:
+                    "header header header"
+                    "menu sometext sometext"
+                    "menu animage moretext";
+            gap: 20px;
+        }
+
+        header {
+            grid-area: header;
+            text-align: center;
+            border: 1px solid red;
+        }
+
+        aside {
+            border: 1px solid red;
+            text-align: center;
+            grid-area: menu;
+        }
+        section.some-text {
+            grid-area: sometext;
+            border: 1px solid red;
+        }
+
+        section.an-image {
+            grid-area: animage;
+            border: 1px solid red;
+        }
+
+        section.more-text {
+            border: 1px solid red;
+            grid-area: moretext;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <header>Header</header>
+        <aside>
+            MENU <br />
+            *********<br />
+            *********<br />
+            *********<br />
+            *********<br />
+            *********
+        </aside>
+        <section class="some-text">some text</section>
+        <section class="an-image">an image</section>
+        <section class="more-text">more text</section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 30%;
+            margin: auto;
+            row-gap: 10px;
+        }
+
+        .bg {
+            background: #FCD800;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+
+        section.main {
+            display: flex;
+            column-gap: 10px;
+            min-height: 300px;
+        }
+
+        header {
+            min-height: 60px;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+
+        .body {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            flex: 4;
+        }
+
+        nav {
+            flex: 1;
+        }
+
+        .article-ads {
+            display: flex;
+            gap: 10px;
+            height: 100%;
+            /* align-items: stretch; */
+        }
+
+        section.article {
+            flex: 3;
+        }
+
+        section.ads {
+            flex: 1;
+        }
+
+        footer.footer.bg {
+            min-height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="bg">Header</header>
+    <section class="main">
+        <nav class="bg">Nav</nav>
+        <div class="body">
+            <div class="article-ads">
+                <section class="article bg">Article</section>
+                <section class="ads bg">Ads</section>
+            </div>
+            <footer class="footer bg">Footer</footer>
+        </div>
+    </section>
+</div>
+</body>
+</html>
