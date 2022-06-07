@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    .container {
+      display: grid;
+      max-width: 40%;
+      margin: auto;
+      grid-template-columns: 2fr 7fr 1fr;
+      grid-column-gap: 15px;
+      grid-row-gap: 15px;
+      grid-template-areas:
+        "header header header"
+        "nav article ads"
+        "nav footer footer";
+    }
+
+    .bg {
+      background: #FCD800;
+      padding: 15px;
+    }
+
+    header.bg {
+      grid-area: header;
+    }
+    nav.bg {
+      grid-area: nav;
+    }
+
+    article.bg {
+      grid-area: article;
+      min-height: 300px;
+    }
+
+    aside.bg {
+      grid-area: ads;
+    }
+
+    footer.bg {
+      grid-area: footer;
+    }
+
+    /*@media (max-width: 767px) {*/
+    /*  .container {*/
+    /*    grid-template-areas: "header" "nav" "article"  "ads" "footer";*/
+    /*  }*/
+    /*}*/
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="bg">Header</header>
+    <nav class="bg">Nav</nav>
+    <article class="bg">Article</article>
+    <aside class="bg">Ads</aside>
+    <footer class="bg">Footer</footer>
+  </div>
+</body>
+</html>

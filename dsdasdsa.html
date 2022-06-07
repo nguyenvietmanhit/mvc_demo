@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .bg {
+      background: #FCD800;
+      padding: 15px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      max-width: 40%;
+      margin: auto;
+    }
+
+    main {
+      display: flex;
+      column-gap: 15px;
+    }
+
+    nav.bg {
+      flex: 1;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      flex: 4;
+    }
+
+    .article-ads {
+      display: flex;
+      column-gap: 15px;
+      min-height: 300px;
+    }
+
+    article.bg {
+      flex: 3;
+    }
+
+    aside.bg {
+      flex: 1;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="bg">Header</header>
+    <main>
+      <nav class="bg">Nav</nav>
+      <div class="main">
+        <div class="article-ads">
+          <article class="bg">Article</article>
+          <aside class="bg">Ads</aside>
+        </div>
+        <footer class="bg">Footer</footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

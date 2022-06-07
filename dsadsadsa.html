@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Exercise</title>
+  <style>
+    .img-main {
+      width: 100%;
+    }
+
+    body {
+      background: #eee;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 20% 70%;
+      max-width: 60%;
+      margin: auto;
+      justify-content: center;
+      background: #fff;
+      grid-column-gap: 40px;
+      grid-row-gap: 40px;
+      grid-template-areas:
+        "header header"
+        "posts main"
+        "footer footer";
+    }
+
+    header {
+      grid-area: header;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 70px;
+      border-bottom: 1px solid #51bb7b;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    header ul li {
+      display: inline-block;
+      margin-right: 25px;
+    }
+
+    header ul li a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #ccc;
+    }
+
+    button {
+      background: #51BB7B;
+      border: none;
+      padding: 8px 25px;
+      border-radius: 20px;
+      color: #fff;
+    }
+
+    section.recent-posts {
+      grid-area: posts;
+      background: #F9F9F9;
+      padding: 0 20px;
+      border-top: 2px solid #693F7E;
+    }
+
+    .recent-posts ul li {
+      line-height: 24px;
+    }
+
+    main.content {
+      grid-area: main;
+    }
+
+    .heading1 {
+      color: #50C6DB;
+    }
+
+    footer {
+      grid-area: footer;
+      text-align: center;
+      background: #9F9C9C;
+      padding: 15px 0;
+      color: #fff;
+    }
+
+    @media(max-width: 767px) {
+      .container {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        grid-template-areas:
+        "header"
+        "posts" "main" "footer";
+        grid-column-gap: 0;
+        grid-row-gap: 15px;
+      }
+
+      header {
+        justify-content: space-around;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button>Login</button>
+    </header>
+    <section class="recent-posts">
+      <h2>Recent Posts</h2>
+      <ul>
+        <li>Post one</li>
+        <li>Post two</li>
+        <li>Post three</li>
+        <li>Post four</li>
+        <li>Post five</li>
+      </ul>
+    </section>
+    <main class="content">
+      <img src="img-flex-grid.png" class="img-main" />
+      <h1 class="heading1">CSS Grid Layout</h1>
+      <p>
+        Main content 1
+      </p>
+      <p>
+        Main content 2
+      </p>
+    </main>
+    <footer>
+      <b>Flexbox Layout Example</b>
+      <br />
+      Hope you enjoyed learning about Flexbox Layouts
+    </footer>
+  </div>
+</body>
+</html>

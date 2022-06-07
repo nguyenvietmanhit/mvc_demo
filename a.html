@@ -2,190 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <title>Title</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 4fr 12fr 3fr;
+            max-width: 40%;
+            margin: auto;
+            grid-template-areas:
+       "header header header"
+       "nav article ads"
+       "nav footer footer";
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+        }
+
+        .bg {
+            background: #FCD800;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+
+        header.header.bg {
+            grid-area: header;
+            min-height: 60px;
+        }
+
+        nav.nav.bg {
+            grid-area: nav;
+            min-height: 300px;
+        }
+
+        article.article.bg {
+            grid-area: article;
+            min-height: 300px;
+        }
+
+        aside.aside.bg {
+            grid-area: ads;
+        }
+
+        footer.footer.bg {
+            grid-area: footer;
+            min-height: 30px;
+        }
+    </style>
 </head>
-<style>
-    .header {
-        background: #54D4EF;
-    }
-
-    .hero {
-        background: #D8C8E5;
-    }
-
-    .sidebar {
-        background: #A1C265;
-    }
-
-    .main-content {
-        background: #F6C834;
-    }
-
-    .extra-content {
-        background: #898989;
-    }
-
-    .related-images {
-        background: #2DB776;
-    }
-
-    .related-posts {
-        background: #F8CBDF;
-    }
-
-    .footer {
-        background: #FFA502;
-    }
-
-    .header {
-        background: #54D4EF;
-    }
-
-    /*.container {*/
-    /*    display: grid;*/
-    /*    grid-template-columns: 4fr 3fr 3fr;*/
-    /*    grid-template-areas: "header header header" "hero main main" "";*/
-    /*    max-width: 50%;*/
-    /*    margin: auto;*/
-    /*    grid-column-gap: 20px;*/
-    /*    grid-row-gap: 10px;*/
-    /*}*/
-
-    /*header.header.grid-item {*/
-    /*    grid-column: 1/4;*/
-    /*    padding: 30px;*/
-    /*    text-align: center;*/
-    /*}*/
-
-    /*section.hero.grid-item {*/
-    /*    grid-column: 1/2;*/
-    /*    grid-row: 2/3;*/
-    /*    padding: 30px 0;*/
-    /*    text-align: center;*/
-    /*}*/
-
-    /*section.sidebar.grid-item {*/
-    /*    grid-column: 1/2;*/
-    /*    grid-row: 3/5;*/
-    /*    padding: 50px 0;*/
-    /*    text-align: center;*/
-    /*}*/
-
-    /*section.main-content.grid-item {*/
-    /*    grid-column: 2/4;*/
-    /*    grid-row: 2/4;*/
-    /*    !* padding: 50px 0; *!*/
-    /*    padding: 80px 0;*/
-    /*    text-align: center;*/
-    /*}*/
-
-    /*section.related-images.grid-item {*/
-    /*    grid-column: 1/3;*/
-    /*    grid-row: 5/6;*/
-    /*    padding: 40px 0;*/
-    /*    text-align: center;*/
-    /*}*/
-
-    /*section.related-posts.grid-item {*/
-    /*    grid-column: 3/4;*/
-    /*     text-align: center;*/
-    /*    padding: 40px 0;*/
-    /*}*/
-
-    /*section.extra-content.grid-item {*/
-    /*    grid-column: 2/4;*/
-    /*    grid-row: 4/5;*/
-    /*    padding: 40px 0;*/
-    /*    text-align: center;*/
-    /*}*/
-
-    /*footer.footer.grid-item {*/
-    /*    grid-column: 1/4;*/
-    /*    padding: 20px;*/
-    /*    text-align: center;*/
-    /*}*/
-
-    @media (max-width: 767px) {
-
-    }
-
-
-    .container {
-        max-width: 60%;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    main.main {
-        display: flex;
-        gap: 10px;
-        /* min-height: 200px; */
-    }
-
-    .hero-sidebar {
-        /* min-height: 200px; */
-        flex: 1;
-    }
-
-    .main-extra {
-        flex: 3;
-    }
-
-    section.hero.grid-item {
-        padding: 30px 0;
-        text-align: center;
-    }
-
-    section.sidebar.grid-item {
-        padding: 50px 0;
-        text-align: center;
-    }
-
-    section.extra-content.grid-item {
-        height: 66px;
-    }
-
-    section.main-content.grid-item {
-        height: 130px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .images-posts {
-        display: flex;
-        gap: 0 10px;
-    }
-
-    section.related-images.grid-item {
-        flex: 3;
-    }
-
-    section.related-posts.grid-item {
-        flex: 1;
-    }
-</style>
 <body>
+
 <div class="container">
-    <header class="header grid-item">Header</header>
-    <main class="main">
-        <div class="hero-sidebar">
-            <section class="hero grid-item">Hero</section>
-            <section class="sidebar grid-item">Sidebar</section>
-        </div>
-        <div class="main-extra">
-            <section class="main-content grid-item">Main Content</section>
-            <section class="extra-content grid-item">Extra item</section>
-        </div>
-    </main>
-    <div class="images-posts">
-        <section class="related-images grid-item">Related Images</section>
-        <section class="related-posts grid-item">Related Posts</section>
-    </div>
-    <footer class="footer grid-item">Footer</footer>
+    <header class="header bg">Header</header>
+    <nav class="nav bg">Nav</nav>
+    <article class="article bg">Article</article>
+    <aside class="aside bg">Aside</aside>
+    <footer class="footer bg">Footer</footer>
 </div>
 </body>
 </html>
