@@ -27,7 +27,7 @@ $path_controller = "controllers/$controller.php";
 //controller/BookController.php
 
 //kiểm tra nếu đường dẫn ko tồn tại, thì báo trang ko tồn tại
-if (file_exists($path_controller) == false) {
+if (!file_exists($path_controller)) {
   die('Trang bạn tìm không tồn tại');
 }
 
