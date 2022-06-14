@@ -1,3 +1,2 @@
-<?php
-//mvc_demo/views/categories/update.php
-?>
+<!--views/categories/update.php-->
+

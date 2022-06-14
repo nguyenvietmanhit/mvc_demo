@@ -1,3 +1,2 @@
-<?php
-//mvc_demo/views/categories/index.php
-?>
+<!--views/categories/index.php-->
+
