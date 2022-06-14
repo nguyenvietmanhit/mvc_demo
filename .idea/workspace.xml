@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="19abbde9-d211-48c5-bd5e-1afe3a9821f8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc_demo_begin_login_register/backend/models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc_demo_begin_login_register/backend/models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc_demo_original_frontend/backend/configs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc_demo_original_frontend/backend/configs/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc_demo_original_frontend/backend/controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc_demo_original_frontend/backend/controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc_demo_original_frontend/backend/controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc_demo_original_frontend/backend/controllers/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc_demo_original_frontend/backend/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc_demo_original_frontend/backend/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc_demo_original_frontend/backend/models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc_demo_original_frontend/backend/models/Category.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +249,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bioessence.com.vn" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../itplus_private" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -408,7 +402,9 @@
       <workItem from="1641880865416" duration="2300000" />
       <workItem from="1646798418649" duration="1230000" />
       <workItem from="1646832589294" duration="1000" />
-      <workItem from="1646832633830" duration="579000" />
+      <workItem from="1646832633830" duration="788000" />
+      <workItem from="1646881126486" duration="182000" />
+      <workItem from="1647082738758" duration="40000" />
     </task>
     <servers />
   </component>
