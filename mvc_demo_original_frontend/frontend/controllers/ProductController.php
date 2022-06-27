@@ -69,8 +69,7 @@ class ProductController extends Controller {
   public function detail() {
     if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
       $_SESSION['error'] = 'ID ko hợp lệ';
-      $url_redirect = $_SERVER['SCRIPT_NAME'] . '/';
-      header("Location: $url_redirect");
+      header("Location: index.php?controller=product&action=index");
       exit();
     }
 
