@@ -1,6 +1,7 @@
 <?php
 require_once 'controllers/Controller.php';
 require_once 'models/Product.php';
+require_once 'helpers/Helper.php';
 
 class HomeController extends Controller {
   public function index() {

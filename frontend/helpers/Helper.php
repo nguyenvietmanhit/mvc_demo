@@ -54,63 +54,6 @@ class Helper
         return $str;
     }
 
-    /**
-     * Gửi mail sử dụng thư viện PHPMailer
-     * @param $email String Email người gửi
-     * @param $subject String Tiêu đề mail
-     * @param $body String Nội dung mail
-     * @param $username String Username Gmail
-     * @param $password String Mật khẩu ứng dụng
-     */
-    public static function sendMail($email, $subject, $body, $username, $password)
-    {
-        // Instantiation and passing `true` enables exceptions
-        $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
 
-        try {
-            $mail->CharSet = 'UTF-8';
-            //Server settings
-            $mail->SMTPDebug = \PHPMailer\PHPMailer\SMTP::DEBUG_OFF;                      // Enable verbose debug output
-            $mail->isSMTP();
-            // Send using SMTP
-            //host miễn phí của gmail
-            $mail->Host = 'smtp.gmail.com';                    // Set the SMTP server to send through
-            $mail->SMTPAuth = true;                                   // Enable SMTP authentication
-            //username gmail của chính bạn
-            $mail->Username = $username;                     // SMTP username
-            //password cho ứng dụng, ko phải password của tài khoảng
-//    đăng nhập gmail
-//    tạo mật khẩu ứng dụng tại link:
-// https://myaccount.google.com/ - menu Bảo mật
-            $mail->Password = $password;                               // SMTP password
-//            $mail->Password = 'yichffdzhetottuw';                               // SMTP password
-            $mail->SMTPSecure = \PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-            $mail->Port = 587;                                    // TCP port to connect to
-
-            //Recipients
-            $mail->setFrom('demo@demo.com', 'Mail demo gửi đơn hàng');
-            //setting mail người gửi
-            $mail->addAddress($email);     // Add a recipient
-//    $mail->addAddress('ellen@example.com');               // Name is optional
-//    $mail->addReplyTo('info@example.com', 'Information');
-//    $mail->addCC('cc@example.com');
-//    $mail->addBCC('bcc@example.com');
-
-            // Attachments
-//      $mail->addAttachment('rose.jpeg');         // Add attachments
-//    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-
-            // Content
-            $mail->isHTML(true);                                  // Set email format to HTML
-            $mail->Subject = $subject;
-            $mail->Body = $body;
-//    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-            $mail->send();
-            echo 'Message has been sent';
-        } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-        }
-    }
 
 }
