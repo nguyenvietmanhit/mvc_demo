@@ -80,7 +80,7 @@ class LoginController extends Controller
         $is_insert = $user_model->register();
         if ($is_insert) {
           $_SESSION['success'] = 'Đăng ký thành công';
-          header('Location: index.php?controller=user&action=login');
+          header('Location: index.php?controller=login&action=login');
           exit();
         }
       }
