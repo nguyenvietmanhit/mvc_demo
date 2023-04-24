@@ -21,7 +21,7 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-
+    
     <?php require_once 'header.php';
     ?>
 
@@ -29,13 +29,36 @@
     <div class="content-wrapper">
         <!-- Main content -->
         <section class="content">
-<!--            Nội dung hiển thị ở đây-->
+            <!--            Hiển thị lỗi-->
+            <?php if (!empty($this->error)): ?>
+            <div class="alert alert-danger"><?php echo $this->error ?></div>
+            <?php endif; ?>
+            
+            <?php if (isset($_SESSION['error'])): ?>
+                <div class="alert alert-danger">
+                    <?php
+                    echo $_SESSION['error'];
+                    unset($_SESSION['error']);
+                    ?>
+                </div>
+            <?php endif; ?>
+    
+            <?php if (isset($_SESSION['success'])): ?>
+                <div class="alert alert-success">
+                    <?php
+                    echo $_SESSION['success'];
+                    unset($_SESSION['success']);
+                    ?>
+                </div>
+            <?php endif; ?>
+            
+            <!--            Nội dung hiển thị ở đây-->
             <?php echo $this->content; ?>
         </section>
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-
+    
     <?php require_once 'footer.php'; ?>
     <!-- Add the sidebar's background. This div must be placed
          immediately after the control sidebar -->
