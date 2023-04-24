@@ -29,9 +29,9 @@
     <div class="content-wrapper">
         <!-- Main content -->
         <section class="content">
-            <!--            Hiển thị lỗi-->
+            <!--            Hiển thị thông báo lỗi và thành công-->
             <?php if (!empty($this->error)): ?>
-            <div class="alert alert-danger"><?php echo $this->error ?></div>
+                <div class="alert alert-danger"><?php echo $this->error ?></div>
             <?php endif; ?>
             
             <?php if (isset($_SESSION['error'])): ?>
