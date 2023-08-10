@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19abbde9-d211-48c5-bd5e-1afe3a9821f8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/mvc_demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mvc_demo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -250,7 +249,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PHP0423E2/Day28_PHP_MVC_Project_1/Codes_demo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mvc_demo_begin_login_register/backend/views/layouts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -263,11 +262,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\xampp\htdocs\mvc_demo\mvc_demo_begin_login_register\backend\views\layouts" />
       <recent name="F:\xampp\htdocs\PHP0423E2\Day28_PHP_MVC_Project_1\Codes_demo" />
       <recent name="F:\xampp\htdocs\PHP0423E2" />
       <recent name="F:\xampp\htdocs\PHP0423E2\Day27_PHP_CRUD_MVC_Project\Codes_demo" />
       <recent name="F:\xampp\htdocs\PHP0423E2\Day27_PHP_CRUD_MVC_Project\Slides" />
-      <recent name="F:\xampp\htdocs\PHP0423E2\Day25_PHP_PDO_MVC\Codes_demo\Draft" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\xampp\htdocs\PHP0423E2\Day21_PHP_Connect_MySQL\Codes_demo\Draft\crud" />
@@ -441,6 +440,7 @@
       <workItem from="1691117167779" duration="20000" />
       <workItem from="1691117618861" duration="52000" />
       <workItem from="1691117797812" duration="136000" />
+      <workItem from="1691633653541" duration="495000" />
     </task>
     <servers />
   </component>
