@@ -67,7 +67,7 @@
         <label for="status">Trạng thái</label>
         <select name="status" class="form-control" id="status">
             <?php
-            $selected_active = '';
+            $selected_active = 'selected';
             $selected_disabled = '';
             if (isset($_POST['status'])) {
                 switch ($_POST['status']) {

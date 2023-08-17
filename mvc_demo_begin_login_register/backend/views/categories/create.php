@@ -20,7 +20,7 @@
 
     <div class="form-group">
       <?php
-      $selected_active = '';
+      $selected_active = 'selected';
       $selected_disabled = '';
       if (isset($_POST['status'])) {
         switch ($_POST['status']) {
@@ -35,8 +35,8 @@
       ?>
         <label>Trạng thái</label>
         <select name="status" class="form-control">
-            <option value="0" <?php echo $selected_disabled ?> >Active</option>
-            <option value="1" <?php echo $selected_active ?> >Disabled</option>
+            <option value="0" <?php echo $selected_active ?> >Active</option>
+            <option value="1" <?php echo $selected_disabled ?> >Disabled</option>
         </select>
     </div>
 

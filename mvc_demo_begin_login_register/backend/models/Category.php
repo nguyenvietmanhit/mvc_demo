@@ -36,9 +36,6 @@ VALUES (:name, :avatar, :description, :status)";
    * @return array
    */
   public function getAll($params = []) {
-    echo "<pre>";
-    print_r($params);
-    echo "</pre>";
     //tạo 1 chuỗi truy vấn để thêm các điều kiện search
     //dựa vào mảng params truyền vào
     $str_search = 'WHERE TRUE';
@@ -99,7 +96,7 @@ VALUES (:name, :avatar, :description, :status)";
    */
   public function update($id)
   {
-    $obj_update = $this->connection->prepare("UPDATE categories SET `name` = :name, `avatar` = :avatar, `description` = :description, `status` = :status, `updated_at` = :updated_at 
+    $obj_update = $this->connection->prepare("UPDATE categories SET `name` = :name, `avatar` = :avatar, `description` = :description, `status` = :status, `updated_at` = :updated_at
          WHERE id = $id");
     $arr_update = [
       ':name' => $this->name,
