@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="19abbde9-d211-48c5-bd5e-1afe3a9821f8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc_demo_begin_login_register/backend/configs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc_demo_begin_login_register/backend/configs/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc_demo_begin_login_register/backend/models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc_demo_begin_login_register/backend/models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc_demo_begin_login_register/backend/views/categories/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc_demo_begin_login_register/backend/views/categories/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc_demo_begin_login_register/backend/views/products/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc_demo_begin_login_register/backend/views/products/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc_demo_original_frontend/backend/configs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc_demo_original_frontend/backend/configs/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc_demo_original_frontend/frontend/configs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc_demo_original_frontend/frontend/configs/Database.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +251,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PHP0423E2/Day29_PHP_Project_Register_Login/Slides" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PHP0423E2/Day30_PHP_Project_Cart_Hosting" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -266,11 +264,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\xampp\htdocs\PHP0423E2\Day30_PHP_Project_Cart_Hosting" />
+      <recent name="F:\xampp\htdocs\PHP0423E2" />
       <recent name="F:\xampp\htdocs\PHP0423E2\Day29_PHP_Project_Register_Login\Slides" />
       <recent name="F:\xampp\htdocs\mvc_demo\Slides" />
       <recent name="F:\xampp\htdocs\PHP0423E2\Day29_PHP_Project_Register_Login" />
-      <recent name="F:\xampp\htdocs\PHP0423E2" />
-      <recent name="F:\xampp\htdocs\mvc_demo\mvc_demo_begin_login_register\backend\views\layouts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\xampp\htdocs\PHP0423E2\Day29_PHP_Project_Register_Login\project_demo" />
@@ -446,7 +444,7 @@
       <workItem from="1691117797812" duration="136000" />
       <workItem from="1691633653541" duration="1236000" />
       <workItem from="1692081818056" duration="675000" />
-      <workItem from="1692237742738" duration="514000" />
+      <workItem from="1692237742738" duration="923000" />
     </task>
     <servers />
   </component>
