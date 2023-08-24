@@ -1,7 +1,8 @@
 <!--Timeline items start -->
 <div class="timeline-items container">
     <h2>Giỏ hàng của bạn</h2>
-    <form action="" method="post">
+    <?php if (isset($_SESSION['cart'])): ?>
+        <form action="" method="post">
         <table class="table table-bordered">
             <tbody>
             <tr>
@@ -73,5 +74,8 @@
             </tbody>
         </table>
     </form>
+    <?php else: ?>
+        <h2>Giỏ hàng trống</h2>
+    <?php endif; ?>
 </div>
 <!--Timeline items end -->
