@@ -3,21 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="19abbde9-d211-48c5-bd5e-1afe3a9821f8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vnpay_php/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vnpay_php/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vnpay_php/.idea/vnpay_php.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vnpay_php/Huong_dan_tich_hop_VNPay_thanh_toan_online.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vnpay_php/assets/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vnpay_php/assets/jquery-1.11.3.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vnpay_php/assets/jumbotron-narrow.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vnpay_php/config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vnpay_php/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vnpay_php/vnpay_create_payment.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vnpay_php/vnpay_ipn.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vnpay_php/vnpay_pay.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vnpay_php/vnpay_querydr.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vnpay_php/vnpay_refund.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vnpay_php/vnpay_return.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -469,7 +454,9 @@
       <workItem from="1692763396646" duration="678000" />
       <workItem from="1692844817877" duration="1463000" />
       <workItem from="1692929043839" duration="509000" />
-      <workItem from="1693277026027" duration="4097000" />
+      <workItem from="1693277026027" duration="4516000" />
+      <workItem from="1693281623608" duration="167000" />
+      <workItem from="1693289538847" duration="560000" />
     </task>
     <servers />
   </component>
